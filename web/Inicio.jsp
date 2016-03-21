@@ -43,7 +43,7 @@
                     <h1 class="navbar-header" style="color:#FFFF00" href="#">SCE</h1>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="padding-top: 0.5cm">
                     <ul class="nav navbar-nav">
                         <li class=""><a href="#" style="color:#FFFFFF">Escolas Parceiras</a></li>
                         <li class=""><a href="#" style="color:#FFFFFF">Fale Conosco</a></li>
