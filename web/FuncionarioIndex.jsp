@@ -49,27 +49,28 @@
                     </a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="padding-top: 1cm">
+                <div class="container" id="bs-example-navbar-collapse-1" style="padding-top: 1cm">
                     <ul class="nav navbar-nav">
                         <li>
-                            <a href="#" style="color:#FFFFFF">Sobre</a>
+                            <a href="#" style="color:#FFFFFF; font-size: x-large"">Sobre</a>
                         </li>
                         <li>
-                            <a href="#" style="color:#FFFFFF">Serviços</a>
+                            <a href="#" style="color:#FFFFFF; font-size: x-large">Serviços</a>
                         </li>
                         <li>
-                            <a href="#" style="color:#FFFFFF">Contatos</a>
+                            <a href="#" style="color:#FFFFFF; font-size: x-large">Contatos</a>
                         </li>
-
                     </ul>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="margin-left:700px; color:#FF7043">Funcionário<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Perfil</a></li>  
-                            <li role="separator" class="divider"></li>
-                            <li><a href="inicio.jsp">Sair</a></li>
-                        </ul>
-                    </li>
+                    <div class="container col-sm-5" id="bs-example-navbar-collapse-1" style="padding-top: 0.4cm">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:#FFFFFF; font-size:large" role="button" >Funcionário</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Perfil</a></li>  
+                                <li role="separator" class="divider"></li>
+                                <li><a href="inicio.jsp">Sair</a></li>
+                            </ul>
+                        </li>
+                    </div>
                 </div>
             </div>
 
@@ -80,22 +81,22 @@
                     <div class="col-lg-4">
                         <img class="img-circle" src="Imagens/Foods.jpg" alt="Generic placeholder image" width="140" height="140">
                         <h2>Manter Produto</h2>
-                        <p><a class="btn btn-secondary" href="#" data-toggle="tooltip" data-placement="bottom" title="Incluir, Alterar, Consultar e Desbloquear Comidas e Bebidas do Sistema." role="button">Entrar &raquo;</a></p>
+                        <p><a class="btn btn-warning waves-effect waves-light" href="#" data-toggle="tooltip" data-placement="bottom" title="Incluir, Alterar, Consultar e Desbloquear Comidas e Bebidas do Sistema." role="button">Entrar &raquo;</a></p>
                     </div><!-- /.col-lg-4 -->
                     <div class="col-lg-4">
                         <img class="img-circle" src="Imagens/cadastro.png" alt="Generic placeholder image" width="140" height="140">
                         <h2>Cadastrar Pais</h2>
-                        <p><a class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Cadastrar responsável atribuindo além de seus dados um login e uma senha de acesso." href="#" role="button">Entrar &raquo;</a></p>
+                        <p><a class="btn btn-warning waves-effect waves-light" data-toggle="tooltip" data-placement="bottom" title="Cadastrar responsável atribuindo além de seus dados um login e uma senha de acesso." href="#" role="button">Entrar &raquo;</a></p>
                     </div><!-- /.col-lg-4 -->
                     <div class="col-lg-4">
                         <img class="img-circle" src="Imagens/saldo.png" alt=Generic placeholder image" width="140" height="140">
                              <h2>Consultar Saldo</h2>
-                        <p><a class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Consultar saldo do aluno através da matricula." href="#" role="button">Entrar &raquo;</a></p>
+                        <p><a class="btn btn-warning waves-effect waves-light" data-toggle="tooltip" data-placement="bottom" title="Consultar saldo do aluno através da matricula." href="#" role="button">Entrar &raquo;</a></p>
                     </div><!-- /.col-lg-4 -->
                 </div><!-- /.row -->
             </div>
         </div>
-
+        <!-- Inicializando os ToolTips -->
         <script>
             $(document).ready(function () {
                 $('[data-toggle="tooltip"]').tooltip();
