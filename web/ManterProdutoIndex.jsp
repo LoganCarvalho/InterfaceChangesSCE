@@ -1,6 +1,6 @@
 <%-- 
-    Document   : FuncionarioIndex
-    Created on : 21/03/2016, 12:53:43
+    Document   : ManterProdutoIndex
+    Created on : 22/03/2016, 15:55:11
     Author     : jcarvalho
 --%>
 
@@ -73,25 +73,19 @@
                     </div>
                 </div>
             </div>
-
         </nav>
         <div class="jumbotron">
             <div class="container text-center">
                 <div class="row">
                     <div class="col-lg-4">
-                        <img class="img-circle" src="Imagens/ManterProdutos.png" alt="Generic placeholder image" width="140" height="140">
-                        <h2>Manter Produto</h2>
-                        <p><a class="btn btn-warning waves-effect waves-light" href="#" data-toggle="tooltip" data-placement="bottom" title="Incluir, Alterar, Consultar e Desbloquear Comidas e Bebidas do Sistema." role="button">Entrar &raquo;</a></p>
+                        <img class="img-circle" src="Imagens/Foods.jpg" alt="Generic placeholder image" width="140" height="140">
+                        <h2>Comida</h2>
+                        <p><a class="btn btn-warning waves-effect waves-light" href="#" data-toggle="tooltip" data-placement="bottom" title="Você pode incluir, alterar, consultar e desbloquear bebidas." role="button">Entrar &raquo;</a></p>
                     </div><!-- /.col-lg-4 -->
                     <div class="col-lg-4">
-                        <img class="img-circle" src="Imagens/cadastro.png" alt="Generic placeholder image" width="140" height="140">
-                        <h2>Cadastrar Pais</h2>
-                        <p><a class="btn btn-warning waves-effect waves-light" data-toggle="tooltip" data-placement="bottom" title="Cadastrar responsável atribuindo além de seus dados um login e uma senha de acesso." href="#" role="button">Entrar &raquo;</a></p>
-                    </div><!-- /.col-lg-4 -->
-                    <div class="col-lg-4">
-                        <img class="img-circle" src="Imagens/saldo.png" alt=Generic placeholder image" width="140" height="140">
-                             <h2>Consultar Saldo</h2>
-                        <p><a class="btn btn-warning waves-effect waves-light" data-toggle="tooltip" data-placement="bottom" title="Consultar saldo do aluno através da matricula." href="#" role="button">Entrar &raquo;</a></p>
+                        <img class="img-circle" src="Imagens/Drinks.jpg" alt="Generic placeholder image" width="140" height="140">
+                        <h2>Bebida</h2>
+                        <p><a class="btn btn-warning waves-effect waves-light" data-toggle="tooltip" data-placement="bottom" title="Você pode incluir, alterar, consultar e desbloquear comidas" href="#" role="button">Entrar &raquo;</a></p>
                     </div><!-- /.col-lg-4 -->
                 </div><!-- /.row -->
             </div>
