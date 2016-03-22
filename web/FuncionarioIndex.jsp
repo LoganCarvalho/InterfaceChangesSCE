@@ -34,7 +34,7 @@
         <title>Funcionários</title>
     </head>
     <body>
-        <nav class="navbar navbar-inverse navbar-fixed-top" style="min-height: 135px" role="navigation">
+        <nav class="navbar navbar-inverse" style="min-height: 135px" role="navigation">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -60,38 +60,49 @@
                         <li>
                             <a href="#" style="color:#FFFFFF">Contatos</a>
                         </li>
+
                     </ul>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="margin-left:700px; color:#FF7043">Funcionário<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Perfil</a></li>  
+                            <li role="separator" class="divider"></li>
+                            <li><a href="inicio.jsp">Sair</a></li>
+                        </ul>
+                    </li>
                 </div>
-                <!-- /.navbar-collapse -->
             </div>
-            <!-- /.container -->
+
         </nav>
         <div class="jumbotron">
             <div class="container text-center">
-                <div class="row" style="padding-top: 4cm">
+                <div class="row">
                     <div class="col-lg-4">
-                        <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+                        <img class="img-circle" src="Imagens/Foods.jpg" alt="Generic placeholder image" width="140" height="140">
                         <h2>Manter Produto</h2>
-                        <p>Informações aqui.</p>
-                        <p><a class="btn btn-secondary" href="#" role="button">Entrar &raquo;</a></p>
+                        <p><a class="btn btn-secondary" href="#" data-toggle="tooltip" data-placement="bottom" title="Incluir, Alterar, Consultar e Desbloquear Comidas e Bebidas do Sistema." role="button">Entrar &raquo;</a></p>
                     </div><!-- /.col-lg-4 -->
                     <div class="col-lg-4">
-                        <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+                        <img class="img-circle" src="Imagens/cadastro.png" alt="Generic placeholder image" width="140" height="140">
                         <h2>Cadastrar Pais</h2>
-                        <p>Informações aqui.</p>
-                        <p><a class="btn btn-secondary" href="#" role="button">Entrar &raquo;</a></p>
+                        <p><a class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Cadastrar responsável atribuindo além de seus dados um login e uma senha de acesso." href="#" role="button">Entrar &raquo;</a></p>
                     </div><!-- /.col-lg-4 -->
                     <div class="col-lg-4">
-                        <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-                        <h2>Consultar Saldo</h2>
-                        <p>Informações aqui.</p>
-                        <p><a class="btn btn-secondary" href="#" role="button">Entrar &raquo;</a></p>
+                        <img class="img-circle" src="Imagens/saldo.png" alt=Generic placeholder image" width="140" height="140">
+                             <h2>Consultar Saldo</h2>
+                        <p><a class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Consultar saldo do aluno através da matricula." href="#" role="button">Entrar &raquo;</a></p>
                     </div><!-- /.col-lg-4 -->
                 </div><!-- /.row -->
             </div>
         </div>
-        
-         <footer class="container-fluid text-center">
+
+        <script>
+            $(document).ready(function () {
+                $('[data-toggle="tooltip"]').tooltip();
+            });
+        </script>
+
+        <footer class="container-fluid text-center">
             <p>SCE- Sistema Cantina Escola, Copyright © 2016 </p>
         </footer>
     </body>
