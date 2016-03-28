@@ -57,7 +57,7 @@
                             <a href="#" style="color:#FFFFFF; font-size: x-large">Contatos</a>
                         </li>
                     </ul>
-                    <div class="container col-sm-5" id="bs-example-navbar-collapse-1" style="padding-top: 0.4cm">
+                    <div class="container col-sm-2" id="bs-example-navbar-collapse-1" style="padding-top: 0.4cm">
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:#FFFFFF; font-size:large" role="button" >Funcionário</a>
                             <ul class="dropdown-menu">
@@ -73,17 +73,17 @@
         <div class="jumbotron">
             <div class="container text-center">
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-md-7">
                         <img class="img-circle" src="Imagens/Foods.jpg" alt="Generic placeholder image" width="140" height="140">
                         <h2>Comida</h2>
                         <p><a class="btn btn-warning waves-effect waves-light" href="#" data-toggle="tooltip" data-placement="bottom" title="Você pode incluir, alterar, consultar e desbloquear bebidas." role="button">Entrar &raquo;</a></p>
                     </div><!-- /.col-lg-4 -->
-                    <div class="col-lg-4">
+                    <div class="col-md-2">
                         <img class="img-circle" src="Imagens/Drinks.jpg" alt="Generic placeholder image" width="140" height="140">
                         <h2>Bebida</h2>
                         <p><a class="btn btn-warning waves-effect waves-light" data-toggle="tooltip" data-placement="bottom" title="Você pode incluir, alterar, consultar e desbloquear comidas" href="#" role="button">Entrar &raquo;</a></p>
                     </div><!-- /.col-lg-4 -->
-                </div><!-- /.row -->
+                </div>             
             </div>
         </div>
         <!-- Inicializando os ToolTips -->
