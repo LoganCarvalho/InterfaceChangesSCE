@@ -23,13 +23,6 @@
             .navbar {
                 margin-bottom: 0;
                 border-radius: 0;
-
-            }
-
-            /* Add a gray background color and some padding to the footer */
-            footer {
-                background-color:  #e8f5e9;
-                padding: 25px;
             }
         </style>
 
