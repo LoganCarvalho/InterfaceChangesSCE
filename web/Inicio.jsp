@@ -24,28 +24,14 @@
                 margin-bottom: 0;
                 border-radius: 0;
             }
-
-            /* Add a gray background color and some padding to the footer */
-            footer {
-                background-color: #f2f2f2;
-                padding: 25px;
-            }
         </style>
     </head>
     <body>
         <nav class="navbar navbar-default navbar-inverse" style="min-height: 130px" role="navigation">
             <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
                     <h1 class="navbar-header" style="color:#FFFF00" href="#">SCE</h1>
                 </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="padding-top: 0.5cm">
                     <ul class="nav navbar-nav">
                         <li class=""><a href="#" style="color:#FFFFFF">Escolas Parceiras</a></li>
@@ -73,7 +59,7 @@
         </div>
 
         <footer class="container-fluid text-center">
-            <p style="color: #FFFFFF">SCE- Sistema Cantina Escola, Copyright © 2016 </p>
+            <p>SCE- Sistema Cantina Escola, Copyright © 2016 </p>
         </footer>
 
     </body>

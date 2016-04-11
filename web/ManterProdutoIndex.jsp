@@ -30,44 +30,24 @@
         <title>Funcionários</title>
     </head>
     <body>
-        <nav class="navbar navbar-inverse" style="min-height: 135px" role="navigation">
+        <nav class="navbar navbar-inverse" style="min-height: 135px">
             <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">
-                        <img  src="Imagens/logoresized.png" alt="">
-                    </a>
+                    <a class="navbar-brand" href="#"><img  src="Imagens/logoresized.png" alt=""> </a>
                 </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="container" id="bs-example-navbar-collapse-1" style="padding-top: 1cm">
-                    <ul class="nav navbar-nav">
-                        <li>
-                            <a href="#" style="color:#FFFFFF; font-size: x-large"">Sobre</a>
-                        </li>
-                        <li>
-                            <a href="#" style="color:#FFFFFF; font-size: x-large">Serviços</a>
-                        </li>
-                        <li>
-                            <a href="#" style="color:#FFFFFF; font-size: x-large">Contatos</a>
-                        </li>
-                    </ul>
-                    <div class="container col-sm-2" id="bs-example-navbar-collapse-1" style="padding-top: 0.4cm">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:#FFFFFF; font-size:large" role="button" >Funcionário</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Perfil</a></li>  
-                                <li role="separator" class="divider"></li>
-                                <li><a href="inicio.jsp">Sair</a></li>
-                            </ul>
-                        </li>
-                    </div>
-                </div>
+                <div></div>
+                <ul class="nav navbar-nav">
+                    <li> <a href="#" style="color:#FFFFFF; font-size: x-large">Sobre</a></li>
+                    <li> <a href="#" style="color:#FFFFFF; font-size: x-large">Serviços</a></li>
+                    <li> <a href="#" style="color:#FFFFFF; font-size: x-large">Contatos</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right" style="padding-top: 3em ">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:#FFFFFF; font-size:x-large">Funcionário</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span>Perfil</a></li>  
+                        <li><a href="Inicio.jsp"><span class="glyphicon glyphicon-log-out"></span>Sair</a></li>
+                    </ul>   
+                </ul>
             </div>
         </nav>
         <div class="jumbotron">
@@ -77,12 +57,12 @@
                         <img class="img-circle" src="Imagens/Foods.jpg" alt="Generic placeholder image" width="140" height="140">
                         <h2>Comida</h2>
                         <p><a class="btn btn-warning waves-effect waves-light" href="#" data-toggle="tooltip" data-placement="bottom" title="Você pode incluir, alterar, consultar e desbloquear bebidas." role="button">Entrar &raquo;</a></p>
-                    </div><!-- /.col-lg-4 -->
+                    </div>
                     <div class="col-md-2">
                         <img class="img-circle" src="Imagens/Drinks.jpg" alt="Generic placeholder image" width="140" height="140">
                         <h2>Bebida</h2>
                         <p><a class="btn btn-warning waves-effect waves-light" data-toggle="tooltip" data-placement="bottom" title="Você pode incluir, alterar, consultar e desbloquear comidas" href="#" role="button">Entrar &raquo;</a></p>
-                    </div><!-- /.col-lg-4 -->
+                    </div>
                 </div>             
             </div>
         </div>
