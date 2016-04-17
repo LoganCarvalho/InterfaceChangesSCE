@@ -57,12 +57,12 @@
                     <div class="col-md-7">
                         <img class="img-circle" src="Imagens/Foods.jpg" alt="Generic placeholder image" width="140" height="140">
                         <h2>Comida</h2>
-                        <p><a class="btn btn-warning waves-effect waves-light" href="#" data-toggle="tooltip" data-placement="bottom" title="Você pode incluir, alterar, consultar e desbloquear bebidas." role="button">Entrar &raquo;</a></p>
+                        <p><a class="btn btn-warning waves-effect waves-light" href="#" data-toggle="tooltip" data-placement="bottom" title="Você pode incluir, alterar, consultar e desbloquear comidas." role="button">Entrar &raquo;</a></p>
                     </div>
                     <div class="col-md-2">
                         <img class="img-circle" src="Imagens/Drinks.jpg" alt="Generic placeholder image" width="140" height="140">
                         <h2>Bebida</h2>
-                        <p><a class="btn btn-warning waves-effect waves-light" data-toggle="tooltip" data-placement="bottom" title="Você pode incluir, alterar, consultar e desbloquear comidas" href="#" role="button">Entrar &raquo;</a></p>
+                        <p><a class="btn btn-warning waves-effect waves-light" data-toggle="tooltip" data-placement="bottom" title="Você pode incluir, alterar, consultar e desbloquear bebidas." href="#" role="button">Entrar &raquo;</a></p>
                     </div>
                 </div>             
             </div>
