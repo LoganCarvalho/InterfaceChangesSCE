@@ -1,32 +1,48 @@
-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package Controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(name = "ResponsavelController", urlPatterns = {"/ResponsavelController"})
-public class ResponsavelController extends HttpServlet {
+/**
+ *
+ * @author jcarvalho
+ */
+public class ResponsavelController2 extends HttpServlet {
 
+    /**
+     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
+     * methods.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException, IOException { 
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet ResponsavelController</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet ResponsavelController at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
+        PrintWriter out = response.getWriter();
+
+        //Pegando parâmetros da tela
+        String respNome = request.getParameter("txtNomeResponsavel");
+        String respEmail = request.getParameter("txtEmailResponsavel");
+        String respCPF = request.getParameter("txtCpfResponsavel");
+        String respTel = request.getParameter("txtTelResponsavel");
+        String respLogin = request.getParameter("txtLoginResponsavel");
+        String respSenha = request.getParameter("txtSenhaResponsavel");
+        
+        RequestDispatcher rd = request.getRequestDispatcher("***.jsp");
+        rd.include(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

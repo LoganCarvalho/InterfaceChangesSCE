@@ -6,7 +6,7 @@ public class Funcionario extends Usuario {
     private String matricula;
 
     public Funcionario(String matricula, String nome, String cep, String telefone, String login, String senha) {
-        super(nome, cep, telefone, login, senha);
+        super(nome, telefone, login, senha);
         this.matricula = matricula;
     }
 

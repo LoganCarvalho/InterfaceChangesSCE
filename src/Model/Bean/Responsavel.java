@@ -1,13 +1,15 @@
 
 package Model.Bean;
 
+import Model.Dao.ResponsavelDAO;
+
 public class Responsavel extends Usuario {
     
     private String cpf;
     private String email;
 
     public Responsavel(String cpf, String email, String nome, String cep, String telefone, String login, String senha) {
-        super(nome, cep, telefone, login, senha);
+        super(nome,telefone, login, senha);
         this.cpf = cpf;
         this.email = email;
     }
@@ -31,6 +33,25 @@ public class Responsavel extends Usuario {
         this.email = email;
     }
     
+     //modelo que deve ser seguido para fazer os outros métodos
+     public int incluir() throws Exception {
+
+        ResponsavelDAO responsavel = new ResponsavelDAO();
+        int resposta = responsavel.incluir(this);
+        return resposta;
+    }
     
-    
+      public int excluir() throws Exception {
+
+        ResponsavelDAO responsavel = new ResponsavelDAO();
+        int resposta = responsavel.excluir(this);
+        return resposta;
+    }
+      
+       public boolean consultar() throws Exception {
+
+        ResponsavelDAO responsavel = new ResponsavelDAO();
+        boolean resposta = responsavel.consultar(this);
+        return resposta;
+    }
 }

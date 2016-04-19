@@ -55,7 +55,7 @@
             <p>Cadastrar Responsável</p>
             </div>
             <div class="container">
-                <form>  
+                <form action="ResponsavelController2" method="post">  
                     <div class="form-group row">
                         <label for="txtNomeResponsavel" class="col-sm-2 form-control-label">Nome<span class="glyphicon glyphicon-user"></span></label>
                         <div class="col-sm-5">
@@ -89,7 +89,7 @@
                      <div class="form-group row">
                         <label for="txtSenhaResponsavel" class="col-sm-2 form-control-label">Senha<span class="glyphicon glyphicon-certificate"></span></label>
                         <div class="col-sm-1">
-                            <input type="password" maxlength="6" class="form-control" id="txtLoginResponsavel" placeholder="Senha do Responsável">
+                            <input type="password" maxlength="6" class="form-control" id="txtSenhaResponsavel" placeholder="Senha do Responsável">
                         </div>
                     </div>
                     <button type="submit" class="btn btn-warning">Cadastrar</button>
