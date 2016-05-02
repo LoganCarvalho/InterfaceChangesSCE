@@ -46,7 +46,7 @@
         </nav>
              <div class="jumbotron">
             <div class="container text-center">
-            <p>Consultar Saldo</p>
+            <p>Consultar Consumo</p>
             </div>
             <div class="container">
                 <form action="ResponsavelController2" method="post">  
@@ -57,9 +57,9 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="txtSaldoAluno" class="col-sm-2 form-control-label">Saldo do Aluno</label>
+                        <label for="txtPeriodo" class="col-sm-2 form-control-label">Período</label>
                         <div class="col-sm-3">
-                            <input type="text" class="form-control" name="txtSaldoAluno" placeholder="Saldo do Aluno">
+                            <input type="text" class="form-control" name="txtPeriodo" placeholder="00/00/0000">
                         </div>
                     </div>                    
                     <button type="submit" class="btn btn-warning">Consultar</button>                                                      
@@ -68,30 +68,18 @@
                             <table class="table table-hover">
                                 <thead>
                                     <tr>
-                                        <th>Código</th>
-                                        <th>Nome</th>
-                                        <th>Ingredientes</th>
-                                        <th>Preço</th>
+                                        <th>Nome do Produto</th>
+                                        <th>Data do Consumo</th>                                        
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td>John</td>
-                                        <td>Doe</td>
-                                        <td>Doe</td>
-                                        <td>john@example.com</td>
+                                        <td>Doe</td>                                        
                                     </tr>
                                     <tr>
                                         <td>Mary</td>
                                         <td>Moe</td>
-                                        <td>Moe</td>
-                                        <td>mary@example.com</td>
-                                    </tr>
-                                    <tr>
-                                        <td>July</td>
-                                        <td>July</td>
-                                        <td>Dooley</td>
-                                        <td>july@example.com</td>
                                     </tr>
                                 </tbody>
                             </table>
