@@ -1,9 +1,3 @@
-<%-- 
-    Document   : FuncionarioIndex
-    Created on : 21/03/2016, 12:53:43
-    Author     : jcarvalho
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -55,12 +49,12 @@
                 <div class="row">
                     <div class="col-lg-4">
                         <img class="img-circle" src="Imagens/ManterProdutos.png" alt="Generic placeholder image" width="140" height="140">
-                        <h2>Manter Produtos</h2>
+                        <h2>Depositar Crédito</h2>
                         <p><a class="btn btn-warning waves-effect waves-light" href="ManterProdutoIndex.jsp" data-toggle="tooltip" data-placement="bottom" title="Incluir, Alterar, Consultar e Desbloquear Comidas e Bebidas do Sistema." role="button">Entrar &raquo;</a></p>
                     </div>
                     <div class="col-lg-4">
                         <img class="img-circle" src="Imagens/cadastro.png" alt="Generic placeholder image" width="140" height="140">
-                        <h2>Cadastrar Pais</h2>
+                        <h2>Cadastrar Aluno</h2>
                         <p><a class="btn btn-warning waves-effect waves-light" data-toggle="tooltip" data-placement="bottom" title="Cadastrar responsável atribuindo além de seus dados um login e uma senha de acesso." href="CadResponsavel.jsp" role="button">Entrar &raquo;</a></p>
                     </div>
                     <div class="col-lg-4">

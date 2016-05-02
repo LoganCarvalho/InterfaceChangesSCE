@@ -1,9 +1,3 @@
-<%-- 
-    Document   : ManterProdutoIndex
-    Created on : 22/03/2016, 15:55:11
-    Author     : jcarvalho
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -29,7 +23,7 @@
 
         <title>Funcionários</title>
     </head>
-    <body>
+   <body>
         <nav class="navbar navbar-inverse" style="min-height: 135px">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -51,30 +45,41 @@
                 </ul>
             </div>
         </nav>
-        <div class="jumbotron">
+         <div class="jumbotron">
             <div class="container text-center">
-                <div class="row">
-                    <div class="col-md-7">
-                        <img class="img-circle" src="Imagens/Foods.jpg" alt="Generic placeholder image" width="140" height="140">
-                        <h2>Comida</h2>
-                        <p><a class="btn btn-warning waves-effect waves-light" href="incluirComida.jsp" data-toggle="tooltip" data-placement="bottom" title="Você pode incluir, alterar, consultar e desbloquear comidas." role="button">Entrar &raquo;</a></p>
+            <p>Incluir Alimento</p>
+            </div>
+            <div class="container">
+                <form action="ResponsavelController2" method="post">  
+                    <div class="form-group row">
+                        <label for="txtCodigoAlimento" class="col-sm-2 form-control-label">Código do Alimento</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" name="txtCodigoAlimento" describedby="basic-addon2" placeholder="Código do Alimento">
+                        </div>
                     </div>
-                    <div class="col-md-2">
-                        <img class="img-circle" src="Imagens/Drinks.jpg" alt="Generic placeholder image" width="140" height="140">
-                        <h2>Bebida</h2>
-                        <p><a class="btn btn-warning waves-effect waves-light" data-toggle="tooltip" data-placement="bottom" title="Você pode incluir, alterar, consultar e desbloquear bebidas." href="incluirBebida.jsp" role="button">Entrar &raquo;</a></p>
+                    <div class="form-group row">
+                        <label for="txtNomeAlimento" class="col-sm-2 form-control-label">Nome do Alimento</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" name="txtNomeAlimento" placeholder="Nome do Alimento">
+                        </div>
                     </div>
-                </div>             
+                    <div class="form-group row">
+                        <label for="txtIngredientes" class="col-sm-2 form-control-label">Ingredientes</label>
+                        <div class="col-sm-4">
+                            <textarea type="text" class="form-control" rows="5" name="txtIngredientes" placeholder="Ingedientes"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="txtPrecoAlimento" class="col-sm-2 form-control-label">Preço do Alimento</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" name="txtPrecoAlimento" placeholder="R$ 00,00">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-warning">Cadastrar</button>
+                </form>
             </div>
         </div>
-        <!-- Inicializando os ToolTips -->
-        <script>
-            $(document).ready(function () {
-                $('[data-toggle="tooltip"]').tooltip();
-            });
-        </script>
-
-        <footer class="container-fluid text-center">
+         <footer class="container-fluid text-center">
             <p>SCE- Sistema Cantina Escola, Copyright © 2016 </p>
         </footer>
     </body>

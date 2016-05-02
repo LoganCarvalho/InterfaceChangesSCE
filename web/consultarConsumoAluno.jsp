@@ -1,9 +1,3 @@
-<%-- 
-    Document   : CadResponsavel
-    Created on : Apr 17, 2016, 9:28:59 AM
-    Author     : Logan
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -50,49 +44,59 @@
                 </ul>
             </div>
         </nav>
-        <div class="jumbotron">
+             <div class="jumbotron">
             <div class="container text-center">
-            <p>Cadastrar Responsável</p>
+            <p>Consultar Saldo</p>
             </div>
             <div class="container">
                 <form action="ResponsavelController2" method="post">  
                     <div class="form-group row">
-                        <label for="txtNomeResponsavel" class="col-sm-2 form-control-label">Nome<span class="glyphicon glyphicon-user"></span></label>
-                        <div class="col-sm-4">
-                            <input type="text" class="form-control" name="txtNomeResponsavel" describedby="basic-addon2" placeholder="Nome do Responsável">
+                        <label for="txtMatricula" class="col-sm-2 form-control-label">Mátricula do Aluno</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" name="txtMatricula" describedby="basic-addon2" placeholder="Mátricula do Aluno">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="txtEmailResponsavel" class="col-sm-2 form-control-label">Email<span class="glyphicon glyphicon-envelope"></span></label>
-                        <div class="col-sm-4">
-                            <input type="email" class="form-control" name="txtEmailResponsavel" placeholder="Email do Responsável">
+                        <label for="txtSaldoAluno" class="col-sm-2 form-control-label">Saldo do Aluno</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" name="txtSaldoAluno" placeholder="Saldo do Aluno">
                         </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="txtCpfResponsavel" class="col-sm-2 form-control-label">CPF<span class="glyphicon glyphicon-tag"></span></label>
-                        <div class="col-sm-4">
-                            <input type="text" maxlength="11"  class="form-control" name="txtCpfResponsavel" placeholder="CPF do Responsável">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="txtTelResponsavel" class="col-sm-2 form-control-label">Telefone<span class="glyphicon glyphicon-phone-alt"></span></label>
-                        <div class="col-sm-4">
-                            <input type="text" maxlength="9" class="form-control" name="txtTelResponsavel" placeholder="Telefone do Responsável">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="txtLoginResponsavel" class="col-sm-2 form-control-label">Login<span class="glyphicon glyphicon-log-in"></span></label>
-                        <div class="col-sm-4">
-                            <input type="text" class="form-control" name="txtLoginResponsavel" placeholder="Login do Responsável">
-                        </div>
-                    </div>
-                     <div class="form-group row">
-                        <label for="txtSenhaResponsavel" class="col-sm-2 form-control-label">Senha<span class="glyphicon glyphicon-certificate"></span></label>
-                        <div class="col-sm-4">
-                            <input type="password" maxlength="6" class="form-control" name="txtSenhaResponsavel" placeholder="Senha do Responsável">
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-warning">Cadastrar</button>
+                    </div>                    
+                    <button type="submit" class="btn btn-warning">Consultar</button>                                                      
+                    <div class="row">
+                        <div class="col-md-12">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Código</th>
+                                        <th>Nome</th>
+                                        <th>Ingredientes</th>
+                                        <th>Preço</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>John</td>
+                                        <td>Doe</td>
+                                        <td>Doe</td>
+                                        <td>john@example.com</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mary</td>
+                                        <td>Moe</td>
+                                        <td>Moe</td>
+                                        <td>mary@example.com</td>
+                                    </tr>
+                                    <tr>
+                                        <td>July</td>
+                                        <td>July</td>
+                                        <td>Dooley</td>
+                                        <td>july@example.com</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>    
+                    </div>    
                 </form>
             </div>
         </div>
