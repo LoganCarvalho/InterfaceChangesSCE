@@ -34,10 +34,10 @@ public class Responsavel extends Usuario {
     }
     
      //modelo que deve ser seguido para fazer os outros métodos
-     public int incluir() throws Exception {
+     public int incluir(Responsavel respons) throws Exception {
 
         ResponsavelDAO responsavel = new ResponsavelDAO();
-        int resposta = responsavel.incluir(this);
+        int resposta = responsavel.incluir(respons);
         return resposta;
     }
     

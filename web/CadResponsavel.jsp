@@ -59,37 +59,37 @@
                     <div class="form-group row">
                         <label for="txtNomeResponsavel" class="col-sm-2 form-control-label">Nome<span class="glyphicon glyphicon-user"></span></label>
                         <div class="col-sm-5">
-                            <input type="text" class="form-control" id="txtNomeResponsavel" describedby="basic-addon2" placeholder="Nome do Responsável">
+                            <input type="text" class="form-control" name="txtNomeResponsavel" describedby="basic-addon2" placeholder="Nome do Responsável">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="txtEmailResponsavel" class="col-sm-2 form-control-label">Email<span class="glyphicon glyphicon-envelope"></span></label>
                         <div class="col-sm-4">
-                            <input type="email" class="form-control" id="txtEmailResponsavel" placeholder="Email do Responsável">
+                            <input type="email" class="form-control" name="txtEmailResponsavel" placeholder="Email do Responsável">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="txtCpfResponsavel" class="col-sm-2 form-control-label">CPF<span class="glyphicon glyphicon-tag"></span></label>
                         <div class="col-sm-3">
-                            <input type="number" class="form-control" id="txtCpfResponsavel" placeholder="CPF do Responsável">
+                            <input type="number" class="form-control" name="txtCpfResponsavel" placeholder="CPF do Responsável">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="txtTelResponsavel" class="col-sm-2 form-control-label">Telefone<span class="glyphicon glyphicon-phone-alt"></span></label>
                         <div class="col-sm-2">
-                            <input type="number" maxlength="11" class="form-control" id="txtTelResponsavel" placeholder="Telefone do Responsável">
+                            <input type="number" maxlength="11" class="form-control" name="txtTelResponsavel" placeholder="Telefone do Responsável">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="txtLoginResponsavel" class="col-sm-2 form-control-label">Login<span class="glyphicon glyphicon-log-in"></span></label>
                         <div class="col-sm-2">
-                            <input type="text" class="form-control" id="txtLoginResponsavel" placeholder="Login do Responsável">
+                            <input type="text" class="form-control" name="txtLoginResponsavel" placeholder="Login do Responsável">
                         </div>
                     </div>
                      <div class="form-group row">
                         <label for="txtSenhaResponsavel" class="col-sm-2 form-control-label">Senha<span class="glyphicon glyphicon-certificate"></span></label>
                         <div class="col-sm-1">
-                            <input type="password" maxlength="6" class="form-control" id="txtSenhaResponsavel" placeholder="Senha do Responsável">
+                            <input type="password" maxlength="6" class="form-control" name="txtSenhaResponsavel" placeholder="Senha do Responsável">
                         </div>
                     </div>
                     <button type="submit" class="btn btn-warning">Cadastrar</button>

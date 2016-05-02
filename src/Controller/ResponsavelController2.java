@@ -5,6 +5,7 @@
  */
 package Controller;
 
+import Model.Bean.Responsavel;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -31,15 +32,17 @@ public class ResponsavelController2 extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException { 
         response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
-
+        Responsavel respons = new Responsavel();
+        
         //Pegando parâmetros da tela
-        String respNome = request.getParameter("txtNomeResponsavel");
-        String respEmail = request.getParameter("txtEmailResponsavel");
-        String respCPF = request.getParameter("txtCpfResponsavel");
-        String respTel = request.getParameter("txtTelResponsavel");
-        String respLogin = request.getParameter("txtLoginResponsavel");
-        String respSenha = request.getParameter("txtSenhaResponsavel");
+        respons.setNome(request.getParameter("txtNomeResponsavel"));
+        respons.setEmail(request.getParameter("txtEmailResponsavel"));
+        respons.setCpf(request.getParameter("txtCpfResponsavel"));
+        respons.setTelefone(request.getParameter("txtTelResponsavel"));
+        respons.setLogin(request.getParameter("txtLoginResponsavel"));
+        respons.setSenha(request.getParameter("txtSenhaResponsavel"));
+        
+       
         
         RequestDispatcher rd = request.getRequestDispatcher("***.jsp");
         rd.include(request, response);
