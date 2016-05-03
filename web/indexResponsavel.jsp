@@ -49,8 +49,8 @@
                 <div class="row">
                     <div class="col-lg-4">
                         <img class="img-circle" src="Imagens/cadastro.png" alt="Generic placeholder image" width="140" height="140">
-                        <h2>Cadastrar Aluno</h2>
-                        <p><a class="btn btn-warning waves-effect waves-light" href="incluirAluno.jsp" data-toggle="tooltip" data-placement="bottom" title="Cadastrar Aluno." role="button">Entrar &raquo;</a></p>
+                        <h2>Cadastrar/Consultar Aluno</h2>
+                        <p><a class="btn btn-warning waves-effect waves-light" href="insertReadAluno.jsp" data-toggle="tooltip" data-placement="bottom" title="Cadastrar Aluno." role="button">Entrar &raquo;</a></p>
                     </div>
                     <div class="col-lg-4">
                         <img class="img-circle" src="Imagens/depositar.jpg" alt="Generic placeholder image" width="140" height="140">
