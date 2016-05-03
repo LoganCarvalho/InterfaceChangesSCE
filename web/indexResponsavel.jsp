@@ -36,7 +36,7 @@
                     </ul>
                 </div>
                 <ul class="nav navbar-nav navbar-right" style="padding-top: 0.5cm">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:#FFFFFF; font-size:x-large">Funcionário</a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:#FFFFFF; font-size:x-large">Responsável</a>
                     <ul class="dropdown-menu">
                         <li><a href="#"><span class="glyphicon glyphicon-user"></span>Perfil</a></li>  
                         <li><a href="Inicio.jsp"><span class="glyphicon glyphicon-log-out"></span>Sair</a></li>
@@ -49,18 +49,28 @@
                 <div class="row">
                     <div class="col-lg-4">
                         <img class="img-circle" src="Imagens/ManterProdutos.png" alt="Generic placeholder image" width="140" height="140">
-                        <h2>Depositar Crédito</h2>
-                        <p><a class="btn btn-warning waves-effect waves-light" href="ManterProdutoIndex.jsp" data-toggle="tooltip" data-placement="bottom" title="Incluir, Alterar, Consultar e Desbloquear Comidas e Bebidas do Sistema." role="button">Entrar &raquo;</a></p>
+                        <h2>Cadastrar Aluno</h2>
+                        <p><a class="btn btn-warning waves-effect waves-light" href="incluirAluno.jsp" data-toggle="tooltip" data-placement="bottom" title="Cadastrar Aluno." role="button">Entrar &raquo;</a></p>
                     </div>
                     <div class="col-lg-4">
                         <img class="img-circle" src="Imagens/cadastro.png" alt="Generic placeholder image" width="140" height="140">
-                        <h2>Cadastrar Aluno</h2>
-                        <p><a class="btn btn-warning waves-effect waves-light" data-toggle="tooltip" data-placement="bottom" title="Cadastrar responsável atribuindo além de seus dados um login e uma senha de acesso." href="CadResponsavel.jsp" role="button">Entrar &raquo;</a></p>
+                        <h2>Depositar Crédito</h2>
+                        <p><a class="btn btn-warning waves-effect waves-light" data-toggle="tooltip" data-placement="bottom" title="Depositar crédito para o aluno." href="depositarCredito.jsp" role="button">Entrar &raquo;</a></p>
                     </div>
                     <div class="col-lg-4">
                         <img class="img-circle" src="Imagens/saldo.png" alt="Generic placeholder image" width="140" height="140">
                         <h2>Consultar Saldo do Aluno</h2>
                         <p><a class="btn btn-warning waves-effect waves-light" data-toggle="tooltip" data-placement="bottom" title="Consultar saldo do aluno através da matricula." href="consultarSaldo.jsp" role="button">Entrar &raquo;</a></p>
+                    </div>
+                    <div class="col-lg-4">
+                        <img class="img-circle" src="Imagens/saldo.png" alt="Generic placeholder image" width="140" height="140">
+                        <h2>Consultar Consumo do Aluno</h2>
+                        <p><a class="btn btn-warning waves-effect waves-light" data-toggle="tooltip" data-placement="bottom" title="Consultar consumo do aluno através da matricula." href="consultarConsumoAluno.jsp" role="button">Entrar &raquo;</a></p>
+                    </div>
+                    <div class="col-lg-4">
+                        <img class="img-circle" src="Imagens/saldo.png" alt="Generic placeholder image" width="140" height="140">
+                        <h2>Bloquear Consumo do Aluno</h2>
+                        <p><a class="btn btn-warning waves-effect waves-light" data-toggle="tooltip" data-placement="bottom" title="Consultar saldo do aluno através da matricula." href="bloquearConsumoAluno.jsp" role="button">Entrar &raquo;</a></p>
                     </div>
                 </div>
             </div>
