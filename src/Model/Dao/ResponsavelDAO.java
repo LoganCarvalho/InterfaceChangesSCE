@@ -15,7 +15,7 @@ public class ResponsavelDAO {
           Connection conexao = ConnectionFactory.getConnection();
         int resposta = 0;
         try {
-            String sql = "insert into cantinaescolaFinal.responsavel(id_responsavel,cpf_responsavel,nome_responsavel,telefone_responsavel,email_responsavel,ativo,nome_usuario,senha_usuario) values (?,?,?,?,?,1,?,?)";
+            String sql = "insert into cantinaescolaparaalteracao.responsavel(cpf_responsavel,nome_responsavel,telefone_responsavel,email_responsavel,ativo,nome_usuario,senha_usuario) values (?,?,?,?,1,?,?)";
            
     PreparedStatement stmt = conexao.prepareStatement(sql);
     stmt.setString(1,responsavel.getCpf());
