@@ -2,26 +2,32 @@ package Model.Dao;
 
 import Model.Bean.Responsavel;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
 public class ResponsavelDAO {
-
+    
+    //Modelo a ser seguido
     public int incluir(Responsavel responsavel) throws Exception {
 
-        Connection conexao = ConnectionFactory.getConnection();
+          Connection conexao = ConnectionFactory.getConnection();
         int resposta = 0;
         try {
-            Statement sentence = conexao.createStatement();
-            String sql = "insert into *** "
-                    + "(nome,dt_nascimento, cpf) "
-                    + "values('" + responsavel.getCpf() + "','" + responsavel.getEmail() + "'"
-                    + responsavel.getLogin() + "','" + responsavel.getNome() + "','" + responsavel.getSenha() + "'"
-                    + responsavel.getTelefone() + "')";
-            resposta = sentence.executeUpdate(sql);
+            String sql = "insert into cantinaescolaFinal.responsavel(id_responsavel,cpf_responsavel,nome_responsavel,telefone_responsavel,email_responsavel,ativo,nome_usuario,senha_usuario) values (?,?,?,?,?,1,?,?)";
+           
+    PreparedStatement stmt = conexao.prepareStatement(sql);
+    stmt.setString(1,responsavel.getCpf());
+    stmt.setString(2,responsavel.getNome());
+    stmt.setString(3,responsavel.getTelefone());
+    stmt.setString(4,responsavel.getEmail());
+    stmt.setString(5,responsavel.getLogin());
+    stmt.setString(6,responsavel.getSenha());
+    stmt.execute();
+    
         } catch (SQLException error) {
-
+             System.out.println(error.getMessage());
         } finally {
             if (conexao != null) {
                 ConnectionFactory.FecharConexao(conexao);

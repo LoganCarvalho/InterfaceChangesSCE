@@ -36,8 +36,15 @@ public class Responsavel extends Usuario {
      //modelo que deve ser seguido para fazer os outros métodos
      public int incluir(Responsavel respons) throws Exception {
 
-        ResponsavelDAO responsavel = new ResponsavelDAO();
-        int resposta = responsavel.incluir(respons);
+          int resposta= 0;
+         try {
+              ResponsavelDAO responsavel = new ResponsavelDAO();
+              resposta = responsavel.incluir(respons);
+            
+         } catch (Exception e) {
+             System.out.println(e.getMessage());
+         }
+       
         return resposta;
     }
     

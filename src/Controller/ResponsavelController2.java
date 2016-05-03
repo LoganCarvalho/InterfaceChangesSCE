@@ -7,7 +7,8 @@ package Controller;
 
 import Model.Bean.Responsavel;
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -41,6 +42,11 @@ public class ResponsavelController2 extends HttpServlet {
         respons.setTelefone(request.getParameter("txtTelResponsavel"));
         respons.setLogin(request.getParameter("txtLoginResponsavel"));
         respons.setSenha(request.getParameter("txtSenhaResponsavel"));
+        try {
+            respons.incluir(respons);
+        } catch (Exception ex) {
+            Logger.getLogger(ResponsavelController2.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
        
         
