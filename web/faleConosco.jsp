@@ -54,7 +54,9 @@
                 <div class="col-sm-3">      
                     <img src="Imagens/logo.png" class="img-responsive" style="width:100%" alt="Image">
                 </div>
-                <p>Inovação. Esta é a palavra-chave para garantir a sobrevivência, o crescimento e o fortalecimento de qualquer negócio. Informatizar sua instituição de ensino é essencial para mantê-la organizada, atualizada e competitiva. Melhorar a qualidade dos serviços prestados também é fundamental para criar diferenciais e assim alcançar o sucesso. Pensando nisso foi que surgiu o SCE. O Sistema Cantina Escolas é uma solução específica para instituições que vão desde a Educação Básica até o ensino médio, oferecendo diversas ferramentas de forma modular, ou seja, permitindo que cada instituição componha uma solução adequada ao seu perfil e às suas necessidades.</p>
+                <p>Para maiores esclarecimentos de como funciona nosso sistema ou como adquirir outras ofertas, entre em contato conosco pelos seguintes caminhos:</p><br>
+                <p>sce@sce.org.br</p><br>
+                <p>(071) 3324-4545 / 6768</p>
             </div>
         </div>
 

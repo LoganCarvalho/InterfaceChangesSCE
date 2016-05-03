@@ -36,9 +36,9 @@
                 </div>
                 <div class="container" id="divMenu" style="padding-top: 1cm">
                     <ul class="nav navbar-nav">
-                        <li><a href="#" style="color:#FFFFFF; font-size: x-large"">Sobre</a></li>
-                        <li><a href="#" style="color:#FFFFFF; font-size: x-large">Serviços</a></li>
-                        <li><a href="#" style="color:#FFFFFF; font-size: x-large">Contatos</a></li> 
+                        <li> <a href="Inicio.jsp" style="color:#FFFFFF; font-size: x-large">Sobre</a></li>
+                        <li> <a href="#" style="color:#FFFFFF; font-size: x-large">Serviços</a></li>
+                        <li> <a href="faleConosco.jsp" style="color:#FFFFFF; font-size: x-large">Contatos</a></li>
                     </ul>
                 </div>
                 <ul class="nav navbar-nav navbar-right" style="padding-top: 0.5cm">
