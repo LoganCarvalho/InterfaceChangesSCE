@@ -38,10 +38,10 @@
                         <li class=""><a href="faleConosco.jsp" style="color:#FFFFFF">Fale Conosco</a></li>
                         <li class=""><a href="Inicio.jsp" style="color:#FFFFFF">Sobre o SCE</a></li>
                     </ul>
-                    <form class="navbar-form navbar-right" role="search">
+                    <form class="navbar-form navbar-right" role="search" action="LoginPerfil" method="post">
                         <div class="form-group" method="post" action="login" accept-charset="UTF-8">
-                            <input type="text" class="form-control" placeholder="Email">
-                            <input type="password"  class="form-control" placeholder="Senha">
+                            <input type="text" name="txtEmailLogin" class="form-control" placeholder="Email">
+                            <input type="password" name="txtSenhaLogin" class="form-control" placeholder="Senha">
                         </div>
                         <button type="submit" class="btn btn-warning waves-effect waves-light"><i class="fa fa-arrow-right right"></i>Entrar</button>
                     </form>

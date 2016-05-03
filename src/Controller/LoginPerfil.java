@@ -9,7 +9,6 @@ import Model.Bean.Responsavel;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -19,29 +18,23 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author jcarvalho
  */
-public class ResponsavelController2 extends HttpServlet {
+public class LoginPerfil extends HttpServlet {
 
-    
+  
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException { 
+            throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         Responsavel respons = new Responsavel();
         
         //Pegando parâmetros da tela
-        respons.setNome(request.getParameter("txtNomeResponsavel"));
-        respons.setEmail(request.getParameter("txtEmailResponsavel"));
-        respons.setCpf(request.getParameter("txtCpfResponsavel"));
-        respons.setTelefone(request.getParameter("txtTelResponsavel"));
-        respons.setLogin(request.getParameter("txtLoginResponsavel"));
-        respons.setSenha(request.getParameter("txtSenhaResponsavel"));
-        try {
-            respons.incluir(respons);
+        respons.setLogin(request.getParameter("txtEmailLogin"));
+        respons.setSenha(request.getParameter("txtSenhaLogin"));
+        
+         try {
+            respons.consultar(respons);
         } catch (Exception ex) {
-            Logger.getLogger(ResponsavelController2.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(CadastroResponsavel.class.getName()).log(Level.SEVERE, null, ex);
         }
-         
-        RequestDispatcher rd = request.getRequestDispatcher("***.jsp");
-        rd.include(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

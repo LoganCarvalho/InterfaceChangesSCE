@@ -55,7 +55,7 @@ public class Responsavel extends Usuario {
         return resposta;
     }
       
-       public boolean consultar() throws Exception {
+       public boolean consultar(Responsavel respons) throws Exception {
 
         ResponsavelDAO responsavel = new ResponsavelDAO();
         boolean resposta = responsavel.consultar(this);

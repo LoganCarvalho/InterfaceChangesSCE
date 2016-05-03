@@ -55,7 +55,7 @@
             <p>Cadastrar Responsável</p>
             </div>
             <div class="container">
-                <form action="ResponsavelController2" method="post">  
+                <form action="CadastroResponsavel" method="post">  
                     <div class="form-group row">
                         <label for="txtNomeResponsavel" class="col-sm-2 form-control-label">Nome<span class="glyphicon glyphicon-user"></span></label>
                         <div class="col-sm-4">

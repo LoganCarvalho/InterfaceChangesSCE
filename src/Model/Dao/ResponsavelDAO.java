@@ -14,17 +14,18 @@ public class ResponsavelDAO {
 
           Connection conexao = ConnectionFactory.getConnection();
         int resposta = 0;
+        StringBuilder sql = new StringBuilder();
         try {
-            String sql = "insert into cantinaescolaparaalteracao.responsavel(cpf_responsavel,nome_responsavel,telefone_responsavel,email_responsavel,ativo,nome_usuario,senha_usuario) values (?,?,?,?,1,?,?)";
-           
-    PreparedStatement stmt = conexao.prepareStatement(sql);
+             sql.append("insert into cantinaescolaparaalteracao.responsavel(cpf_responsavel,nome_responsavel,telefone_responsavel,email_responsavel,ativo,nome_usuario,senha_usuario");
+             sql.append("?,?,?,?,1,?,?");     
+    PreparedStatement stmt = conexao.prepareStatement(sql.toString());
     stmt.setString(1,responsavel.getCpf());
     stmt.setString(2,responsavel.getNome());
     stmt.setString(3,responsavel.getTelefone());
     stmt.setString(4,responsavel.getEmail());
     stmt.setString(5,responsavel.getLogin());
     stmt.setString(6,responsavel.getSenha());
-    stmt.execute();
+    stmt.executeUpdate();
     
         } catch (SQLException error) {
              System.out.println(error.getMessage());
@@ -54,24 +55,28 @@ public class ResponsavelDAO {
         return resposta;
     }
 
+    //Verificar se eu devo retornar um responsável ao invés de um bool
     public boolean consultar(Responsavel responsavel) throws Exception {
+        
         Connection conexao = ConnectionFactory.getConnection();
         ResultSet resposta = null;
         boolean ok = false;
+        StringBuilder sql = new StringBuilder();
+        
         try {
-            Statement sentenca = conexao.createStatement();
-            String sql = "select *** from *** "
-                    + "where cpf=" + "'" + responsavel.getCpf() + "'";
-            resposta = sentenca.executeQuery(sql);
+            sql.append("select * from cantinaescolaparaalteracao.responsavel");
+            sql.append("where login = ?");
+            PreparedStatement stmt = conexao.prepareStatement(sql.toString());
+            stmt.setString(1, responsavel.getLogin());
+              
+            resposta = stmt.executeQuery();
             while (resposta.next()) {
-                responsavel.setNome(resposta.getString("campo da tela"));
-                responsavel.setCpf(resposta.getString("campo da tela"));
-                responsavel.setEmail(resposta.getString("campo da tela"));
-                responsavel.setTelefone(resposta.getString("campo da tela"));
+                responsavel.setNome(resposta.getString("login..."));
+               
                 ok = true;
             }
-        } catch (SQLException erro) {
-
+        } catch (SQLException error) {
+                 System.out.println(error.getMessage());
         } finally {
             if (conexao != null) {
                 ConnectionFactory.FecharConexao(conexao, null, resposta);

@@ -5,16 +5,24 @@
         <servlet-class>.ServletMain</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>ResponsavelController2</servlet-name>
-        <servlet-class>Controller.ResponsavelController2</servlet-class>
+        <servlet-name>CadastroResponsavel</servlet-name>
+        <servlet-class>Controller.CadastroResponsavel</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LoginPerfil</servlet-name>
+        <servlet-class>Controller.LoginPerfil</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ServletMain</servlet-name>
         <url-pattern>/ServletMain</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>ResponsavelController2</servlet-name>
-        <url-pattern>/ResponsavelController2</url-pattern>
+        <servlet-name>CadastroResponsavel</servlet-name>
+        <url-pattern>/CadastroResponsavel</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginPerfil</servlet-name>
+        <url-pattern>/LoginPerfil</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
