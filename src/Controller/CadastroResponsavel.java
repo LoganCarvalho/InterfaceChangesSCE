@@ -26,7 +26,7 @@ public class CadastroResponsavel extends HttpServlet {
             throws ServletException, IOException { 
         response.setContentType("text/html;charset=UTF-8");
         Responsavel respons = new Responsavel();
-        
+        int resposta = 0;
         //Pegando parâmetros da tela
         respons.setNome(request.getParameter("txtNomeResponsavel"));
         respons.setEmail(request.getParameter("txtEmailResponsavel"));
@@ -35,11 +35,12 @@ public class CadastroResponsavel extends HttpServlet {
         respons.setLogin(request.getParameter("txtLoginResponsavel"));
         respons.setSenha(request.getParameter("txtSenhaResponsavel"));
         try {
-            respons.incluir(respons);
+           resposta= respons.incluir(respons);
         } catch (Exception ex) {
             Logger.getLogger(CadastroResponsavel.class.getName()).log(Level.SEVERE, null, ex);
         }
-         
+         //Verificar uma forma de exibir uma mesnagem depois que a inserção ocorrer com sucesso.
+     
         RequestDispatcher rd = request.getRequestDispatcher("***.jsp");
         rd.include(request, response);
     }

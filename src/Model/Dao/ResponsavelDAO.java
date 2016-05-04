@@ -16,8 +16,8 @@ public class ResponsavelDAO {
         int resposta = 0;
         StringBuilder sql = new StringBuilder();
         try {
-             sql.append("insert into cantinaescolaparaalteracao.responsavel(cpf_responsavel,nome_responsavel,telefone_responsavel,email_responsavel,ativo,nome_usuario,senha_usuario");
-             sql.append("?,?,?,?,1,?,?");     
+             sql.append("insert into cantinaescolaparaalteracao.responsavel(cpf_responsavel,nome_responsavel,telefone_responsavel,email_responsavel,ativo,nome_usuario,senha_usuario)");
+             sql.append(" values(?,?,?,?,1,?,?)");     
     PreparedStatement stmt = conexao.prepareStatement(sql.toString());
     stmt.setString(1,responsavel.getCpf());
     stmt.setString(2,responsavel.getNome());
@@ -31,6 +31,7 @@ public class ResponsavelDAO {
              System.out.println(error.getMessage());
         } finally {
             if (conexao != null) {
+                resposta = 1;
                 ConnectionFactory.FecharConexao(conexao);
             }
         }
@@ -42,8 +43,8 @@ public class ResponsavelDAO {
         int resposta = 0;
         try {
             Statement sentenca = conexao.createStatement();
-            String sql = "delete from *** "
-                    + "where *** = **";
+            String sql = "delete from cantinaescolaparaalteracao.responsavel "
+                    + "where cpf = **";
             resposta = sentenca.executeUpdate(sql);
         } catch (SQLException erro) {
 
@@ -65,13 +66,13 @@ public class ResponsavelDAO {
         
         try {
             sql.append("select * from cantinaescolaparaalteracao.responsavel");
-            sql.append("where login = ?");
+            sql.append("where login_usuario LIKE %?% ");
             PreparedStatement stmt = conexao.prepareStatement(sql.toString());
             stmt.setString(1, responsavel.getLogin());
               
             resposta = stmt.executeQuery();
             while (resposta.next()) {
-                responsavel.setNome(resposta.getString("login..."));
+                responsavel.setLogin(resposta.getString("login_usuario"));
                
                 ok = true;
             }

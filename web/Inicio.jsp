@@ -39,7 +39,7 @@
                         <li class=""><a href="Inicio.jsp" style="color:#FFFFFF">Sobre o SCE</a></li>
                     </ul>
                     <form class="navbar-form navbar-right" role="search" action="LoginPerfil" method="post">
-                        <div class="form-group" method="post" action="login" accept-charset="UTF-8">
+                        <div class="form-group" method="post" action="LoginPerfil" accept-charset="UTF-8">
                             <input type="text" name="txtEmailLogin" class="form-control" placeholder="Email">
                             <input type="password" name="txtSenhaLogin" class="form-control" placeholder="Senha">
                         </div>
