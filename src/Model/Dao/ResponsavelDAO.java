@@ -66,7 +66,7 @@ public class ResponsavelDAO {
         
         try {
             sql.append("select * from cantinaescolaparaalteracao.responsavel");
-            sql.append("where login_usuario LIKE %?% ");
+            sql.append(" where login_usuario LIKE '%'  ?  '%' ");
             PreparedStatement stmt = conexao.prepareStatement(sql.toString());
             stmt.setString(1, responsavel.getLogin());
               
