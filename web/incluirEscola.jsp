@@ -37,7 +37,7 @@
                 <div class="container" id="divMenu" style="padding-top: 1cm">
                     <ul class="nav navbar-nav">
                         <li> <a href="Inicio.jsp" style="color:#FFFFFF; font-size: x-large">Sobre</a></li>
-                        <li> <a href="#" style="color:#FFFFFF; font-size: x-large">Serviços</a></li>
+                        <li> <a href="servicos.jsp" style="color:#FFFFFF; font-size: x-large">Serviços</a></li>
                         <li> <a href="faleConosco.jsp" style="color:#FFFFFF; font-size: x-large">Contatos</a></li>
                     </ul>
                 </div>
@@ -59,25 +59,25 @@
                     <div class="form-group row">
                         <label for="txtNomeEscola" class="col-sm-2 form-control-label">Nome da Escola</label>
                         <div class="col-sm-4">
-                            <input type="text" class="form-control" name="txtNomeEscola" describedby="basic-addon2" placeholder="Nome da Escola">
+                            <input type="text" class="form-control" name="txtNomeEscola" describedby="basic-addon2">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="txtEnderecoEscola" class="col-sm-2 form-control-label">Endereço da Escola</label>
                         <div class="col-sm-4">
-                            <input type="text" class="form-control" name="txtEnderecoEscola" placeholder="Endereço da Escola">
+                            <input type="text" class="form-control" name="txtEnderecoEscola">
                         </div>
                     </div>   
                      <div class="form-group row">
                         <label for="txtTelEscola" class="col-sm-2 form-control-label">Telefone</label>
                         <div class="col-sm-4">
-                            <input type="text" maxlength="9" class="form-control" name="txtTelEscola" placeholder="Telefone da Escola">
+                            <input type="text" maxlength="9" class="form-control" name="txtTelEscola">
                         </div>
                     </div>
                      <div class="form-group row">
                         <label for="txtEmailEscola" class="col-sm-2 form-control-label">Email</label>
                         <div class="col-sm-4">
-                            <input type="email" class="form-control" name="txtEmailEscola" placeholder="Email da Escola">
+                            <input type="email" class="form-control" name="txtEmailEscola">
                         </div>
                     </div>                                 
                     <button type="submit" class="btn btn-warning">Cadastrar</button>

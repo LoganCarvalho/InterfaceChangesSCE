@@ -37,7 +37,7 @@
                 <div class="container" id="divMenu" style="padding-top: 1cm">
                     <ul class="nav navbar-nav">
                         <li> <a href="Inicio.jsp" style="color:#FFFFFF; font-size: x-large">Sobre</a></li>
-                        <li> <a href="#" style="color:#FFFFFF; font-size: x-large">Serviços</a></li>
+                        <li> <a href="servicos.jsp" style="color:#FFFFFF; font-size: x-large">Serviços</a></li>
                         <li> <a href="faleConosco.jsp" style="color:#FFFFFF; font-size: x-large">Contatos</a></li>
                     </ul>
                 </div>
@@ -59,43 +59,41 @@
                     <div class="form-group row">
                         <label for="txtNomeFuncionario" class="col-sm-2 form-control-label">Nome do Funcionário</label>
                         <div class="col-sm-4">
-                            <input type="text" class="form-control" name="txtNomeFuncionario" describedby="basic-addon2" placeholder="Nome do Funcionário">
-                        </div>
+                            <input type="text" class="form-control" name="txtNomeFuncionario" describedby="basic-addon2">                        </div>
                     </div>
                     <div class="form-group row">
                         <label for="txtMatriculaFunci" class="col-sm-2 form-control-label">Mátricula do Funcionário</label>
                         <div class="col-sm-4">
-                            <input type="text" class="form-control" name="txtMatriculaFunci" placeholder="Mátricula do Funcionário">
+                            <input type="text" class="form-control" name="txtMatriculaFunci">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="txtCepFunci" class="col-sm-2 form-control-label">CEP</label>
                         <div class="col-sm-4">
-                            <input type="text" maxlength="8"  class="form-control" name="txtCepFunci" placeholder="CEP">
+                            <input type="text" maxlength="8"  class="form-control" name="txtCepFunci">
                         </div>
                     </div>
                      <div class="form-group row">
                         <label for="txtEmailFunci" class="col-sm-2 form-control-label">Email</label>
                         <div class="col-sm-4">
-                            <input type="email" class="form-control" name="txtEmailFunci" placeholder="Email do Funcionário">
+                            <input type="email" class="form-control" name="txtEmailFunci">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="txtTelFunci" class="col-sm-2 form-control-label">Telefone</label>
                         <div class="col-sm-4">
-                            <input type="text" maxlength="9" class="form-control" name="txtTelFunci" placeholder="Telefone do Funcionário">
-                        </div>
+                            <input type="text" maxlength="9" class="form-control" name="txtTelFunci">
                     </div>
                     <div class="form-group row">
                         <label for="txtLoginFunci" class="col-sm-2 form-control-label">Login</label>
                         <div class="col-sm-4">
-                            <input type="text" class="form-control" name="txtLoginFunci" placeholder="Login do Funcionário">
+                            <input type="text" class="form-control" name="txtLoginFunci">
                         </div>
                     </div>
                      <div class="form-group row">
                         <label for="txtSenhaResponsavel" class="col-sm-2 form-control-label">Senha<span class="glyphicon glyphicon-certificate"></span></label>
                         <div class="col-sm-4">
-                            <input type="password" maxlength="6" class="form-control" name="txtSenhaResponsavel" placeholder="Senha do Responsável">
+                            <input type="password" maxlength="6" class="form-control" name="txtSenhaResponsavel">
                         </div>
                     </div>
                     <button type="submit" class="btn btn-warning">Cadastrar</button>

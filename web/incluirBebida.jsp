@@ -32,7 +32,7 @@
                 <div style="padding-top: 1cm">
                     <ul class="nav navbar-nav">
                         <li> <a href="Inicio.jsp" style="color:#FFFFFF; font-size: x-large">Sobre</a></li>
-                        <li> <a href="#" style="color:#FFFFFF; font-size: x-large">Serviços</a></li>
+                        <li> <a href="servicos.jsp" style="color:#FFFFFF; font-size: x-large">Serviços</a></li>
                         <li> <a href="faleConosco.jsp" style="color:#FFFFFF; font-size: x-large">Contatos</a></li>
                     </ul>
                 </div>
@@ -54,19 +54,19 @@
                     <div class="form-group row">
                         <label for="txtCodigoBebida" class="col-sm-2 form-control-label">Código da Bebida</label>
                         <div class="col-sm-4">
-                            <input type="text" class="form-control" name="txtCodigoBebida" describedby="basic-addon2" placeholder="Código da Bebida">
+                            <input type="text" class="form-control" name="txtCodigoBebida" describedby="basic-addon2">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="txtNomeBebida" class="col-sm-2 form-control-label">Nome da Bebida</label>
                         <div class="col-sm-4">
-                            <input type="text" class="form-control" name="txtNomeBebida" placeholder="Nome da Bebida">
+                            <input type="text" class="form-control" name="txtNomeBebida">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="txtFornecedor" class="col-sm-2 form-control-label">Fornecedor</label>
                         <div class="col-sm-4">
-                            <input type="text"  class="form-control" name="txtFornecedor" placeholder="Nome do Fornecedor">
+                            <input type="text"  class="form-control" name="txtFornecedor">
                         </div>
                     </div>
                     <div class="form-group row">

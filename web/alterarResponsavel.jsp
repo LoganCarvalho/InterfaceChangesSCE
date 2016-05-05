@@ -37,7 +37,7 @@
                 <div class="container" id="divMenu" style="padding-top: 1cm">
                     <ul class="nav navbar-nav">
                         <li> <a href="Inicio.jsp" style="color:#FFFFFF; font-size: x-large">Sobre</a></li>
-                        <li> <a href="#" style="color:#FFFFFF; font-size: x-large">Serviços</a></li>
+                        <li> <a href="servicos.jsp" style="color:#FFFFFF; font-size: x-large">Serviços</a></li>
                         <li> <a href="faleConosco.jsp" style="color:#FFFFFF; font-size: x-large">Contatos</a></li>
                     </ul>
                 </div>
@@ -59,37 +59,37 @@
                     <div class="form-group row">
                         <label for="txtNomeResponsavel" class="col-sm-2 form-control-label">Nome<span class="glyphicon glyphicon-user"></span></label>
                         <div class="col-sm-4">
-                            <input type="text" class="form-control" name="txtNomeResponsavel" describedby="basic-addon2" placeholder="Nome do Responsável">
+                            <input type="text" class="form-control" name="txtNomeResponsavel" describedby="basic-addon2">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="txtEmailResponsavel" class="col-sm-2 form-control-label">Email<span class="glyphicon glyphicon-envelope"></span></label>
                         <div class="col-sm-4">
-                            <input type="email" class="form-control" name="txtEmailResponsavel" placeholder="Email do Responsável">
+                            <input type="email" class="form-control" name="txtEmailResponsavel">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="txtCpfResponsavel" class="col-sm-2 form-control-label">CPF<span class="glyphicon glyphicon-tag"></span></label>
                         <div class="col-sm-4">
-                            <input type="text" maxlength="11"  class="form-control" name="txtCpfResponsavel" placeholder="CPF do Responsável">
+                            <input type="text" maxlength="11"  class="form-control" name="txtCpfResponsavel">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="txtTelResponsavel" class="col-sm-2 form-control-label">Telefone<span class="glyphicon glyphicon-phone-alt"></span></label>
                         <div class="col-sm-4">
-                            <input type="text" maxlength="9" class="form-control" name="txtTelResponsavel" placeholder="Telefone do Responsável">
+                            <input type="text" maxlength="9" class="form-control" name="txtTelResponsavel">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="txtLoginResponsavel" class="col-sm-2 form-control-label">Login<span class="glyphicon glyphicon-log-in"></span></label>
                         <div class="col-sm-4">
-                            <input type="text" class="form-control" name="txtLoginResponsavel" placeholder="Login do Responsável">
+                            <input type="text" class="form-control" name="txtLoginResponsavel">
                         </div>
                     </div>
                      <div class="form-group row">
                         <label for="txtSenhaResponsavel" class="col-sm-2 form-control-label">Senha<span class="glyphicon glyphicon-certificate"></span></label>
                         <div class="col-sm-4">
-                            <input type="password" maxlength="6" class="form-control" name="txtSenhaResponsavel" placeholder="Senha do Responsável">
+                            <input type="password" maxlength="6" class="form-control" name="txtSenhaResponsavel">
                         </div>
                     </div>
                     <button type="submit" class="btn btn-warning">Alterar</button>

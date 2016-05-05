@@ -32,7 +32,7 @@
                 <div style="padding-top: 1cm">
                     <ul class="nav navbar-nav">
                         <li> <a href="Inicio.jsp" style="color:#FFFFFF; font-size: x-large">Sobre</a></li>
-                        <li> <a href="#" style="color:#FFFFFF; font-size: x-large">Serviços</a></li>
+                        <li> <a href="servicos.jsp" style="color:#FFFFFF; font-size: x-large">Serviços</a></li>
                         <li> <a href="faleConosco.jsp" style="color:#FFFFFF; font-size: x-large">Contatos</a></li>
                     </ul>
                 </div>
@@ -54,13 +54,13 @@
                     <div class="form-group row">
                         <label for="txtMatricula" class="col-sm-2 form-control-label">Mátricula do Aluno</label>
                         <div class="col-sm-3">
-                            <input type="text" class="form-control" name="txtMatricula" describedby="basic-addon2" placeholder="Mátricula do Aluno">
+                            <input type="text" class="form-control" name="txtMatricula" describedby="basic-addon2">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="txtSaldoAluno" class="col-sm-2 form-control-label">Saldo do Aluno</label>
                         <div class="col-sm-3">
-                            <input type="text" class="form-control" name="txtSaldoAluno" placeholder="Saldo do Aluno">
+                            <input type="text" class="form-control" name="txtSaldoAluno">
                         </div>
                     </div>                    
                     <button type="submit" class="btn btn-warning">Consultar</button>

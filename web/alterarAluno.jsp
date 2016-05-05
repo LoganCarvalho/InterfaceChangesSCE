@@ -37,7 +37,7 @@
                 <div class="container" id="divMenu" style="padding-top: 1cm">
                     <ul class="nav navbar-nav">
                         <li> <a href="Inicio.jsp" style="color:#FFFFFF; font-size: x-large">Sobre</a></li>
-                        <li> <a href="#" style="color:#FFFFFF; font-size: x-large">Serviços</a></li>
+                        <li> <a href="servicos.jsp" style="color:#FFFFFF; font-size: x-large">Serviços</a></li>
                         <li> <a href="faleConosco.jsp" style="color:#FFFFFF; font-size: x-large">Contatos</a></li>
                     </ul>
                 </div>
@@ -59,19 +59,19 @@
                     <div class="form-group row">
                         <label for="txtNomeAluno" class="col-sm-2 form-control-label">Nome do Aluno</label>
                         <div class="col-sm-4">
-                            <input type="text" class="form-control" name="txtNomeAluno" describedby="basic-addon2" placeholder="Nome do Aluno">
+                            <input type="text" class="form-control" name="txtNomeAluno" describedby="basic-addon2">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="txtMatriculaAluno" class="col-sm-2 form-control-label">Mátricula do Aluno</label>
                         <div class="col-sm-4">
-                            <input type="text" class="form-control" name="txtMatriculaAluno" placeholder="Mátricula do Aluno">
+                            <input type="text" class="form-control" name="txtMatriculaAluno">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="txtTurma" class="col-sm-2 form-control-label">Turma do Aluno</label>
                         <div class="col-sm-4">
-                            <input type="text"   class="form-control" name="txtTurma" placeholder="Turma do Aluno">
+                            <input type="text"   class="form-control" name="txtTurma">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -88,13 +88,13 @@
                     <div class="form-group row">
                         <label for="txtLoginAluno" class="col-sm-2 form-control-label">Login</label>
                         <div class="col-sm-4">
-                            <input type="text" class="form-control" name="txtLoginAluno" placeholder="Login do Aluno">
+                            <input type="text" class="form-control" name="txtLoginAluno">
                         </div>
                     </div>
                      <div class="form-group row">
                         <label for="txtSenhaAluno" class="col-sm-2 form-control-label">Senha</label>
                         <div class="col-sm-4">
-                            <input type="password" maxlength="6" class="form-control" name="txtSenhaAluno" placeholder="Senha do Aluno">
+                            <input type="password" maxlength="6" class="form-control" name="txtSenhaAluno">
                         </div>
                     </div>
                     <button type="submit" class="btn btn-warning">Alterar</button>
