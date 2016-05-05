@@ -46,7 +46,7 @@
         </nav>
              <div class="jumbotron">
             <div class="container text-center">
-            <p>Consultar Comida</p>
+            <p>Comprar Alimento</p>
             </div>
             <div class="container">
                 <form action="ResponsavelController2" method="post">  
