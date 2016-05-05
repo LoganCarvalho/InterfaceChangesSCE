@@ -12,6 +12,10 @@
         <servlet-name>LoginPerfil</servlet-name>
         <servlet-class>Controller.LoginPerfil</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CadastroAlunoPorResponsavel</servlet-name>
+        <servlet-class>Controller.CadastroAlunoPorResponsavel</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ServletMain</servlet-name>
         <url-pattern>/ServletMain</url-pattern>
@@ -23,6 +27,10 @@
     <servlet-mapping>
         <servlet-name>LoginPerfil</servlet-name>
         <url-pattern>/LoginPerfil</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CadastroAlunoPorResponsavel</servlet-name>
+        <url-pattern>/CadastroAlunoPorResponsavel</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

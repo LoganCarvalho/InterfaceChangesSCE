@@ -1,6 +1,7 @@
 
 package Model.Bean;
 
+import Model.Dao.AlunoDAO;
 import java.util.ArrayList;
 
 public class Aluno extends Usuario {
@@ -70,6 +71,35 @@ public class Aluno extends Usuario {
 
     public void setResponsavel(Responsavel responsavel) {
         this.responsavel = responsavel;
+    }
+    
+        //modelo que deve ser seguido para fazer os outros métodos
+     public int incluir(Aluno aluno) throws Exception {
+
+          int resposta= 0;
+         try {
+              AlunoDAO alunoDao = new AlunoDAO();
+              resposta = alunoDao.incluir(aluno);
+            
+         } catch (Exception e) {
+             System.out.println(e.getMessage());
+         }
+       
+        return resposta;
+    }
+    
+      public int excluir() throws Exception {
+
+        AlunoDAO aluno = new AlunoDAO();
+        int resposta = aluno.excluir(this);
+        return resposta;
+    }
+      
+       public boolean consultar(Aluno aluno) throws Exception {
+
+        AlunoDAO alunoDao = new AlunoDAO();
+        boolean resposta = alunoDao.consultar(aluno);
+        return resposta;
     }
     
         

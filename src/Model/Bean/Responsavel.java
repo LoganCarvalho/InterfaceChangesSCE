@@ -38,8 +38,8 @@ public class Responsavel extends Usuario {
 
           int resposta= 0;
          try {
-              ResponsavelDAO responsavel = new ResponsavelDAO();
-              resposta = responsavel.incluir(respons);
+              ResponsavelDAO responsavelDao = new ResponsavelDAO();
+              resposta = responsavelDao.incluir(respons);
             
          } catch (Exception e) {
              System.out.println(e.getMessage());
