@@ -64,31 +64,17 @@
                             <table class="table table-hover">
                                 <thead>
                                     <tr>
-                                        <th>Mátricula</th>
-                                        <th>Nome do Aluno</th>
-                                        <th>Turma</th>
-                                        <th>Turno</th>
-                                        <th>Editar</th>
-                                        <th>Excluir</th>
+                                        <th>Nome do Produto</th>
+                                        <th>Preço</th>
+                                        <th>Bloquear</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td>John</td>
-                                        <td>Doe</td> 
-                                        <td>Doe</td>
-                                        <td>Doe</td>
-                                        <td><a href="alterarAluno.jsp"><span class="glyphicon glyphicon-edit"></span></a></td>                                        
-                                        <td><span class="glyphicon glyphicon-remove"></span></td>       
-                                    </tr>
-                                    <tr>
-                                        <td>Mary</td>
-                                        <td>Moe</td>
-                                        <td>Doe</td>
-                                        <td>Doe</td> 
-                                        <td><a href="alterarAluno.jsp"><span class="glyphicon glyphicon-edit"></span></a></td>                                        
-                                        <td><span class="glyphicon glyphicon-remove"></span></td>                                        
-                                    </tr>
+                                        <td>Doe</td>                                        
+                                        <td><a href="#"><span class="glyphicon glyphicon-ban-circle"></span></a></td>                                        
+                                    </tr>                              
                                 </tbody>
                             </table>
                         </div>    

@@ -58,12 +58,7 @@
                         <img class="img-circle" src="Imagens/compras.jpg" alt="Generic placeholder image" width="140" height="140">
                         <h2>Comprar</h2>
                         <p><a class="btn btn-warning waves-effect waves-light" href="realizarCompra.jsp" data-toggle="tooltip" data-placement="bottom" title="Clique aqui para realizar compra dos produtos desejados." role="button">Entrar &raquo;</a></p>
-                    </div>
-                    <div class="col-md-2">
-                        <img class="img-circle" src="Imagens/saldo.jpg" alt="Generic placeholder image" width="140" height="140">
-                        <h2>Saldo</h2>
-                        <p><a class="btn btn-warning waves-effect waves-light" data-toggle="tooltip" data-placement="bottom" title="Clique aqui para consultar seu saldo." href="consultarSaldo.jsp" role="button">Entrar &raquo;</a></p>
-                    </div>
+                    </div>                 
                 </div>             
             </div>
         </div>
