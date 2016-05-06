@@ -59,6 +59,33 @@ public class ResponsavelDAO {
         }
         return resposta;
     }
+    
+     public int update(Responsavel responsavel) throws Exception {
+        
+        Connection conexao = ConnectionFactory.getConnection();
+        int resposta = 0;
+        StringBuilder sql = new StringBuilder();
+        try {
+            sql.append("UPDATE cantinaescolaparaalteracao.responsavel SET");
+            sql.append("nome_responsavel = ? ,telefone_responsavel = ? ,email_responsavel = ? ");
+            sql.append(" WHERE cpf = ?");
+            PreparedStatement stmt = conexao.prepareStatement(sql.toString());
+            stmt.setString(1, responsavel.getNome());
+            stmt.setString(2, responsavel.getTelefone());
+            stmt.setString(3, responsavel.getEmail()); 
+            stmt.setString(4, responsavel.getCpf());
+            stmt.executeUpdate();
+
+        } catch (SQLException error) {
+            System.out.println(error.getMessage());
+        } finally {
+            if (conexao != null) {
+                resposta = 1;
+                ConnectionFactory.FecharConexao(conexao);
+            }
+        }
+        return resposta;
+    }
 
     //Verificar se eu devo retornar um responsável ao invés de um bool
     public boolean consultar(Responsavel responsavel) throws Exception {
