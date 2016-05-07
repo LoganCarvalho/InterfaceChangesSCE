@@ -16,6 +16,7 @@ public class ResponsavelDAO {
         int resposta = 0;
         int idInsercao=0;
         StringBuilder sql = new StringBuilder();
+        StringBuilder sql1 = new StringBuilder();
             try {
              sql.append("insert into cantinaescolaparaalteracao.usuario(senha_usuario, login_usuario, tipo_usuario)");
              sql.append(" values(?,?,'R'); ");
@@ -29,9 +30,9 @@ public class ResponsavelDAO {
              rs.next();
              idInsercao = rs.getInt(1);             
 
-            sql.append(" insert into cantinaescolaparaalteracao.responsavel(cpf_responsavel, nome_responsavel, telefone_responsavel, email_responsavel, ativo, id_usuario)");
-            sql.append(" values(?,?,?,?,1,?)");
-            PreparedStatement stmt = conexao.prepareStatement(sql.toString());
+            sql1.append(" insert into cantinaescolaparaalteracao.responsavel(cpf_responsavel, nome_responsavel, telefone_responsavel, email_responsavel, ativo, id_usuario)");
+            sql1.append(" values(?,?,?,?,1,?)");
+            PreparedStatement stmt = conexao.prepareStatement(sql1.toString());
             stmt.setString(1, responsavel.getCpf());
             stmt.setString(2, responsavel.getNome());
             stmt.setString(3, responsavel.getTelefone());
