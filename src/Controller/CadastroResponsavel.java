@@ -41,7 +41,7 @@ public class CadastroResponsavel extends HttpServlet {
         }
          //Verificar uma forma de exibir uma mesnagem depois que a inserção ocorrer com sucesso.
      
-        RequestDispatcher rd = request.getRequestDispatcher("***.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("sucesso.jsp");
         rd.include(request, response);
     }
 

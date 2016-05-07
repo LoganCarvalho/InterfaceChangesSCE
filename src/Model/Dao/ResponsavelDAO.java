@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 public class ResponsavelDAO {
 
@@ -13,17 +14,29 @@ public class ResponsavelDAO {
 
         Connection conexao = ConnectionFactory.getConnection();
         int resposta = 0;
+        int idInsercao=0;
         StringBuilder sql = new StringBuilder();
-        try {
-            sql.append("insert into cantinaescolaparaalteracao.responsavel(cpf_responsavel,nome_responsavel,telefone_responsavel,email_responsavel,ativo,nome_usuario,senha_usuario)");
-            sql.append(" values(?,?,?,?,1,?,?)");
+            try {
+             sql.append("insert into cantinaescolaparaalteracao.usuario(senha_usuario, login_usuario, tipo_usuario)");
+             sql.append(" values(?,?,'R'); ");
+             PreparedStatement stmt1 = conexao.prepareStatement(sql.toString(), Statement.RETURN_GENERATED_KEYS);// o return generated keys retorna o ultimo id da tabela que passou pela inserção, desde de que este campo esteja como AutoIncrement.
+             stmt1.setString(1, responsavel.getSenha());
+             stmt1.setString(2, responsavel.getLogin());
+             stmt1.executeUpdate();
+
+             //Pegando resultado do generated keys
+             ResultSet rs = stmt1.getGeneratedKeys();
+             rs.next();
+             idInsercao = rs.getInt(1);             
+
+            sql.append(" insert into cantinaescolaparaalteracao.responsavel(cpf_responsavel, nome_responsavel, telefone_responsavel, email_responsavel, ativo, id_usuario)");
+            sql.append(" values(?,?,?,?,1,?)");
             PreparedStatement stmt = conexao.prepareStatement(sql.toString());
             stmt.setString(1, responsavel.getCpf());
             stmt.setString(2, responsavel.getNome());
             stmt.setString(3, responsavel.getTelefone());
-            stmt.setString(4, responsavel.getEmail());
-            stmt.setString(5, responsavel.getLogin());
-            stmt.setString(6, responsavel.getSenha());
+            stmt.setString(4, responsavel.getEmail());  
+            stmt.setString(5, Integer.toString(idInsercao));
             stmt.executeUpdate();
 
         } catch (SQLException error) {

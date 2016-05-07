@@ -55,7 +55,7 @@
             <p>Cadastrar Aluno</p>
             </div>
             <div class="container">
-                <form action="ResponsavelController2" method="post">  
+                <form action="CadastroAlunoPorResponsavel" method="post">  
                     <div class="form-group row">
                         <label for="txtNomeAluno" class="col-sm-2 form-control-label">Nome do Aluno</label>
                         <div class="col-sm-4">
@@ -65,7 +65,7 @@
                     <div class="form-group row">
                         <label for="txtMatriculaAluno" class="col-sm-2 form-control-label">Mátricula do Aluno</label>
                         <div class="col-sm-4">
-                            <input type="text" class="form-control" name="txtMatriculaAluno">
+                            <input type="text" maxlength="9" class="form-control" name="txtMatriculaAluno">
                         </div>
                     </div>
                     <div class="form-group row">
