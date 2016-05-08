@@ -50,7 +50,7 @@
             <p>Incluir Bebida</p>
             </div>
             <div class="container">
-                <form action="ResponsavelController2" method="post">  
+                <form action="CadastroBebida" method="post">  
                     <div class="form-group row">
                         <label for="txtCodigoBebida" class="col-sm-2 form-control-label">Código da Bebida</label>
                         <div class="col-sm-4">
@@ -73,6 +73,12 @@
                         <label for="txtPrecoBebida" class="col-sm-2 form-control-label">Preço da Bebida</label>
                         <div class="col-sm-4">
                             <input type="text" class="form-control" name="txtPrecoBebida" placeholder="R$ 00,00">
+                        </div>
+                    </div>
+                     <div class="form-group row">
+                        <label for="txtQntdBebida" class="col-sm-2 form-control-label">Quantidade</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" name="txtQntdBebida">
                         </div>
                     </div>
                     <button type="submit" class="btn btn-warning">Cadastrar</button>
