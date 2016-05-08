@@ -1,3 +1,6 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="Model.Bean.Responsavel"%>
+<%@page import="Model.Dao.ResponsavelDAO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -49,17 +52,11 @@
             <p>Consultar Responsável</p>
             </div>
             <div class="container">
-                <form action="ResponsavelController2" method="post">  
-                    <div class="form-group row">
-                        <label for="txtMatricula" class="col-sm-2 form-control-label">Mátricula </label>
-                        <div class="col-sm-3">
-                            <input type="text" class="form-control" name="txtMatricula" describedby="basic-addon2">
-                        </div>
-                    </div>
+                <form action="ConsultarResponsavel" method="post">  
                     <div class="form-group row">
                         <label for="txtNomeResponsavel" class="col-sm-2 form-control-label">Nome do Responsável</label>
                         <div class="col-sm-3">
-                            <input type="text" class="form-control" name="txtNomeAluno">
+                            <input type="text" class="form-control" name="txtNomeResponsavel">
                         </div>
                     </div>                    
                     <button type="submit" class="btn btn-warning">Consultar</button>                                                      
@@ -68,7 +65,6 @@
                             <table class="table table-hover">
                                 <thead>
                                     <tr>
-                                        <th>Mátricula</th>
                                         <th>Nome do Responsável</th>
                                         <th>CPF</th>
                                         <th>Telefone</th>
@@ -77,25 +73,21 @@
                                         <th>Excluir</th>
                                     </tr>
                                 </thead>
+                                <% ResponsavelDAO dao = new ResponsavelDAO();
+                                    ArrayList<Responsavel> responsavel = dao.listarResponsavel();
+                                    for( Responsavel respons : responsavel){
+                                %>
                                 <tbody>
                                     <tr>
-                                        <td>John</td>
-                                        <td>Doe</td> 
-                                        <td>Doe</td>
-                                        <td>Doe</td>
-                                        <th>doe</th>
+                                        <td><% respons.getNome();%></td> 
+                                        <td><% respons.getCpf();%></td>
+                                        <td><% respons.getTelefone();%></td>
+                                        <th><% respons.getEmail();%></th>
                                         <td><a href="alterarResponsavel.jsp"><span class="glyphicon glyphicon-edit"></span></a></td>                                        
                                         <td><span class="glyphicon glyphicon-remove"></span></td>       
                                     </tr>
-                                    <tr>
-                                        <td>Mary</td>
-                                        <td>Moe</td>
-                                        <td>Doe</td>
-                                        <td>Doe</td> 
-                                        <td>Doe</td>
-                                        <td><a href="alterarResponsavel.jsp"><span class="glyphicon glyphicon-edit"></span></a></td>                                        
-                                        <td><span class="glyphicon glyphicon-remove"></span></td>                                        
-                                    </tr>
+                                <% } %>    
+                                    
                                 </tbody>
                             </table>
                         </div>    

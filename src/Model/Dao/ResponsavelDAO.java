@@ -6,6 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 public class ResponsavelDAO {
 
@@ -111,13 +112,16 @@ public class ResponsavelDAO {
 
         try {
             sql.append("select * from cantinaescolaparaalteracao.responsavel");
-            sql.append(" where login_usuario LIKE '%'  ?  '%' ");
+            sql.append(" where nome_responsavel LIKE  ?  ");
             PreparedStatement stmt = conexao.prepareStatement(sql.toString());
-            stmt.setString(1, responsavel.getLogin());
+            stmt.setString(1, "'" + responsavel.getNome()+ "'");
 
             resposta = stmt.executeQuery();
             while (resposta.next()) {
-                responsavel.setLogin(resposta.getString("login_usuario"));
+                responsavel.setNome(resposta.getString("nome_responsavel"));
+                responsavel.setCpf(resposta.getString("cpf_responsavel"));
+                responsavel.setTelefone(resposta.getString("telefone_responsavel"));
+                responsavel.setEmail(resposta.getString("email_responsavel"));
 
                 ok = true;
             }
@@ -129,6 +133,46 @@ public class ResponsavelDAO {
             }
         }
         return ok;
+    }
+    
+    public ArrayList<Responsavel> listarResponsavel() throws Exception {
+        
+        ArrayList<Responsavel> responsaveis = new ArrayList();
+        Responsavel responsavel;
+        
+        Responsavel respon = new Responsavel();
+        
+        Connection conexao = ConnectionFactory.getConnection();
+        ResultSet resposta = null;
+        boolean ok = false;
+        StringBuilder sql = new StringBuilder();
+        
+        try {            
+            conexao = new ConnectionFactory().getConnection();
+            sql.append("select * from cantinaescolaparaalteracao.responsavel");
+            sql.append(" where nome_responsavel LIKE ? ");
+            
+            PreparedStatement stmt = conexao.prepareStatement(sql.toString());
+            stmt.setString(1, ("'%" + respon.getNome() + "%'"));                     
+            resposta = stmt.executeQuery();
+            
+            while (resposta.next()) {
+                responsavel = new Responsavel();
+                responsavel.setNome(resposta.getString("nome_responsavel"));
+                responsavel.setCpf(resposta.getString("cpf_responsavel"));
+                responsavel.setTelefone(resposta.getString("telefone_responsavel"));
+                responsavel.setEmail(resposta.getString("email_responsavel"));
+                responsaveis.add(responsavel);
+            }
+            
+        } catch (SQLException error) {
+            System.out.println(error.getMessage());
+        } finally {
+            if (conexao != null) {
+                ConnectionFactory.FecharConexao(conexao, null, resposta);
+            }
+        }
+        return (responsaveis);
     }
 
 }

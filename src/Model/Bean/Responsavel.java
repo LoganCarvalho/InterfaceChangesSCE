@@ -2,6 +2,7 @@
 package Model.Bean;
 
 import Model.Dao.ResponsavelDAO;
+import java.util.ArrayList;
 
 public class Responsavel extends Usuario {
     
@@ -66,6 +67,13 @@ public class Responsavel extends Usuario {
 
         ResponsavelDAO responsavel = new ResponsavelDAO();
         boolean resposta = responsavel.consultar(respons);
+        return resposta;
+    }
+       
+        public ArrayList<Responsavel> listarResponsavel() throws Exception {
+       
+        ResponsavelDAO responsavelDao = new ResponsavelDAO();
+        ArrayList<Responsavel> resposta = responsavelDao.listarResponsavel();
         return resposta;
     }
 }
