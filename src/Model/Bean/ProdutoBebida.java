@@ -1,6 +1,8 @@
 
 package Model.Bean;
 
+import Model.Dao.BebidaDAO;
+
 public class ProdutoBebida extends Produto {
     
     private String fornecedor;
@@ -23,4 +25,41 @@ public class ProdutoBebida extends Produto {
     }
     
     
+ public int incluir(ProdutoBebida produtoBebida) throws Exception {
+
+          int resposta= 0;
+         try {
+              BebidaDAO bebidaDao = new BebidaDAO();
+              resposta = bebidaDao.incluir(produtoBebida);
+            
+         } catch (Exception e) {
+             System.out.println(e.getMessage());
+         }
+       
+        return resposta;
+    }
+    
+      public int excluir() throws Exception {
+
+        BebidaDAO bebidaDao = new BebidaDAO();
+        int resposta = bebidaDao.excluir(this);
+        return resposta;
+    }
+      
+    public int update() throws Exception {
+
+        BebidaDAO bebidaDao = new BebidaDAO();
+        int resposta = bebidaDao.update(this);
+        return resposta;
+    }
+      
+     /*  public boolean consultar(ProdutoBebida produtoBebida) throws Exception {
+
+        BebidaDAO bebidaDao = new BebidaDAO();
+        boolean resposta = bebidaDao.consultar(produtoBebida);
+        return resposta;
+    }*/
+    
+    
 }
+
