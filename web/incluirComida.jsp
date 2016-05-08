@@ -50,7 +50,7 @@
                 <p>Incluir Alimento</p>
             </div>
             <div class="container">
-                <form action="ResponsavelController2" method="post">  
+                <form action="CadastroComida" method="post">  
                    <div class="form-group row">
                         <label for="txtCodigoAlimento" class="col-sm-2 form-control-label">Código do Alimento</label>
                         <div class="col-sm-4">
@@ -73,6 +73,12 @@
                             <label for="txtPrecoAlimento" class="col-sm-2 form-control-label">Preço do Alimento</label>
                             <div class="col-sm-4">
                                 <input type="text" class="form-control" name="txtPrecoAlimento" placeholder="R$ 00,00">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="txtQntd" class="col-sm-2 form-control-label">Quantidade</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" name="txtQntd">
                             </div>
                         </div>
                         <button type="submit" class="btn btn-warning">Cadastrar</button>

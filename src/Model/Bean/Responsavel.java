@@ -8,8 +8,8 @@ public class Responsavel extends Usuario {
     private String cpf;
     private String email;
 
-    public Responsavel(String cpf, String email, String nome, String cep, String telefone, String login, String senha) {
-        super(nome,telefone, login, senha);
+    public Responsavel(String cpf, String email, String nome, String cep, String telefone, String login, String senha, String tipo_usuario) {
+        super(nome,telefone, login, senha, tipo_usuario);
         this.cpf = cpf;
         this.email = email;
     }

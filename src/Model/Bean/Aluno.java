@@ -16,8 +16,8 @@ public class Aluno extends Usuario {
     public Aluno() {
     }
 
-    public Aluno(String matricula, String turno, String turma, double saldo, Responsavel responsavel, String nome, String cep, String telefone, String login, String senha) {
-        super(nome, telefone, login, senha);
+    public Aluno(String matricula, String turno, String turma, double saldo, Responsavel responsavel, String nome, String cep, String telefone, String login, String senha, String tipo_usuario) {
+        super(nome, telefone, login, senha, tipo_usuario);
         this.matricula = matricula;
         this.turno = turno;
         this.turma = turma;

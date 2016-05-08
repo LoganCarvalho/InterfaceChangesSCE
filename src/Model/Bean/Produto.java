@@ -5,11 +5,11 @@ public class Produto {
     
     private String codigo;
     private String nome;
-    private double preco;
+    private String preco;
     private int quantidade;
     private boolean disponivel;
 
-    public Produto(String codigo, String nome, double preco, int quantidade, boolean disponivel) {
+    public Produto(String codigo, String nome, String preco, int quantidade, boolean disponivel) {
         this.codigo = codigo;
         this.nome = nome;
         this.preco = preco;
@@ -37,11 +37,11 @@ public class Produto {
         this.nome = nome;
     }
 
-    public double getPreco() {
+    public String getPreco() {
         return preco;
     }
 
-    public void setPreco(double preco) {
+    public void setPreco(String preco) {
         this.preco = preco;
     }
 

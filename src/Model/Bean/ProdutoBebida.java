@@ -5,7 +5,7 @@ public class ProdutoBebida extends Produto {
     
     private String fornecedor;
 
-    public ProdutoBebida(String fornecedor, String codigo, String nome, double preco, int quantidade, boolean disponivel) {
+    public ProdutoBebida(String fornecedor, String codigo, String nome, String preco, int quantidade, boolean disponivel) {
         super(codigo, nome, preco, quantidade, disponivel);
         this.fornecedor = fornecedor;
     }

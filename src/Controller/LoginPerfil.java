@@ -5,10 +5,13 @@
  */
 package Controller;
 
+import Model.Bean.Funcionario;
 import Model.Bean.Responsavel;
+import Model.Bean.Usuario;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -18,20 +21,34 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author jcarvalho
  */
+
 public class LoginPerfil extends HttpServlet {
 
   
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        Responsavel respons = new Responsavel();
+        Usuario usuario = new Usuario();
         
         //Pegando parâmetros da tela
-        respons.setLogin(request.getParameter("txtEmailLogin"));
-        respons.setSenha(request.getParameter("txtSenhaLogin"));
+        usuario.setLogin(request.getParameter("txtEmailLogin"));
+        usuario.setSenha(request.getParameter("txtSenhaLogin"));
         
          try {
-            respons.consultar(respons);
+            usuario.consultar(usuario);
+            if (usuario.getTipo_usuario().equals("F")){
+                RequestDispatcher rd = request.getRequestDispatcher("FuncionarioIndex.jsp");
+                request.getSession().setAttribute("login_usuario", usuario.getLogin());
+                rd.include(request, response);
+                               
+            } else if (usuario.getTipo_usuario().equals("A")){
+                RequestDispatcher rd = request.getRequestDispatcher("indexAluno.jsp");
+                request.getSession().setAttribute("login_usuario", usuario.getLogin());
+                rd.include(request, response);
+            }   else{
+                RequestDispatcher rd = request.getRequestDispatcher("indexResponsavel.jsp");
+                request.getSession().setAttribute("login_usuario", usuario.getLogin());
+                rd.include(request, response);
+            }
         } catch (Exception ex) {
             Logger.getLogger(CadastroResponsavel.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -77,3 +94,5 @@ public class LoginPerfil extends HttpServlet {
     }// </editor-fold>
 
 }
+
+
