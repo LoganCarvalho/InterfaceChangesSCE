@@ -1,3 +1,7 @@
+<%@page import="Model.Bean.ProdutoComida"%>
+<%@page import="Model.Bean.Produto"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -19,8 +23,6 @@
                 border-radius: 0;
             }
         </style>
-
-        <title>Funcionário</title>
     </head>
     <body>
         <nav class="navbar navbar-inverse" style="min-height: 135px">
@@ -49,14 +51,20 @@
             <p>Consultar Comida</p>
             </div>
             <div class="container">
-                <form action="ResponsavelController2" method="post">  
+                <form action="ConsultarComida" method="post">  
                     <div class="form-group row">
                         <label for="sellComida" class="col-sm-2 form-control-label">Comida</label>
                         <div class="col-sm-3">
-                            <select type="text" class="form-control" name="sellComida" describedby="basic-addon2">
+                                 <% List sellComida = (List)session.getAttribute("nome_comida");
+                                    for(int i = 0; i < sellComida.size(); i++) {
+                                    ProdutoComida produtoComida = (ProdutoComida)sellComida.get(i);
+                                %>
+                           <select type="text" class="form-control" name="sellComida" describedby="basic-addon2"> 
                                 <option value="0">Escolha uma opção...</option>
-                            </select>    
-                        </div>
+                               <option value=<%produtoComida.getCodigo();%>> <% produtoComida.getNome();%> </option>																</select>
+                               <% } %>     
+                            </select>                             
+                         </div>
                     </div>                 
                     <button type="submit" class="btn btn-warning">Consultar</button>                                                      
                     <div class="row">
@@ -68,6 +76,7 @@
                                         <th>Nome do Produto</th>
                                         <th>Preço</th>
                                         <th>Ingredientes</th>
+                                        <th>Quantidade</th>
                                         <th>Bloquear</th>
                                         <th>Editar</th>
                                         <th>Excluir</th>
@@ -79,6 +88,7 @@
                                         <td>Doe</td> 
                                         <td>Doe</td>
                                         <td>Doe</td>
+                                        <td>ff</td>
                                         <td><a href="#"><span class="glyphicon glyphicon-ban-circle"></span></a></td>                                        
                                         <td><a href="alterarComida.jsp"><span class="glyphicon glyphicon-edit"></span></a></td>                                        
                                         <td><span class="glyphicon glyphicon-remove"></span></td>       

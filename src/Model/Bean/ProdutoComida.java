@@ -2,6 +2,8 @@
 package Model.Bean;
 
 import Model.Dao.ComidaDAO;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ProdutoComida extends Produto {
   
@@ -58,6 +60,13 @@ public class ProdutoComida extends Produto {
         boolean resposta = comidaDao.consultar(produtoComida);
         return resposta;
     }*/
+    
+    public List<ProdutoComida> getComida() throws Exception {
+       
+        ComidaDAO ComidaDao = new ComidaDAO();
+        List<ProdutoComida> resposta = ComidaDao.getComida();
+        return resposta;
+    }
     
     
 }

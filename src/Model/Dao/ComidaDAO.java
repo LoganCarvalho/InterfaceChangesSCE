@@ -7,6 +7,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ComidaDAO {
     
@@ -119,4 +121,45 @@ public int incluir(ProdutoComida produtoComida) throws Exception {
         }
         return ok;
     }*/
+     
+     public List<ProdutoComida> getComida() throws Exception {
+        
+        List<ProdutoComida> comidas = new ArrayList();
+        ProdutoComida comida;
+        
+        ProdutoComida produtoComida = new ProdutoComida();
+        
+        Connection conexao = ConnectionFactory.getConnection();
+        ResultSet resposta = null;
+        boolean ok = false;
+        StringBuilder sql = new StringBuilder();
+        
+        try {            
+            conexao = new ConnectionFactory().getConnection();
+            sql.append("select * from cantinaescolaparaalteracao.produto_comida");
+            sql.append(" where nome_comida LIKE ? ");
+            
+            PreparedStatement stmt = conexao.prepareStatement(sql.toString());
+            stmt.setString(1, ("'%" + produtoComida.getNome() + "%'"));                     
+            resposta = stmt.executeQuery();
+            
+            while (resposta.next()) {
+                comida = new ProdutoComida();
+                comida.setCodigo(resposta.getString("codigo_comida"));
+                comida.setNome(resposta.getString("nome_comida"));
+                comida.setPreco(resposta.getString("preco_comida"));
+                comida.setIngredientes(resposta.getString("ingredientes"));
+                comida.setQuantidade(resposta.getInt("quantidade_comida"));
+                comidas.add(comida);
+            }
+            
+        } catch (SQLException error) {
+            System.out.println(error.getMessage());
+        } finally {
+            if (conexao != null) {
+                ConnectionFactory.FecharConexao(conexao, null, resposta);
+            }
+        }
+        return (comidas);
+    }
 }
