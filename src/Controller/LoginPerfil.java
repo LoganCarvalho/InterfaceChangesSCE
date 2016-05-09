@@ -5,8 +5,6 @@
  */
 package Controller;
 
-import Model.Bean.Funcionario;
-import Model.Bean.Responsavel;
 import Model.Bean.Usuario;
 import java.io.IOException;
 import java.util.logging.Level;
