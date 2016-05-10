@@ -63,6 +63,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <table class="table table-hover">
+                             <% Responsavel respons = (Responsavel)request.getAttribute("responsavel");%>
                                 <thead>
                                     <tr>
                                         <th>Nome do Responsável</th>
@@ -72,22 +73,18 @@
                                         <th>Editar</th>
                                         <th>Excluir</th>
                                     </tr>
-                                </thead>
-                                <% ResponsavelDAO dao = new ResponsavelDAO();
-                                    ArrayList<Responsavel> responsavel = dao.listarResponsavel();
-                                    for( Responsavel respons : responsavel){
-                                %>
+                                </thead>                            
                                 <tbody>
+                                    <%if(respons!=null){%>
                                     <tr>
-                                        <td><% respons.getNome();%></td> 
-                                        <td><% respons.getCpf();%></td>
-                                        <td><% respons.getTelefone();%></td>
-                                        <th><% respons.getEmail();%></th>
+                                        <td><%=respons.getNome()%></td> 
+                                        <td><%=respons.getCpf()%></td>
+                                        <td><%=respons.getTelefone()%></td>
+                                        <th><%=respons.getEmail()%></th>
                                         <td><a href="alterarResponsavel.jsp"><span class="glyphicon glyphicon-edit"></span></a></td>                                        
                                         <td><span class="glyphicon glyphicon-remove"></span></td>       
-                                    </tr>
-                                <% } %>    
-                                    
+                                    </tr>     
+                                    <%}%>
                                 </tbody>
                             </table>
                         </div>    

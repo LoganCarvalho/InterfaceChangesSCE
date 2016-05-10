@@ -26,9 +26,11 @@ public class ConsultarResponsavel extends HttpServlet {
         
         try {
            resposta= respons.consultar(respons);
+           
         } catch (Exception ex) {
             Logger.getLogger(CadastroResponsavel.class.getName()).log(Level.SEVERE, null, ex);
         }
+        request.setAttribute("responsavel", respons);
        RequestDispatcher rd = request.getRequestDispatcher("consultarResponsavel.jsp");
         rd.include(request, response);
     }

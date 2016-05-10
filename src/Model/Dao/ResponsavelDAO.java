@@ -112,9 +112,9 @@ public class ResponsavelDAO {
 
         try {
             sql.append("select * from cantinaescolaparaalteracao.responsavel");
-            sql.append(" where nome_responsavel LIKE  ?  ");
+            sql.append(" where nome_responsavel LIKE '%" +responsavel.getNome()+"%'");
             PreparedStatement stmt = conexao.prepareStatement(sql.toString());
-            stmt.setString(1, "'" + responsavel.getNome()+ "'");
+            //stmt.setString(1, responsavel.getNome());
 
             resposta = stmt.executeQuery();
             while (resposta.next()) {
