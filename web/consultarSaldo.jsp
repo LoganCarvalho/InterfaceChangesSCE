@@ -23,13 +23,13 @@
 
         <title>Funcionários</title>
     </head>
-   <body>
+    <body>
         <nav class="navbar navbar-inverse" style="min-height: 135px">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="#"><img  src="Imagens/logoresized.png" alt=""> </a>
                 </div>
-                <div style="padding-top: 1cm">
+                <div class="container" id="divMenuConsultarAluno" style="padding-top: 1cm">
                     <ul class="nav navbar-nav">
                         <li> <a href="Inicio.jsp" style="color:#FFFFFF; font-size: x-large">Sobre</a></li>
                         <li> <a href="servicos.jsp" style="color:#FFFFFF; font-size: x-large">Serviços</a></li>
@@ -45,12 +45,12 @@
                 </ul>
             </div>
         </nav>
-         <div class="jumbotron">
+        <div class="jumbotron">
             <div class="container text-center">
-            <p>Consultar Saldo</p>
+                <p>Consultar Saldo</p>
             </div>
             <div class="container">
-                <form action="ResponsavelController2" method="post">  
+                <form action="ConsultarSaldoAluno" method="post">  
                     <div class="form-group row">
                         <label for="txtMatricula" class="col-sm-2 form-control-label">Mátricula do Aluno</label>
                         <div class="col-sm-3">
@@ -67,7 +67,7 @@
                 </form>
             </div>
         </div>
-         <footer class="container-fluid text-center">
+        <footer class="container-fluid text-center">
             <p>SCE- Sistema Cantina Escola, Copyright © 2016 </p>
         </footer>
     </body>

@@ -20,6 +20,10 @@
         <servlet-name>CadastroAlunoPorResponsavel</servlet-name>
         <servlet-class>Controller.CadastroAlunoPorResponsavel</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ConsultarSaldoAluno</servlet-name>
+        <servlet-class>Controller.ConsultarSaldoAluno</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ServletMain</servlet-name>
         <url-pattern>/ServletMain</url-pattern>
@@ -39,6 +43,10 @@
     <servlet-mapping>
         <servlet-name>CadastroAlunoPorResponsavel</servlet-name>
         <url-pattern>/CadastroAlunoPorResponsavel</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ConsultarSaldoAluno</servlet-name>
+        <url-pattern>/ConsultarSaldoAluno</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

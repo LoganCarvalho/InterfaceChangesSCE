@@ -74,7 +74,7 @@ public class AlunoDAO {
         return resposta;
     }
 
-    //Verificar se eu devo retornar um responsável ao invés de um bool
+    
     public boolean consultar(Aluno aluno) throws Exception {
 
         Connection conexao = ConnectionFactory.getConnection();
@@ -90,7 +90,7 @@ public class AlunoDAO {
 
             resposta = stmt.executeQuery();
             while (resposta.next()) {
-                aluno.setLogin(resposta.getString("campo_banco"));
+                aluno.setSaldo( Double.valueOf(resposta.getString("saldo")));
 
                 ok = true;
             }

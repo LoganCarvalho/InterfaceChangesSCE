@@ -73,6 +73,14 @@ public class Aluno extends Usuario {
         this.responsavel = responsavel;
     }
     
+    
+     public int calcularSaldoDepoisCompra(Aluno aluno) {
+     //Quando eu chamar o comprar, ele vai pegar o valor da compra, vai 
+     //subtrair do saldo atual(já tem que estar na tela de aluno) e vai dar um update com esse novo valor
+     
+     return 1;
+     }
+    
         //modelo que deve ser seguido para fazer os outros métodos
      public int incluir(Aluno aluno) throws Exception {
 

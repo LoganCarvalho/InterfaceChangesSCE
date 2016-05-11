@@ -29,7 +29,7 @@
                 <div class="navbar-header">
                     <a class="navbar-brand" href="#"><img  src="Imagens/logoresized.png" alt=""> </a>
                 </div>
-                <div style="padding-top: 1cm">
+                <div class="container" id="divMenu" style="padding-top: 1cm">
                     <ul class="nav navbar-nav">
                         <li> <a href="Inicio.jsp" style="color:#FFFFFF; font-size: x-large">Sobre</a></li>
                         <li> <a href="servicos.jsp" style="color:#FFFFFF; font-size: x-large">Serviços</a></li>
