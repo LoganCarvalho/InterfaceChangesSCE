@@ -1,4 +1,3 @@
-<%@page import="java.util.ArrayList"%>
 <%@page import="Model.Bean.Responsavel"%>
 <%@page import="Model.Dao.ResponsavelDAO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -81,7 +80,7 @@
                                         <td><%=respons.getCpf()%></td>
                                         <td><%=respons.getTelefone()%></td>
                                         <th><%=respons.getEmail()%></th>
-                                        <td><a href="alterarResponsavel.jsp"><span class="glyphicon glyphicon-edit"></span></a></td>                                        
+                                        <td><a href="alterarResponsavel.jsp?txtCpfResponsavel"<%=respons.getCpf()%>><span class="glyphicon glyphicon-edit"></span></a></td>                                        
                                         <td><span class="glyphicon glyphicon-remove"></span></td>       
                                     </tr>     
                                     <%}%>

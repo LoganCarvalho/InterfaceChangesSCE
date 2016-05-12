@@ -1,9 +1,4 @@
-<%-- 
-    Document   : CadResponsavel
-    Created on : Apr 17, 2016, 9:28:59 AM
-    Author     : Logan
---%>
-
+<%@page import="Model.Bean.Responsavel"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -55,11 +50,12 @@
             <p>Alterar Responsável</p>
             </div>
             <div class="container">
-                <form action="ResponsavelController2" method="post">  
-                    <div class="form-group row">
+                <form action="ResponsavelController2" method="post">
+                 <% Responsavel respons = (Responsavel)request.getAttribute("responsavel");%>
+                    <div class="form-group row">                       
                         <label for="txtNomeResponsavel" class="col-sm-2 form-control-label">Nome<span class="glyphicon glyphicon-user"></span></label>
                         <div class="col-sm-4">
-                            <input type="text" class="form-control" name="txtNomeResponsavel" describedby="basic-addon2">
+                            <input type="text" class="form-control" name="txtNomeResponsavel" value="<%=respons.getNome()%>" describedby="basic-addon2">
                         </div>
                     </div>
                     <div class="form-group row">
