@@ -80,8 +80,8 @@
                                         <td><%=respons.getCpf()%></td>
                                         <td><%=respons.getTelefone()%></td>
                                         <th><%=respons.getEmail()%></th>
-                                        <td><a href="alterarResponsavel.jsp?txtCpfResponsavel"<%=respons.getCpf()%>><span class="glyphicon glyphicon-edit"></span></a></td>                                        
-                                        <td><span class="glyphicon glyphicon-remove"></span></td>       
+                                        <td><a href="alterarResponsavel.jsp?cpf=<%=respons.getCpf()%>&nome=<%=respons.getNome()%>&telefone=<%=respons.getTelefone()%>&email=<%=respons.getEmail()%>"><span class="glyphicon glyphicon-edit"></span></a></td>                                        
+                                        <td><a href="ExcluirResponsavel.jsp?cpf=<%=respons.getCpf()%>"><span class="glyphicon glyphicon-remove"></span></a></td>       
                                     </tr>     
                                     <%}%>
                                 </tbody>

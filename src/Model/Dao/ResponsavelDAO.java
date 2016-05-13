@@ -59,7 +59,7 @@ public class ResponsavelDAO {
         StringBuilder sql = new StringBuilder();
         try {
             sql.append("delete from cantinaescolaparaalteracao.responsavel");
-            sql.append(" where cpf = ?");
+            sql.append(" where cpf_responsavel = ? ");
             PreparedStatement stmt = conexao.prepareStatement(sql.toString());
             stmt.setString(1, responsavel.getCpf());
             stmt.executeUpdate();
@@ -82,8 +82,8 @@ public class ResponsavelDAO {
         StringBuilder sql = new StringBuilder();
         try {
             sql.append("UPDATE cantinaescolaparaalteracao.responsavel SET");
-            sql.append("nome_responsavel = ? ,telefone_responsavel = ? ,email_responsavel = ? ");
-            sql.append(" WHERE cpf = ?");
+            sql.append(" nome_responsavel = ? ,telefone_responsavel = ? ,email_responsavel = ? ");
+            sql.append(" WHERE cpf_responsavel = ?");
             PreparedStatement stmt = conexao.prepareStatement(sql.toString());
             stmt.setString(1, responsavel.getNome());
             stmt.setString(2, responsavel.getTelefone());

@@ -50,33 +50,32 @@
             <p>Alterar Responsável</p>
             </div>
             <div class="container">
-                <form action="ResponsavelController2" method="post">
-                 <% Responsavel respons = (Responsavel)request.getAttribute("responsavel");%>
+                <form action="AlterarResponsavel" method="get">
                     <div class="form-group row">                       
                         <label for="txtNomeResponsavel" class="col-sm-2 form-control-label">Nome<span class="glyphicon glyphicon-user"></span></label>
                         <div class="col-sm-4">
-                            <input type="text" class="form-control" name="txtNomeResponsavel" value="<%=respons.getNome()%>" describedby="basic-addon2">
+                            <input type="text" class="form-control" name="nome" required="true" value="<%=request.getParameter("nome")%>" describedby="basic-addon2">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="txtEmailResponsavel" class="col-sm-2 form-control-label">Email<span class="glyphicon glyphicon-envelope"></span></label>
                         <div class="col-sm-4">
-                            <input type="email" class="form-control" name="txtEmailResponsavel">
+                            <input type="email" class="form-control" name="email" required="true" value="<%=request.getParameter("email")%>">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="txtCpfResponsavel" class="col-sm-2 form-control-label">CPF<span class="glyphicon glyphicon-tag"></span></label>
                         <div class="col-sm-4">
-                            <input type="text" maxlength="11"  class="form-control" name="txtCpfResponsavel">
+                            <input type="text" maxlength="11" readonly="true"  class="form-control" name="cpf" value="<%=request.getParameter("cpf")%>">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="txtTelResponsavel" class="col-sm-2 form-control-label">Telefone<span class="glyphicon glyphicon-phone-alt"></span></label>
+                        <label for="txtTelResponsavel"  class="col-sm-2 form-control-label">Telefone<span class="glyphicon glyphicon-phone-alt"></span></label>
                         <div class="col-sm-4">
-                            <input type="text" maxlength="9" class="form-control" name="txtTelResponsavel">
+                            <input type="text" maxlength="9" required="true" class="form-control" name="telefone" value="<%=request.getParameter("telefone")%>">
                         </div>
                     </div>
-                    <div class="form-group row">
+                <!--    <div class="form-group row">
                         <label for="txtLoginResponsavel" class="col-sm-2 form-control-label">Login<span class="glyphicon glyphicon-log-in"></span></label>
                         <div class="col-sm-4">
                             <input type="text" class="form-control" name="txtLoginResponsavel">
@@ -87,7 +86,7 @@
                         <div class="col-sm-4">
                             <input type="password" maxlength="6" class="form-control" name="txtSenhaResponsavel">
                         </div>
-                    </div>
+                    </div>-->
                     <button type="submit" class="btn btn-warning">Alterar</button>
                 </form>
             </div>

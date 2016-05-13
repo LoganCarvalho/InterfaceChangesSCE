@@ -45,15 +45,19 @@
         </nav>
         <div class="jumbotron">            
             <div class="container"> 
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="alert alert-success">
-                            <center><strong>Cadastro realizado com sucesso!</strong></center>
+                <form action="ExcluirResponsavel" method="get">  
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="alert alert-warning">
+                                <center><strong>Tem certeza que deseja excluir o registro?</strong></center>
+                                <input type="hidden" value="<%=request.getParameter("cpf")%>"/>
+                                <center><button type="submit" class="btn btn-warning">Excluir Registro</button></center>
+                            </div>
                         </div>
-                    </div>
-                </div>
+                    </div> 
+                </form>
             </div>
-        </div>   
+        </div>    
         <footer class="container-fluid text-center">
             <p>SCE- Sistema Cantina Escola, Copyright © 2016 </p>
         </footer>

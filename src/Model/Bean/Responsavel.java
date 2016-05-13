@@ -49,17 +49,17 @@ public class Responsavel extends Usuario {
         return resposta;
     }
     
-      public int excluir() throws Exception {
+      public int excluir(Responsavel respons) throws Exception {
 
         ResponsavelDAO responsavel = new ResponsavelDAO();
-        int resposta = responsavel.excluir(this);
+        int resposta = responsavel.excluir(respons);
         return resposta;
     }
       
-    public int update() throws Exception {
+    public int update(Responsavel respons) throws Exception {
 
         ResponsavelDAO responsavel = new ResponsavelDAO();
-        int resposta = responsavel.update(this);
+        int resposta = responsavel.update(respons);
         return resposta;
     }
       
