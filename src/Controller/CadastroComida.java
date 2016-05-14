@@ -33,7 +33,7 @@ public class CadastroComida extends HttpServlet {
         produtoComida.setCodigo(request.getParameter("txtCodigoAlimento"));
         produtoComida.setNome(request.getParameter("txtNomeAlimento"));
         produtoComida.setIngredientes(request.getParameter("txtIngredientes"));
-        produtoComida.setPreco(request.getParameter("txtPrecoAlimento"));
+        produtoComida.setPreco(Double.valueOf(request.getParameter("txtPrecoAlimento")));
         produtoComida.setQuantidade(Integer.parseInt(request.getParameter("txtQntd")));
         try {
            resposta= produtoComida.incluir(produtoComida);

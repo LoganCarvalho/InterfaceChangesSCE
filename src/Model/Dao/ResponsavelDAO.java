@@ -19,8 +19,8 @@ public class ResponsavelDAO {
         StringBuilder sql = new StringBuilder();
         StringBuilder sql1 = new StringBuilder();
             try {
-             sql.append("insert into cantinaescolaparaalteracao.usuario(senha_usuario, login_usuario, tipo_usuario)");
-             sql.append(" values(?,?,'R'); ");
+             sql.append("insert into CantinaEscola.usuario(senha_usuario, login_usuario, tipo_usuario)");
+             sql.append(" values(?,?,'R')");
              PreparedStatement stmt1 = conexao.prepareStatement(sql.toString(), Statement.RETURN_GENERATED_KEYS);// o return generated keys retorna o ultimo id da tabela que passou pela inserção, desde de que este campo esteja como AutoIncrement.
              stmt1.setString(1, responsavel.getSenha());
              stmt1.setString(2, responsavel.getLogin());
@@ -31,7 +31,7 @@ public class ResponsavelDAO {
              rs.next();
              idInsercao = rs.getInt(1);             
 
-            sql1.append(" insert into cantinaescolaparaalteracao.responsavel(cpf_responsavel, nome_responsavel, telefone_responsavel, email_responsavel, ativo, id_usuario)");
+            sql1.append(" insert into CantinaEscola.responsavel(cpf_responsavel, nome_responsavel, telefone_responsavel, email_responsavel, ativo, id_usuario)");
             sql1.append(" values(?,?,?,?,1,?)");
             PreparedStatement stmt = conexao.prepareStatement(sql1.toString());
             stmt.setString(1, responsavel.getCpf());
@@ -58,7 +58,7 @@ public class ResponsavelDAO {
         int resposta = 0;
         StringBuilder sql = new StringBuilder();
         try {
-            sql.append("delete from cantinaescolaparaalteracao.responsavel");
+            sql.append("delete from CantinaEscola.responsavel");
             sql.append(" where cpf_responsavel = ? ");
             PreparedStatement stmt = conexao.prepareStatement(sql.toString());
             stmt.setString(1, responsavel.getCpf());
@@ -81,7 +81,7 @@ public class ResponsavelDAO {
         int resposta = 0;
         StringBuilder sql = new StringBuilder();
         try {
-            sql.append("UPDATE cantinaescolaparaalteracao.responsavel SET");
+            sql.append("UPDATE CantinaEscola.responsavel SET");
             sql.append(" nome_responsavel = ? ,telefone_responsavel = ? ,email_responsavel = ? ");
             sql.append(" WHERE cpf_responsavel = ?");
             PreparedStatement stmt = conexao.prepareStatement(sql.toString());
@@ -111,7 +111,7 @@ public class ResponsavelDAO {
         StringBuilder sql = new StringBuilder();
 
         try {
-            sql.append("select * from cantinaescolaparaalteracao.responsavel");
+            sql.append("select * from CantinaEscola.responsavel");
             sql.append(" where nome_responsavel LIKE '%" +responsavel.getNome()+"%'");
             PreparedStatement stmt = conexao.prepareStatement(sql.toString());
             //stmt.setString(1, responsavel.getNome());
@@ -149,7 +149,7 @@ public class ResponsavelDAO {
         
         try {            
             conexao = new ConnectionFactory().getConnection();
-            sql.append("select * from cantinaescolaparaalteracao.responsavel");
+            sql.append("select * from CantinaEscola.responsavel");
             sql.append(" where nome_responsavel LIKE ? ");
             
             PreparedStatement stmt = conexao.prepareStatement(sql.toString());

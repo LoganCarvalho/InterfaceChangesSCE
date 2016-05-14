@@ -6,7 +6,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,15 +18,14 @@ public int incluir(ProdutoComida produtoComida) throws Exception {
         StringBuilder sql = new StringBuilder();
        
         try {
-            sql.append("insert into cantinaescolaparaalteracao.produto_comida(nome_comida,");
-            sql.append("quantidade_comida, preco_comida, disponivel_comida, ingredientes");
-            sql.append(" values(?,?,?,'s',?)");
-            PreparedStatement stmt = conexao.prepareStatement(sql.toString(), Statement.RETURN_GENERATED_KEYS);// o return generated keys retorna o ultimo id da tabela que passou pela inserção, desde de que este campo esteja como AutoIncrement.
-            stmt.setString(1, produtoComida.getCodigo());           
-            stmt.setString(2, produtoComida.getNome());
-            stmt.setInt(3, produtoComida.getQuantidade());
-            stmt.setString(4, produtoComida.getPreco());
-            stmt.setString(5, produtoComida.getIngredientes());
+            sql.append("insert into CantinaEscola.produto_comida(nome_comida,");
+            sql.append("quantidade_comida, preco_comida, disponivel_comida, ingredientes)");
+            sql.append(" values(?,?,?,'S',?)");
+            PreparedStatement stmt = conexao.prepareStatement(sql.toString());
+            stmt.setString(1, produtoComida.getNome());           
+            stmt.setInt(2, produtoComida.getQuantidade()); 
+            stmt.setDouble(3, produtoComida.getPreco());
+            stmt.setString(4, produtoComida.getIngredientes());
             stmt.executeUpdate();
             
         } catch (SQLException error) {
@@ -48,7 +46,7 @@ public int incluir(ProdutoComida produtoComida) throws Exception {
         int resposta = 0;
         StringBuilder sql = new StringBuilder();
         try {
-            sql.append("delete from cantinaescolaparaalteracao.produto_comida");
+            sql.append("delete from CantinaEscola.produto_comida");
             sql.append(" where codigo_comida = ?");
             PreparedStatement stmt = conexao.prepareStatement(sql.toString());
             stmt.setString(1, produtoComida.getCodigo());
@@ -71,13 +69,13 @@ public int incluir(ProdutoComida produtoComida) throws Exception {
         int resposta = 0;
         StringBuilder sql = new StringBuilder();
         try {
-            sql.append("UPDATE cantinaescolaparaalteracao.produto_comida SET");
+            sql.append("UPDATE CantinaEscola.produto_comida SET");
             sql.append(" nome_comida = ?, qunatidade_comida = ?, preco_comida = ? , ingredientes = ?");
             sql.append(" WHERE codigo_comida = ?");
             PreparedStatement stmt = conexao.prepareStatement(sql.toString());
             stmt.setString(1, produtoComida.getNome());
             stmt.setInt(2, produtoComida.getQuantidade());
-            stmt.setString(3, produtoComida.getPreco()); 
+            stmt.setDouble(3, produtoComida.getPreco()); 
             stmt.setString(5, produtoComida.getIngredientes());
             stmt.setString(6, produtoComida.getCodigo());
             stmt.executeUpdate();
@@ -102,7 +100,7 @@ public int incluir(ProdutoComida produtoComida) throws Exception {
         StringBuilder sql = new StringBuilder();
 
         try {
-            sql.append("select * from cantinaescolaparaalteracao.produto_comida");
+            sql.append("select * from CantinaEscola.produto_comida");
             sql.append(" where codigo_comida LIKE '%'  ?  '%' ");
             PreparedStatement stmt = conexao.prepareStatement(sql.toString());
             stmt.setString(1, produtoComida.getLogin());
@@ -137,7 +135,7 @@ public int incluir(ProdutoComida produtoComida) throws Exception {
         
         try {            
             conexao = new ConnectionFactory().getConnection();
-            sql.append("select * from cantinaescolaparaalteracao.produto_comida");
+            sql.append("select * from CantinaEscola.produto_comida");
             sql.append(" where nome_comida LIKE ? ");
             
             PreparedStatement stmt = conexao.prepareStatement(sql.toString());
@@ -148,7 +146,7 @@ public int incluir(ProdutoComida produtoComida) throws Exception {
                 comida = new ProdutoComida();
                 comida.setCodigo(resposta.getString("codigo_comida"));
                 comida.setNome(resposta.getString("nome_comida"));
-                comida.setPreco(resposta.getString("preco_comida"));
+                comida.setPreco(Double.valueOf(resposta.getString("preco_comida")));
                 comida.setIngredientes(resposta.getString("ingredientes"));
                 comida.setQuantidade(resposta.getInt("quantidade_comida"));
                 comidas.add(comida);

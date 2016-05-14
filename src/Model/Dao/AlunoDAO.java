@@ -23,7 +23,7 @@ public class AlunoDAO {
         StringBuilder sql1 = new StringBuilder();
        
         try {
-            sql.append("insert into cantinaescolaparaalteracao.usuario(senha_usuario, login_usuario, tipo_usuario)");
+            sql.append("insert into CantinaEscola.usuario(senha_usuario, login_usuario, tipo_usuario)");
             sql.append(" values(?,?,A);");
             PreparedStatement stmt = conexao.prepareStatement(sql.toString(), Statement.RETURN_GENERATED_KEYS);// o return generated keys retorna o ultimo id da tabela que passou pela inserção, desde de que este campo esteja como AutoIncrement.
             stmt.setString(1, aluno.getSenha());           
@@ -35,7 +35,7 @@ public class AlunoDAO {
             rs.next();
             idInsercao = rs.getInt(1);
                          
-            sql1.append(" insert into cantinaescolaparaalteracao.aluno(matricula_aluno,turno_aluno,turma_aluno,nome_aluno,id_usuario)");
+            sql1.append(" insert into CantinaEscola.aluno(matricula_aluno,turno_aluno,turma_aluno,nome_aluno,id_usuario)");
             sql1.append(" values(?,?,?,?,?);");
             PreparedStatement stmt2 = conexao.prepareStatement(sql1.toString());
             stmt2.setString(1, aluno.getMatricula());
@@ -61,7 +61,7 @@ public class AlunoDAO {
         int resposta = 0;
         try {
             Statement sentenca = conexao.createStatement();
-            String sql = "delete from cantinaescolaparaalteracao.aluno "
+            String sql = "delete from CantinaEscola.aluno "
                     + "where cpf = **";
             resposta = sentenca.executeUpdate(sql);
         } catch (SQLException erro) {
@@ -83,7 +83,7 @@ public class AlunoDAO {
         StringBuilder sql = new StringBuilder();
 
         try {
-            sql.append("select * from cantinaescolaparaalteracao.aluno");
+            sql.append("select * from CantinaEscola.aluno");
             sql.append(" where *** LIKE '%'  ?  '%' ");
             PreparedStatement stmt = conexao.prepareStatement(sql.toString());
             stmt.setString(1, aluno.getMatricula());

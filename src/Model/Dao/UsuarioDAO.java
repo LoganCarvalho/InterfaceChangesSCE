@@ -17,7 +17,7 @@ public class UsuarioDAO {
         StringBuilder sql = new StringBuilder();
 
         try {
-            sql.append("select * from cantinaescolaparaalteracao.usuario");
+            sql.append("select * from CantinaEscola.usuario");
             sql.append(" where login_usuario = ? and senha_usuario = ?");
             PreparedStatement stmt = conexao.prepareStatement(sql.toString());
             stmt.setString(1, usuario.getLogin());

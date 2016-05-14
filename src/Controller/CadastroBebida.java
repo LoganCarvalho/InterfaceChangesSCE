@@ -24,7 +24,7 @@ public class CadastroBebida extends HttpServlet {
         produtoBebida.setCodigo(request.getParameter("txtCodigoBebida"));
         produtoBebida.setNome(request.getParameter("txtNomeBebida"));
         produtoBebida.setFornecedor(request.getParameter("txtFornecedor"));
-        produtoBebida.setPreco(request.getParameter("txtPrecoBebida"));
+        produtoBebida.setPreco(Double.valueOf(request.getParameter("txtPrecoBebida")));
         produtoBebida.setQuantidade(Integer.parseInt(request.getParameter("txtQntdBebida")));
         try {
            resposta= produtoBebida.incluir(produtoBebida);

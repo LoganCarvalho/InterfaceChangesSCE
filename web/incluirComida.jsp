@@ -12,6 +12,8 @@
         <!-- Latest compiled JavaScript -->
         <script src="js/bootstrap.min.js"></script>
         <link href="assets/css/custom.css" rel="stylesheet" />
+        <script src="js/jquery-1.12.1.js" type="text/javascript"></script>
+        <script src="js/jquery.maskedinput.js" type="text/javascript"></script>
         <style>
             /* Remove the navbar's default margin-bottom and rounded borders */ 
             .navbar {
@@ -51,42 +53,48 @@
             </div>
             <div class="container">
                 <form action="CadastroComida" method="post">  
-                   <div class="form-group row">
+                    <div class="form-group row">
                         <label for="txtCodigoAlimento" class="col-sm-2 form-control-label">Código do Alimento</label>
                         <div class="col-sm-4">
                             <input type="text" class="form-control" name="txtCodigoAlimento" describedby="basic-addon2">
                         </div>
                     </div>
-                        <div class="form-group row">
-                            <label for="txtNomeAlimento" class="col-sm-2 form-control-label">Nome do Alimento</label>
-                            <div class="col-sm-4">
-                               <input type="text" class="form-control" name="txtNomeAlimento">
-                           </div>
+                    <div class="form-group row">
+                        <label for="txtNomeAlimento" class="col-sm-2 form-control-label">Nome do Alimento</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" name="txtNomeAlimento">
                         </div>
-                        <div class="form-group row">
-                            <label for="txtIngredientes" class="col-sm-2 form-control-label">Ingredientes</label>
-                            <div class="col-sm-4">
-                                <textarea type="text" class="form-control" rows="5" name="txtIngredientes"></textarea>
-                            </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="txtIngredientes" class="col-sm-2 form-control-label">Ingredientes</label>
+                        <div class="col-sm-4">
+                            <textarea type="text" class="form-control" rows="5" name="txtIngredientes"></textarea>
                         </div>
-                        <div class="form-group row">
-                            <label for="txtPrecoAlimento" class="col-sm-2 form-control-label">Preço do Alimento</label>
-                            <div class="col-sm-4">
-                                <input type="text" class="form-control" name="txtPrecoAlimento" placeholder="R$ 00,00">
-                            </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="txtPrecoAlimento" class="col-sm-2 form-control-label">Preço do Alimento</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" name="txtPrecoAlimento" placeholder="R$ 00,00">
                         </div>
-                        <div class="form-group row">
-                            <label for="txtQntd" class="col-sm-2 form-control-label">Quantidade</label>
-                            <div class="col-sm-4">
-                                <input type="text" class="form-control" name="txtQntd">
-                            </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="txtQntd" class="col-sm-2 form-control-label">Quantidade</label>
+                        <div class="col-sm-4">
+                            <input type="text" data-masked-input="999-999-9999" class="form-control" name="txtQntd">
                         </div>
-                        <button type="submit" class="btn btn-warning">Cadastrar</button>
-                   </form>
-                </div>
-            </div>           
-            <footer class="container-fluid text-center">
-                <p>SCE- Sistema Cantina Escola, Copyright © 2016 </p>
-            </footer>
-        </body>
-    </html>
+                    </div>
+                    <button type="submit" class="btn btn-warning">Cadastrar</button>
+                </form>
+            </div>
+        </div>    
+        <script>
+        $(".form-control").focus( function (){
+        $(".form-control").mask("99/99/9999");
+});
+        });
+        </script>
+        <footer class="container-fluid text-center">
+            <p>SCE- Sistema Cantina Escola, Copyright © 2016 </p>
+        </footer>
+    </body>
+</html>

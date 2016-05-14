@@ -2,7 +2,6 @@
 package Model.Bean;
 
 import Model.Dao.ComidaDAO;
-import java.util.ArrayList;
 import java.util.List;
 
 public class ProdutoComida extends Produto {
@@ -13,7 +12,7 @@ public class ProdutoComida extends Produto {
     
     }
 
-    public ProdutoComida(String ingredientes, String codigo, String nome, String preco, int quantidade, boolean disponivel) {
+    public ProdutoComida(String ingredientes, String codigo, String nome, double preco, int quantidade, boolean disponivel) {
         super(codigo, nome, preco, quantidade, disponivel);
         this.ingredientes = ingredientes;
     }
