@@ -19,8 +19,9 @@ public int incluir(ProdutoComida produtoComida) throws Exception {
         StringBuilder sql = new StringBuilder();
        
         try {
-            sql.append("insert into cantinaescolaparaalteracao.produto_comida(codigo_comida, nome_comida, quantidade_comida, preco_comida, disponivel_comida, ingredientes)");
-            sql.append(" values(?,?,?,?, 's',?);");
+            sql.append("insert into cantinaescolaparaalteracao.produto_comida(nome_comida,");
+            sql.append("quantidade_comida, preco_comida, disponivel_comida, ingredientes");
+            sql.append(" values(?,?,?,'s',?)");
             PreparedStatement stmt = conexao.prepareStatement(sql.toString(), Statement.RETURN_GENERATED_KEYS);// o return generated keys retorna o ultimo id da tabela que passou pela inserção, desde de que este campo esteja como AutoIncrement.
             stmt.setString(1, produtoComida.getCodigo());           
             stmt.setString(2, produtoComida.getNome());

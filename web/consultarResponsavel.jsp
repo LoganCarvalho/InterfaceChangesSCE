@@ -46,9 +46,9 @@
                 </ul>
             </div>
         </nav>
-             <div class="jumbotron">
+        <div class="jumbotron">
             <div class="container text-center">
-            <p>Consultar Responsável</p>
+                <p>Consultar Responsável</p>
             </div>
             <div class="container">
                 <form action="ConsultarResponsavel" method="post">  
@@ -62,7 +62,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <table class="table table-hover">
-                             <% Responsavel respons = (Responsavel)request.getAttribute("responsavel");%>
+                                <% Responsavel respons = (Responsavel) request.getAttribute("responsavel");%>
                                 <thead>
                                     <tr>
                                         <th>Nome do Responsável</th>
@@ -74,7 +74,7 @@
                                     </tr>
                                 </thead>                            
                                 <tbody>
-                                    <%if(respons!=null){%>
+                                    <%if (respons != null) {%>
                                     <tr>
                                         <td><%=respons.getNome()%></td> 
                                         <td><%=respons.getCpf()%></td>
@@ -91,7 +91,34 @@
                 </form>
             </div>
         </div>
-         <footer class="container-fluid text-center">
+        <div class="modal fade" id="confirmar-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">     
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="modelConfirmarExclusao">Confirmar Exclusão</h4>
+                    </div>
+
+                    <div class="modal-body">
+                        <p>Você está prestes a apagar um responsável, o procedimento é irreversivel.</p>
+                        <p>Você quer continuar?</p>
+                        <p class="debug-url"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                        <button class="btn btn-danger btn-ok">Apagar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            $('#confirmar-delete').on('show.bs.modal', function (e) {
+                $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));
+                //data-toggle="modal" data-target="#confirmar-delete" colocar no Href
+                $('.debug-url').html('Apagar: <strong>' + $(this).find('.btn-ok').attr('href') + '</strong>');
+            });
+        </script>
+        <footer class="container-fluid text-center">
             <p>SCE- Sistema Cantina Escola, Copyright © 2016 </p>
         </footer>
     </body>
