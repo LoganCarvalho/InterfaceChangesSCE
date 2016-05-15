@@ -88,10 +88,10 @@
             </div>
         </div>    
         <script>
-        $(".form-control").focus( function (){
-        $(".form-control").mask("99/99/9999");
-});
-        });
+            $(".form-control").focus(function () {
+                $(".form-control").mask("99/99/9999");
+            });
+            });
         </script>
         <footer class="container-fluid text-center">
             <p>SCE- Sistema Cantina Escola, Copyright © 2016 </p>
