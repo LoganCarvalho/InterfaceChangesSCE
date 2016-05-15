@@ -22,7 +22,7 @@ public class CadastroAlunoPorResponsavel extends HttpServlet {
         int resposta = 0;
         //Pegando parâmetros da tela. Avaliar necessidade de capturar mais campos
         aluno.setNome(request.getParameter("txtNomeAluno"));
-        aluno.setMatricula(request.getParameter("txtMatricula"));
+        aluno.setMatricula(Integer.parseInt(request.getParameter("txtMatricula")));
         aluno.setTurma(request.getParameter("txtTurma"));
         aluno.setTurno(request.getParameter("txtTurno"));
         aluno.setLogin(request.getParameter("txtLoginAluno"));

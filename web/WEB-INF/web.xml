@@ -24,6 +24,10 @@
         <servlet-name>ConsultarSaldoAluno</servlet-name>
         <servlet-class>Controller.ConsultarSaldoAluno</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>DepositarCredito</servlet-name>
+        <servlet-class>Controller.DepositarCredito</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ServletMain</servlet-name>
         <url-pattern>/ServletMain</url-pattern>
@@ -47,6 +51,10 @@
     <servlet-mapping>
         <servlet-name>ConsultarSaldoAluno</servlet-name>
         <url-pattern>/ConsultarSaldoAluno</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DepositarCredito</servlet-name>
+        <url-pattern>/DepositarCredito</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

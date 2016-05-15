@@ -38,7 +38,7 @@ public class AlunoDAO {
             sql1.append(" insert into CantinaEscola.aluno(matricula_aluno,turno_aluno,turma_aluno,nome_aluno,id_usuario)");
             sql1.append(" values(?,?,?,?,?);");
             PreparedStatement stmt2 = conexao.prepareStatement(sql1.toString());
-            stmt2.setString(1, aluno.getMatricula());
+            stmt2.setInt(1, aluno.getMatricula());
             stmt2.setString(2, aluno.getTurno());
             stmt2.setString(3, aluno.getTurma());
             stmt2.setString(4, aluno.getNome());
@@ -74,7 +74,31 @@ public class AlunoDAO {
         return resposta;
     }
 
-    
+     public int update(Aluno aluno) throws Exception {
+        
+        Connection conexao = ConnectionFactory.getConnection();
+        int resposta = 0;
+        StringBuilder sql = new StringBuilder();
+        try {
+            sql.append("UPDATE CantinaEscola.aluno SET");
+            sql.append(" saldo_aluno = ? ");
+            sql.append(" WHERE matricula_aluno = ?");
+            PreparedStatement stmt = conexao.prepareStatement(sql.toString());
+            stmt.setDouble(1, aluno.getSaldo());
+            stmt.setInt(2, aluno.getMatricula());
+            stmt.executeUpdate();
+
+        } catch (SQLException error) {
+            System.out.println(error.getMessage());
+        } finally {
+            if (conexao != null) {
+                resposta = 1;
+                ConnectionFactory.FecharConexao(conexao);
+            }
+        }
+        return resposta;
+    }
+
     public boolean consultar(Aluno aluno) throws Exception {
 
         Connection conexao = ConnectionFactory.getConnection();
@@ -86,12 +110,13 @@ public class AlunoDAO {
             sql.append("select * from CantinaEscola.aluno");
             sql.append(" where matricula_aluno = ?");
             PreparedStatement stmt = conexao.prepareStatement(sql.toString());
-            stmt.setString(1, aluno.getMatricula());
+            stmt.setInt(1, aluno.getMatricula());
 
             resposta = stmt.executeQuery();
             while (resposta.next()) {
                 aluno.setSaldo( Double.valueOf(resposta.getString("saldo_aluno")));
                 aluno.setNome(resposta.getString("nome_aluno"));
+                aluno.setMatricula(Integer.parseInt(resposta.getString("matricula_aluno")));
                 ok = true;
             }
         } catch (SQLException error) {

@@ -21,7 +21,7 @@ public class ConsultarSaldoAluno extends HttpServlet {
         Aluno aluno = new Aluno();
         boolean resposta = false;
         
-        aluno.setMatricula(request.getParameter("txtMatricula"));
+        aluno.setMatricula(Integer.parseInt(request.getParameter("txtMatricula")));
        
         try {
             resposta = aluno.consultar(aluno);

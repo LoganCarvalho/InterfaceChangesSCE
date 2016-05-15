@@ -58,9 +58,9 @@
                             <input type="text" class="form-control" name="txtMatricula" describedby="basic-addon2">
                         </div>
                     </div>
-                     <% Aluno alunoRespons = (Aluno) request.getAttribute("alunoRespons");%>
+                     <% Aluno alunoRespons = (Aluno) request.getAttribute("alunoRespons");// <%if (alunoRespons != null) {%>%>
                      
-                       <%if (alunoRespons != null) {%>
+                     
                     <div class="form-group row">
                         <label for="txtSaldoAluno" class="col-sm-2 form-control-label">Saldo do Aluno</label>
                         <div class="col-sm-3">

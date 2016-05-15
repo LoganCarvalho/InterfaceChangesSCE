@@ -50,20 +50,17 @@
             <p>Depositar Crédito</p>
             </div>
             <div class="container">
-                <form action="ResponsavelController2" method="post">  
+                <form action="DepositarCredito" method="post">  
                     <div class="form-group row">
-                        <label for="txtAluno" class="col-sm-2 form-control-label">Alunos</label>
-                        <div class="col-sm-3">
-                            <select type="text" class="form-control" name="txtAluno" describedby="basic-addon2">
-                                <option value ="0">Escolha um Aluno...</option>
-                                <option value ="1">Stephanie Lima</option>
-                            </select>
+                        <label for="txtMatriculaAluno" class="col-sm-2 form-control-label">Matricula do Aluno</label>
+                         <div class="col-sm-3">
+                             <input type="text" class="form-control" name="txtMatriculaAluno">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="txtValor" class="col-sm-2 form-control-label">Valor</label>
                         <div class="col-sm-3">
-                            <input type="text" class="form-control" name="txtValor" placeholder="R$ 00,00">
+                            <input type="text" class="form-control" name="txtValorSaldo" placeholder="R$ 00,00">
                         </div>
                     </div>                    
                     <button type="submit" class="btn btn-warning">Depositar</button>
