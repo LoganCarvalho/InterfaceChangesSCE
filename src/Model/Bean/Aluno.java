@@ -98,7 +98,7 @@ public class Aluno extends Usuario {
 
     //modelo que deve ser seguido para fazer os outros métodos
     public int incluir(Aluno aluno) throws Exception {
-
+        
         int resposta = 0;
         try {
             AlunoDAO alunoDao = new AlunoDAO();

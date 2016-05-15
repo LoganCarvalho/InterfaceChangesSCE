@@ -42,7 +42,7 @@ public class AlunoDAO {
             stmt2.setString(2, aluno.getTurno());
             stmt2.setString(3, aluno.getTurma());
             stmt2.setString(4, aluno.getNome());
-            stmt2.setString(5, Integer.toString(idInsercao));
+            stmt2.setInt(5, (idInsercao));
             stmt2.executeUpdate();
 
         } catch (SQLException error) {

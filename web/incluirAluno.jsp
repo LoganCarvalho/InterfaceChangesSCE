@@ -58,25 +58,25 @@
                 <form action="CadastroAlunoPorResponsavel" method="post">  
                     <div class="form-group row">
                         <label for="txtNomeAluno" class="col-sm-2 form-control-label">Nome do Aluno</label>
-                        <div class="col-sm-4">
+                        <div class="col-sm-6">
                             <input type="text" class="form-control" name="txtNomeAluno" describedby="basic-addon2">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="txtMatriculaAluno" class="col-sm-2 form-control-label">Mátricula do Aluno</label>
-                        <div class="col-sm-4">
+                        <div class="col-sm-2">
                             <input type="text" maxlength="9" class="form-control" name="txtMatriculaAluno">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="txtTurma" class="col-sm-2 form-control-label">Turma do Aluno</label>
-                        <div class="col-sm-4">
+                        <div class="col-sm-2">
                             <input type="text"   class="form-control" name="txtTurma">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="txtTurno" class="col-sm-2 form-control-label">Turno do Aluno</label>
-                        <div class="col-sm-4">
+                        <div class="col-sm-2">
                             <select type="text" maxlength="9" class="form-control" name="txtTurno">
                                 <option value="0">Escolha...</option>
                                 <option value="matutino">Matutino</option>
@@ -87,13 +87,13 @@
                     </div>
                     <div class="form-group row">
                         <label for="txtLoginAluno" class="col-sm-2 form-control-label">Login</label>
-                        <div class="col-sm-4">
+                        <div class="col-sm-2">
                             <input type="text" class="form-control" name="txtLoginAluno">
                         </div>
                     </div>
                      <div class="form-group row">
                         <label for="txtSenhaAluno" class="col-sm-2 form-control-label">Senha</label>
-                        <div class="col-sm-4">
+                        <div class="col-sm-2">
                             <input type="password" maxlength="6" class="form-control" name="txtSenhaAluno">
                         </div>
                     </div>
