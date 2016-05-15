@@ -5,6 +5,7 @@ import Model.Bean.Aluno;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -27,7 +28,9 @@ public class ConsultarSaldoAluno extends HttpServlet {
         } catch (Exception ex) {
             Logger.getLogger(ConsultarSaldoAluno.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+        request.setAttribute("alunoRespons", aluno);
+        RequestDispatcher rd = request.getRequestDispatcher("consultarSaldo.jsp");
+        rd.include(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

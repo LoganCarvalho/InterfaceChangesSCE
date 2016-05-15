@@ -84,14 +84,14 @@ public class AlunoDAO {
 
         try {
             sql.append("select * from CantinaEscola.aluno");
-            sql.append(" where *** LIKE '%'  ?  '%' ");
+            sql.append(" where matricula_aluno = ?");
             PreparedStatement stmt = conexao.prepareStatement(sql.toString());
             stmt.setString(1, aluno.getMatricula());
 
             resposta = stmt.executeQuery();
             while (resposta.next()) {
-                aluno.setSaldo( Double.valueOf(resposta.getString("saldo")));
-
+                aluno.setSaldo( Double.valueOf(resposta.getString("saldo_aluno")));
+                aluno.setNome(resposta.getString("nome_aluno"));
                 ok = true;
             }
         } catch (SQLException error) {
