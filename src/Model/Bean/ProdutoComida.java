@@ -53,12 +53,12 @@ public class ProdutoComida extends Produto {
         return resposta;
     }
       
-     /*  public boolean consultar(ProdutoComida produtoComida) throws Exception {
+      public boolean consultar(ProdutoComida produtoComida) throws Exception {
 
         ComidaDAO comidaDao = new ComidaDAO();
         boolean resposta = comidaDao.consultar(produtoComida);
         return resposta;
-    }*/
+    }
     
     public List<ProdutoComida> getComida() throws Exception {
        

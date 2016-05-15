@@ -91,8 +91,7 @@ public int incluir(ProdutoComida produtoComida) throws Exception {
         return resposta;
     }
 
-    //Verificar se eu devo retornar um responsável ao invés de um bool
- /*   public boolean consultar(ProdutoComida produtoComida) throws Exception {
+     public boolean consultar(ProdutoComida produtoComida) throws Exception {
 
         Connection conexao = ConnectionFactory.getConnection();
         ResultSet resposta = null;
@@ -101,14 +100,17 @@ public int incluir(ProdutoComida produtoComida) throws Exception {
 
         try {
             sql.append("select * from CantinaEscola.produto_comida");
-            sql.append(" where codigo_comida LIKE '%'  ?  '%' ");
+            sql.append(" where nome_comida LIKE '%" +produtoComida.getNome()+"%' and disponivel_comida = 'S' ");
             PreparedStatement stmt = conexao.prepareStatement(sql.toString());
-            stmt.setString(1, produtoComida.getLogin());
 
             resposta = stmt.executeQuery();
-            while (produtoComida.next()) {
-                produtoComida.setLogin(resposta.getString("login_usuario"));
-
+             while (resposta.next()) {
+                produtoComida.setCodigo(resposta.getString("codigo_comida"));
+                produtoComida.setNome(resposta.getString("nome_comida"));
+                produtoComida.setPreco(resposta.getDouble("preco_comida"));
+                produtoComida.setIngredientes(resposta.getString("ingredientes"));
+                produtoComida.setQuantidade(resposta.getInt("quantidade_comida"));
+                
                 ok = true;
             }
         } catch (SQLException error) {
@@ -119,7 +121,7 @@ public int incluir(ProdutoComida produtoComida) throws Exception {
             }
         }
         return ok;
-    }*/
+     }     
      
      public List<ProdutoComida> getComida() throws Exception {
         

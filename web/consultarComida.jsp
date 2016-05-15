@@ -51,19 +51,12 @@
             <p>Consultar Comida</p>
             </div>
             <div class="container">
-                <form action="ConsultarComida" method="post">  
+                <form action="ConsultarComida" method="get">  
                     <div class="form-group row">
                         <label for="sellComida" class="col-sm-2 form-control-label">Comida</label>
-                        <div class="col-sm-3">
-                                 <% List sellComida = (List)session.getAttribute("nome_comida");
-                                    for(int i = 0; i < sellComida.size(); i++) {
-                                    ProdutoComida produtoComida = (ProdutoComida)sellComida.get(i);
-                                %>
-                           <select type="text" class="form-control" name="sellComida" describedby="basic-addon2"> 
-                                <option value="0">Escolha uma opção...</option>
-                               <option value=<%produtoComida.getCodigo();%>> <% produtoComida.getNome();%> </option>																</select>
-                               <% } %>     
-                            </select>                             
+                        <% ProdutoComida comida = (ProdutoComida) request.getAttribute("comida");%>
+                        <div class="col-sm-3">                               
+                           <input type="text" class="form-control" name="txtComida" describedby="basic-addon2">                                                           
                          </div>
                     </div>                 
                     <button type="submit" class="btn btn-warning">Consultar</button>                                                      
@@ -83,25 +76,18 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <% if(comida != null) {%>
                                     <tr>
-                                        <td>John</td>
-                                        <td>Doe</td> 
-                                        <td>Doe</td>
-                                        <td>Doe</td>
-                                        <td>ff</td>
-                                        <td><a href="#"><span class="glyphicon glyphicon-ban-circle"></span></a></td>                                        
-                                        <td><a href="alterarComida.jsp"><span class="glyphicon glyphicon-edit"></span></a></td>                                        
+                                        <td><%=comida.getCodigo()%></td>
+                                        <td><%=comida.getNome()%></td> 
+                                        <td><%=comida.getPreco()%></td>
+                                        <td><%=comida.getIngredientes()%></td>
+                                        <td><%=comida.getQuantidade()%></td>
+                                        <td><a href=""><span class="glyphicon glyphicon-ban-circle"></span></a></td>                                        
+                                        <td><a href="alterarComida.jsp?codigo=<%=comida.getCodigo()%>&nome=<%=comida.getNome()%>&preco=<%=comida.getPreco()%>&ingrediente=<%=comida.getIngredientes()%>&quantidade=<%=comida.getQuantidade()%>"><span class="glyphicon glyphicon-edit"></span></a></td>                                        
                                         <td><span class="glyphicon glyphicon-remove"></span></td>       
                                     </tr>
-                                    <tr>
-                                        <td>Mary</td>
-                                        <td>Moe</td>
-                                        <td>Doe</td>
-                                        <td>Doe</td> 
-                                        <td><a href="#"><span class="glyphicon glyphicon-ban-circle"></span></a></td>
-                                        <td><a href="alterarComida.jsp"><span class="glyphicon glyphicon-edit"></span></a></td>                                        
-                                        <td><span class="glyphicon glyphicon-remove"></span></td>                                        
-                                    </tr>
+                                    <%}%>
                                 </tbody>
                             </table>
                         </div>    
