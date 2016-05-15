@@ -3,7 +3,6 @@ package Controller;
 
 import Model.Bean.Responsavel;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
@@ -13,11 +12,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(name = "ExcluirUsuario", urlPatterns = {"/ExcluirUsuario"})
+@WebServlet(name = "ExcluirResponsavel", urlPatterns = {"/ExcluirResponsavel"})
 public class ExcluirResponsavel extends HttpServlet {
 
-      protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+      protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         Responsavel respons = new Responsavel();
         int resposta=0;
@@ -29,7 +27,7 @@ public class ExcluirResponsavel extends HttpServlet {
         } catch (Exception ex) {
             Logger.getLogger(CadastroResponsavel.class.getName()).log(Level.SEVERE, null, ex);
         }
-        request.setAttribute("responsavel", respons);
+       // request.setAttribute("responsavel", respons);
        RequestDispatcher rd = request.getRequestDispatcher("consultarResponsavel.jsp");
         rd.forward(request, response);
     }

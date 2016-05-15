@@ -45,12 +45,12 @@
         </nav>
         <div class="jumbotron">            
             <div class="container"> 
-                <form action="ExcluirResponsavel" method="get">  
+                <form action="ExcluirResponsavel" method="post">  
                     <div class="row">
                         <div class="col-md-12">
                             <div class="alert alert-warning">
                                 <center><strong>Tem certeza que deseja excluir o registro?</strong></center>
-                                <input type="hidden" value="<%=request.getParameter("cpf")%>"/>
+                                <input type="hidden" name="cpf" id="cpf" value="<%=request.getParameter("cpf")%>"/>
                                 <center><button type="submit" class="btn btn-warning">Excluir Registro</button></center>
                             </div>
                         </div>

@@ -58,7 +58,7 @@ public class ResponsavelDAO {
         int resposta = 0;
         StringBuilder sql = new StringBuilder();
         try {
-            sql.append("delete from CantinaEscola.responsavel");
+            sql.append("UPDATE CantinaEscola.responsavel SET ativo= 0 ");
             sql.append(" where cpf_responsavel = ? ");
             PreparedStatement stmt = conexao.prepareStatement(sql.toString());
             stmt.setString(1, responsavel.getCpf());
@@ -112,7 +112,7 @@ public class ResponsavelDAO {
 
         try {
             sql.append("select * from CantinaEscola.responsavel");
-            sql.append(" where nome_responsavel LIKE '%" +responsavel.getNome()+"%'");
+            sql.append(" where nome_responsavel LIKE '%" +responsavel.getNome()+"%' and ativo = 1 ");
             PreparedStatement stmt = conexao.prepareStatement(sql.toString());
             //stmt.setString(1, responsavel.getNome());
 
