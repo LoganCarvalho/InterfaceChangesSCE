@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -21,14 +22,22 @@ public class ConsultarComida extends HttpServlet {
 
      protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, Exception {
         response.setContentType("text/html;charset=UTF-8");
-        ProdutoComida produtoComida = new ProdutoComida();        
-        //Pegando parâmetros da tela        
-        produtoComida.setNome(request.getParameter("sellComida"));
-        ComidaDAO daoComida = new ComidaDAO();
-        List linhasList = daoComida.getComida(); 
-        request.getSession().setAttribute("nome_comida", linhasList);
-     
-     }    
+       ProdutoComida comida = new ProdutoComida();
+        boolean resposta = true;
+        //Pegando parâmetros da tela
+        comida.setNome(request.getParameter("txtComida"));
+        
+        try {
+           resposta= comida.consultar(comida);
+           
+        } catch (Exception ex) {
+            Logger.getLogger(CadastroResponsavel.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        request.setAttribute("comida", comida);
+        RequestDispatcher rd = request.getRequestDispatcher("consultarComida.jsp");
+        rd.include(request, response);
+    }
+   
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
