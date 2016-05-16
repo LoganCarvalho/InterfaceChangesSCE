@@ -10,18 +10,18 @@ public class Aluno extends Usuario {
     private String turma;
     private double saldo;
     private ArrayList produtosBloqueados = new ArrayList<Produto>();
-    private Responsavel responsavel;
+    private int idResponsavel;
 
     public Aluno() {
     }
 
-    public Aluno(int matricula, String turno, String turma, double saldo, Responsavel responsavel, String nome, String cep, String telefone, String login, String senha, String tipo_usuario) {
+    public Aluno(int matricula, String turno, String turma, double saldo, int idResponsavel, String nome, String cep, String telefone, String login, String senha, String tipo_usuario) {
         super(nome, telefone, login, senha, tipo_usuario);
         this.matricula = matricula;
         this.turno = turno;
         this.turma = turma;
         this.saldo = saldo;
-        this.responsavel = responsavel;
+        this.idResponsavel = idResponsavel;
     }
 
     public int getMatricula() {
@@ -64,12 +64,12 @@ public class Aluno extends Usuario {
         this.produtosBloqueados = produtosBloqueados;
     }
 
-    public Responsavel getResponsavel() {
-        return responsavel;
+       public int getIdResponsavel() {
+        return idResponsavel;
     }
 
-    public void setResponsavel(Responsavel responsavel) {
-        this.responsavel = responsavel;
+    public void setIdResponsavel(int idResponsavel) {
+        this.idResponsavel = idResponsavel;
     }
 
     public int calcularSaldoDepoisCompra(Aluno aluno) {

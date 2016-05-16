@@ -8,6 +8,7 @@ public class Responsavel extends Usuario {
     
     private String cpf;
     private String email;
+    private int id_Funcionario;
 
     public Responsavel(String cpf, String email, String nome, String cep, String telefone, String login, String senha, String tipo_usuario) {
         super(nome,telefone, login, senha, tipo_usuario);
@@ -32,6 +33,14 @@ public class Responsavel extends Usuario {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+    
+       public int getId_Funcionario() {
+        return id_Funcionario;
+    }
+
+    public void setId_Funcionario(int id_Funcionario) {
+        this.id_Funcionario = id_Funcionario;
     }
     
      //modelo que deve ser seguido para fazer os outros métodos
@@ -60,6 +69,13 @@ public class Responsavel extends Usuario {
 
         ResponsavelDAO responsavel = new ResponsavelDAO();
         int resposta = responsavel.update(respons);
+        return resposta;
+    }
+    
+    public boolean consultarPeloCPF(Responsavel respons) throws Exception {
+
+        ResponsavelDAO responsavel = new ResponsavelDAO();
+        boolean resposta = responsavel.consultarPeloCPF(respons);
         return resposta;
     }
       

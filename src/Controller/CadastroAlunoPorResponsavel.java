@@ -2,6 +2,7 @@
 package Controller;
 
 import Model.Bean.Aluno;
+import Model.Bean.Responsavel;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -19,7 +20,9 @@ public class CadastroAlunoPorResponsavel extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");         
         Aluno aluno = new Aluno();
+        Responsavel respons = new Responsavel();
         int resposta = 0;
+        boolean respostaResponsavel = false;
         //Pegando parâmetros da tela. Avaliar necessidade de capturar mais campos
         aluno.setNome(request.getParameter("txtNomeAluno"));
         aluno.setMatricula(Integer.parseInt(request.getParameter("txtMatricula")));
@@ -27,8 +30,12 @@ public class CadastroAlunoPorResponsavel extends HttpServlet {
         aluno.setTurno(request.getParameter("txtTurno"));
         aluno.setLogin(request.getParameter("txtLoginAluno"));
         aluno.setSenha(request.getParameter("txtSenhaAluno"));
+        respons.setCpf(request.getParameter("txtCpfResponsavel"));
         
         try {
+            //faz uma busca em reponsável pelo CPF
+            respostaResponsavel = respons.consultarPeloCPF(respons);
+            aluno.setIdResponsavel(respons.getId_Funcionario());
             resposta= aluno.incluir(aluno);
         } catch (Exception ex) {
             Logger.getLogger(CadastroAlunoPorResponsavel.class.getName()).log(Level.SEVERE, null, ex);

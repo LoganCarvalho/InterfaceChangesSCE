@@ -35,7 +35,7 @@ public class AlunoDAO {
             rs.next();
             idInsercao = rs.getInt(1);
                          
-            sql1.append(" insert into CantinaEscola.aluno(matricula_aluno,turno_aluno,turma_aluno,nome_aluno,id_usuario)");
+            sql1.append(" insert into CantinaEscola.aluno(matricula_aluno,turno_aluno,turma_aluno,nome_aluno,id_usuario,id_responsavel)");
             sql1.append(" values(?,?,?,?,?);");
             PreparedStatement stmt2 = conexao.prepareStatement(sql1.toString());
             stmt2.setInt(1, aluno.getMatricula());
@@ -43,6 +43,7 @@ public class AlunoDAO {
             stmt2.setString(3, aluno.getTurma());
             stmt2.setString(4, aluno.getNome());
             stmt2.setInt(5, (idInsercao));
+            stmt2.setInt(6, aluno.getIdResponsavel());
             stmt2.executeUpdate();
 
         } catch (SQLException error) {
@@ -108,15 +109,17 @@ public class AlunoDAO {
 
         try {
             sql.append("select * from CantinaEscola.aluno");
-            sql.append(" where matricula_aluno = ?");
+            sql.append(" where matricula_aluno = ? or nome_aluno LIKE '%" +aluno.getNome()+"%'");
             PreparedStatement stmt = conexao.prepareStatement(sql.toString());
             stmt.setInt(1, aluno.getMatricula());
 
             resposta = stmt.executeQuery();
-            while (resposta.next()) {
-                aluno.setSaldo( Double.valueOf(resposta.getString("saldo_aluno")));
+            while (resposta.next()) {            
                 aluno.setNome(resposta.getString("nome_aluno"));
                 aluno.setMatricula(Integer.parseInt(resposta.getString("matricula_aluno")));
+                aluno.setTurma(resposta.getString("turma_aluno"));
+                aluno.setTurno(resposta.getString("turno_aluno"));
+                   
                 ok = true;
             }
         } catch (SQLException error) {

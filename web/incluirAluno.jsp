@@ -59,19 +59,19 @@
                     <div class="form-group row">
                         <label for="txtNomeAluno" class="col-sm-2 form-control-label">Nome do Aluno</label>
                         <div class="col-sm-6">
-                            <input type="text" class="form-control" name="txtNomeAluno" describedby="basic-addon2">
+                            <input type="text" required="true" class="form-control" name="txtNomeAluno" describedby="basic-addon2">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="txtMatriculaAluno" class="col-sm-2 form-control-label">Mátricula do Aluno</label>
                         <div class="col-sm-2">
-                            <input type="text" maxlength="9" class="form-control" name="txtMatriculaAluno">
+                            <input type="number" maxlength="9" required="true" class="form-control" name="txtMatriculaAluno">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="txtTurma" class="col-sm-2 form-control-label">Turma do Aluno</label>
                         <div class="col-sm-2">
-                            <input type="text"   class="form-control" name="txtTurma">
+                            <input type="text" required="true"  class="form-control" name="txtTurma">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -88,13 +88,19 @@
                     <div class="form-group row">
                         <label for="txtLoginAluno" class="col-sm-2 form-control-label">Login</label>
                         <div class="col-sm-2">
-                            <input type="text" class="form-control" name="txtLoginAluno">
+                            <input type="text" required="true" class="form-control" name="txtLoginAluno">
                         </div>
                     </div>
                      <div class="form-group row">
                         <label for="txtSenhaAluno" class="col-sm-2 form-control-label">Senha</label>
                         <div class="col-sm-2">
-                            <input type="password" maxlength="6" class="form-control" name="txtSenhaAluno">
+                            <input type="password" required="true" maxlength="6" class="form-control" name="txtSenhaAluno">
+                        </div>
+                    </div>
+                     <div class="form-group row">
+                        <label for="txtCpfResponsavel" class="col-sm-2 form-control-label">CPF do Responsável</label>
+                        <div class="col-sm-2">
+                            <input type="password" required="true" maxlength="6" class="form-control" name="txtCpfResponsavel">
                         </div>
                     </div>
                     <button type="submit" class="btn btn-warning">Cadastrar</button>

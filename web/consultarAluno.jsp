@@ -44,12 +44,12 @@
                 </ul>
             </div>
         </nav>
-             <div class="jumbotron">
+        <div class="jumbotron">
             <div class="container text-center">
-            <p>Consultar Aluno</p>
+                <p>Consultar Aluno</p>
             </div>
             <div class="container">
-                <form action="ResponsavelController2" method="post">  
+                <form action="ConsultarAlunoResponsavel" method="post">  
                     <div class="form-group row">
                         <label for="txtMatricula" class="col-sm-2 form-control-label">Mátricula do Aluno</label>
                         <div class="col-sm-3">
@@ -100,7 +100,7 @@
                 </form>
             </div>
         </div>
-         <footer class="container-fluid text-center">
+        <footer class="container-fluid text-center">
             <p>SCE- Sistema Cantina Escola, Copyright © 2016 </p>
         </footer>
     </body>

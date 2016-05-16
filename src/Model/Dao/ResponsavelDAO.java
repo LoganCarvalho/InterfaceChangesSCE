@@ -102,7 +102,36 @@ public class ResponsavelDAO {
         return resposta;
     }
 
-    //Verificar se eu devo retornar um responsável ao invés de um bool
+     
+      public boolean consultarPeloCPF(Responsavel responsavel) throws Exception {
+
+        Connection conexao = ConnectionFactory.getConnection();
+        ResultSet resposta = null;
+        boolean ok = false;
+        StringBuilder sql = new StringBuilder();
+
+        try {
+            sql.append("select * from CantinaEscola.responsavel");
+            sql.append(" where cpf_responsavel LIKE '%" +responsavel.getCpf()+"%' and ativo = 1 ");
+            PreparedStatement stmt = conexao.prepareStatement(sql.toString());
+            //stmt.setString(1, responsavel.getNome());
+
+            resposta = stmt.executeQuery();
+            while (resposta.next()) {
+                responsavel.setId_Funcionario(Integer.parseInt(resposta.getString("id_responsavel")));
+                
+                ok = true;
+            }
+        } catch (SQLException error) {
+            System.out.println(error.getMessage());
+        } finally {
+            if (conexao != null) {
+                ConnectionFactory.FecharConexao(conexao, null, resposta);
+            }
+        }
+        return ok;
+    }
+   
     public boolean consultar(Responsavel responsavel) throws Exception {
 
         Connection conexao = ConnectionFactory.getConnection();
