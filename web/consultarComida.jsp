@@ -85,7 +85,7 @@
                                         <td><%=comida.getQuantidade()%></td>
                                         <td><a href=""><span class="glyphicon glyphicon-ban-circle"></span></a></td>                                        
                                         <td><a href="alterarComida.jsp?codigo=<%=comida.getCodigo()%>&nome=<%=comida.getNome()%>&preco=<%=comida.getPreco()%>&ingrediente=<%=comida.getIngredientes()%>&quantidade=<%=comida.getQuantidade()%>"><span class="glyphicon glyphicon-edit"></span></a></td>                                        
-                                        <td><span class="glyphicon glyphicon-remove"></span></td>       
+                                        <td><a href="ExcluirComida.jsp?codigo=<%=comida.getCodigo()%>"></a><span class="glyphicon glyphicon-remove"></span></td>       
                                     </tr>
                                     <%}%>
                                 </tbody>

@@ -39,17 +39,17 @@ public class ProdutoComida extends Produto {
         return resposta;
     }
     
-      public int excluir() throws Exception {
+      public int excluir(ProdutoComida produtoComida) throws Exception {
 
         ComidaDAO ComidaDao = new ComidaDAO();
-        int resposta = ComidaDao.excluir(this);
+        int resposta = ComidaDao.excluir(produtoComida);
         return resposta;
     }
       
-    public int update() throws Exception {
+    public int update(ProdutoComida produtoComida) throws Exception {
 
         ComidaDAO ComidaDao = new ComidaDAO();
-        int resposta = ComidaDao.update(this);
+        int resposta = ComidaDao.update(produtoComida);
         return resposta;
     }
       
