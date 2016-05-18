@@ -55,7 +55,7 @@
             <div class="container text-center">
                 <div class="row">
                     <div class="col-md-12">
-                        <img class="img-circle" src="Imagens/compras.jpg" alt="Generic placeholder image" width="140" height="140">
+                        <img class="img-circle" src="Imagens/comprar.png" alt="Generic placeholder image" width="140" height="140">
                         <h2>Comprar</h2>
                         <p><a class="btn btn-warning waves-effect waves-light" href="realizarCompra.jsp" data-toggle="tooltip" data-placement="bottom" title="Clique aqui para realizar compra dos produtos desejados." role="button">Entrar &raquo;</a></p>
                     </div>                 

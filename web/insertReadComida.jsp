@@ -55,7 +55,7 @@
             <div class="container text-center">
                 <div class="row">
                     <div class="col-md-7">
-                        <img class="img-circle" src="Imagens/cadastro.png" alt="Generic placeholder image" width="140" height="140">
+                        <img class="img-circle" src="Imagens/adicionarcomida.png" alt="Generic placeholder image" width="140" height="140">
                         <h2>Incluir Comida</h2>
                         <p><a class="btn btn-warning waves-effect waves-light" href="incluirComida.jsp" data-toggle="tooltip" data-placement="bottom" title="Clique aqui para realizar o cadastro de um alimento" role="button">Entrar &raquo;</a></p>
                     </div>

@@ -59,7 +59,7 @@
                         <p><a class="btn btn-warning waves-effect waves-light" href="ManterProdutoIndex.jsp" data-toggle="tooltip" data-placement="bottom" title="Incluir, Alterar, Consultar e Desbloquear Comidas e Bebidas do Sistema." role="button">Entrar &raquo;</a></p>
                     </div>
                     <div class="col-lg-4">
-                        <img class="img-circle" src="Imagens/cadastro.png" alt="Generic placeholder image" width="140" height="140">
+                        <img class="img-circle" src="Imagens/cadastrarresponsavel.png" alt="Generic placeholder image" width="140" height="140">
                         <h2>Cadastrar Pais</h2>
                         <p><a class="btn btn-warning waves-effect waves-light" data-toggle="tooltip" data-placement="bottom" title="Cadastrar responsável atribuindo além de seus dados um login e uma senha de acesso." href="insertReadFuncionario.jsp" role="button">Entrar &raquo;</a></p>
                     </div>
