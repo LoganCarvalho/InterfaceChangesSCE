@@ -60,7 +60,7 @@
                         <p><a class="btn btn-warning waves-effect waves-light" href="incluirComida.jsp" data-toggle="tooltip" data-placement="bottom" title="Clique aqui para realizar o cadastro de um alimento" role="button">Entrar &raquo;</a></p>
                     </div>
                     <div class="col-md-4">
-                        <img class="img-circle" src="Imagens/saldo.jpg" alt="Generic placeholder image" width="140" height="140">
+                        <img class="img-circle" src="Imagens/consultarcomida.png" alt="Generic placeholder image" width="140" height="140">
                         <h2>Consultar Comida</h2>
                         <p><a class="btn btn-warning waves-effect waves-light" data-toggle="tooltip" data-placement="bottom" title="Clique aqui para consultar os dados de um alimento." href="consultarComida.jsp" role="button">Entrar &raquo;</a></p>
                     </div>

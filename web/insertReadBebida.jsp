@@ -60,7 +60,7 @@
                         <p><a class="btn btn-warning waves-effect waves-light" href="incluirBebida.jsp" data-toggle="tooltip" data-placement="bottom" title="Clique aqui para realizar o cadastro de uma bebida" role="button">Entrar &raquo;</a></p>
                     </div>
                     <div class="col-md-4">
-                        <img class="img-circle" src="Imagens/saldo.jpg" alt="Generic placeholder image" width="140" height="140">
+                        <img class="img-circle" src="Imagens/consultarbebida.png" alt="Generic placeholder image" width="140" height="140">
                         <h2>Consultar Bebida</h2>
                         <p><a class="btn btn-warning waves-effect waves-light" data-toggle="tooltip" data-placement="bottom" title="Clique aqui para consultar os dados de uma bebida." href="consultarBebida.jsp" role="button">Entrar &raquo;</a></p>
                     </div>
