@@ -46,9 +46,9 @@
                 </ul>
             </div>
         </nav>
-             <div class="jumbotron">
+        <div class="jumbotron">
             <div class="container text-center">
-            <p>Consultar Comida</p>
+                <p>Consultar Comida</p>
             </div>
             <div class="container">
                 <form action="ConsultarComida" method="get">  
@@ -56,8 +56,8 @@
                         <label for="sellComida" class="col-sm-2 form-control-label">Comida</label>
                         <% ProdutoComida comida = (ProdutoComida) request.getAttribute("comida");%>
                         <div class="col-sm-3">                               
-                           <input type="text" class="form-control" name="txtComida" describedby="basic-addon2">                                                           
-                         </div>
+                            <input type="text" class="form-control" name="txtComida" describedby="basic-addon2">                                                           
+                        </div>
                     </div>                 
                     <button type="submit" class="btn btn-warning">Consultar</button>                                                      
                     <div class="row">
@@ -76,7 +76,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <% if(comida != null) {%>
+                                    <% if (comida != null) {%>
                                     <tr>
                                         <td><%=comida.getCodigo()%></td>
                                         <td><%=comida.getNome()%></td> 
@@ -95,7 +95,7 @@
                 </form>
             </div>
         </div>
-         <footer class="container-fluid text-center">
+        <footer class="container-fluid text-center">
             <p>SCE- Sistema Cantina Escola, Copyright © 2016 </p>
         </footer>
     </body>

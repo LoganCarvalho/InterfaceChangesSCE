@@ -2,11 +2,14 @@
 package Model.Bean;
 
 import Model.Dao.ComidaDAO;
+import java.util.Date;
 import java.util.List;
 
 public class ProdutoComida extends Produto {
   
     private String ingredientes;
+    private Date dataCompra;
+ 
 
     public ProdutoComida(){
     
@@ -24,6 +27,15 @@ public class ProdutoComida extends Produto {
     public void setIngredientes(String ingredientes) {
         this.ingredientes = ingredientes;
     }
+    
+     public Date getDataCompra() {
+        return dataCompra;
+    }
+
+    public void setDataCompra(Date dataCompra) {
+        this.dataCompra = dataCompra;
+    }
+    
     
      public int incluir(ProdutoComida produtoComida) throws Exception {
 
@@ -57,6 +69,13 @@ public class ProdutoComida extends Produto {
 
         ComidaDAO comidaDao = new ComidaDAO();
         boolean resposta = comidaDao.consultar(produtoComida);
+        return resposta;
+    }
+      
+      public boolean consultarComidasDisponiveis(ProdutoComida produtoComida) throws Exception {
+
+        ComidaDAO comidaDao = new ComidaDAO();
+        boolean resposta = comidaDao.consultarComidasDisponiveis(produtoComida);
         return resposta;
     }
     

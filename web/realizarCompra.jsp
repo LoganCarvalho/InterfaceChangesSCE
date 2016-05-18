@@ -44,18 +44,19 @@
                 </ul>
             </div>
         </nav>
-             <div class="jumbotron">
+        <div class="jumbotron">
             <div class="container text-center">
-            <p>Comprar Alimento</p>
+                <p>Comprar Alimento</p>
             </div>
             <div class="container">
-                <form action="ResponsavelController2" method="post">  
+                <form action="RealizarCompra" method="post">  
                     <div class="form-group row">
                         <label for="txtSaldoAluno" class="col-sm-2 form-control-label">Saldo Disponível</label>
                         <div class="col-sm-3">
                             <input type="text" class="form-control" name="txtSaldoAluno" describedby="basic-addon2"/>    
                         </div>
-                    </div>                 
+                    </div>    
+                       <button type="submit" class="btn btn-warning">Exibir Alimentos</button>     
                     <div class="row">
                         <div class="col-md-12">
                             <table class="table table-hover">
@@ -63,7 +64,7 @@
                                     <tr>
                                         <th>Nome do Produto</th>
                                         <th>Preço</th>
-                                        <th>Quantidade</th>
+                                        <th>Ingredientes</th>
                                         <th>Comprar</th>                                  
                                     </tr>
                                 </thead>
@@ -81,7 +82,7 @@
                 </form>
             </div>
         </div>
-         <footer class="container-fluid text-center">
+        <footer class="container-fluid text-center">
             <p>SCE- Sistema Cantina Escola, Copyright © 2016 </p>
         </footer>
     </body>

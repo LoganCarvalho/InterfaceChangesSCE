@@ -44,25 +44,31 @@
                 </ul>
             </div>
         </nav>
-             <div class="jumbotron">
+        <div class="jumbotron">
             <div class="container text-center">
-            <p>Consultar Consumo</p>
+                <p>Consultar Consumo</p>
             </div>
             <div class="container">
-                <form action="ResponsavelController2" method="post">  
+                <form action="ConsultarConsumoAluno" method="post">  
                     <div class="form-group row">
                         <label for="txtMatricula" class="col-sm-2 form-control-label">Mátricula do Aluno</label>
-                        <div class="col-sm-3">
+                        <div class="col-sm-2">
                             <input type="text" class="form-control" name="txtMatricula" describedby="basic-addon2">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="txtPeriodo" class="col-sm-2 form-control-label">Período</label>
-                        <div class="col-sm-3">
-                            <input type="text" class="form-control" name="txtPeriodo" placeholder="00/00/0000">
+                        <label for="txtDataInicial" class="col-sm-2 form-control-label">Data Inicial</label>
+                        <div class="col-sm-2">
+                            <input type="date" class="form-control" name="txtDataInicial" placeholder="00/00/0000">
                         </div>
-                    </div>                    
-                    <button type="submit" class="btn btn-warning">Consultar</button>                                                      
+                    </div>   
+                    <div class="form-group row">
+                        <label for="txtDataFinal" class="col-sm-2 form-control-label">Data Final</label>
+                        <div class="col-sm-2">
+                            <input type="date" class="form-control" name="txtDataInicial" placeholder="00/00/0000">
+                        </div>
+                    </div> 
+                    <button type="submit" class="btn btn-warning">Consultar Consumo</button>                                                      
                     <div class="row">
                         <div class="col-md-12">
                             <table class="table table-hover">
@@ -88,7 +94,7 @@
                 </form>
             </div>
         </div>
-         <footer class="container-fluid text-center">
+        <footer class="container-fluid text-center">
             <p>SCE- Sistema Cantina Escola, Copyright © 2016 </p>
         </footer>
     </body>

@@ -123,6 +123,38 @@ public int incluir(ProdutoComida produtoComida) throws Exception {
         return ok;
      }     
      
+     
+     public boolean consultarComidasDisponiveis(ProdutoComida produtoComida) throws Exception {
+
+        Connection conexao = ConnectionFactory.getConnection();
+        ResultSet resposta = null;
+        boolean ok = false;
+        StringBuilder sql = new StringBuilder();
+
+        try {
+            sql.append("select * from CantinaEscola.produto_comida");
+            sql.append(" where disponivel_comida = 1");
+            PreparedStatement stmt = conexao.prepareStatement(sql.toString());
+
+            resposta = stmt.executeQuery();
+             while (resposta.next()) {
+                produtoComida.setCodigo(resposta.getString("codigo_comida"));
+                produtoComida.setNome(resposta.getString("nome_comida"));
+                produtoComida.setPreco(resposta.getDouble("preco_comida"));
+                produtoComida.setIngredientes(resposta.getString("ingredientes"));
+                             
+                ok = true;
+            }
+        } catch (SQLException error) {
+            System.out.println(error.getMessage());
+        } finally {
+            if (conexao != null) {
+                ConnectionFactory.FecharConexao(conexao, null, resposta);
+            }
+        }
+        return ok;
+     }     
+     
      public List<ProdutoComida> getComida() throws Exception {
         
         List<ProdutoComida> comidas = new ArrayList();
