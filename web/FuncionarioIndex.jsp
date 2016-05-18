@@ -64,7 +64,7 @@
                         <p><a class="btn btn-warning waves-effect waves-light" data-toggle="tooltip" data-placement="bottom" title="Cadastrar responsável atribuindo além de seus dados um login e uma senha de acesso." href="insertReadFuncionario.jsp" role="button">Entrar &raquo;</a></p>
                     </div>
                     <div class="col-lg-4">
-                        <img class="img-circle" src="Imagens/saldo.png" alt="Generic placeholder image" width="140" height="140">
+                        <img class="img-circle" src="Imagens/consultarsaldo.png" alt="Generic placeholder image" width="140" height="140">
                         <h2>Consultar Saldo do Aluno</h2>
                         <p><a class="btn btn-warning waves-effect waves-light" data-toggle="tooltip" data-placement="bottom" title="Consultar saldo do aluno através da matricula." href="consultarSaldo.jsp" role="button">Entrar &raquo;</a></p>
                     </div>

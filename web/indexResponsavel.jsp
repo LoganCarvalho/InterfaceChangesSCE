@@ -48,29 +48,29 @@
             <div class="container text-center">
                 <div class="row">
                     <div class="col-lg-4">
-                        <img class="img-circle" src="Imagens/cadastro.png" alt="Generic placeholder image" width="140" height="140">
+                        <img class="img-circle" src="Imagens/incluiraluno.png" alt="Generic placeholder image" width="140" height="140">
                         <h2>Cadastrar/Consultar Aluno</h2>
                         <p><a class="btn btn-warning waves-effect waves-light" href="insertReadAluno.jsp" data-toggle="tooltip" data-placement="bottom" title="Cadastrar Aluno." role="button">Entrar &raquo;</a></p>
                     </div>
                     <div class="col-lg-4">
-                        <img class="img-circle" src="Imagens/depositar.jpg" alt="Generic placeholder image" width="140" height="140">
+                        <img class="img-circle" src="Imagens/creditoaluno.png" alt="Generic placeholder image" width="140" height="140">
                         <h2>Depositar Crédito</h2>
                         <p><a class="btn btn-warning waves-effect waves-light" data-toggle="tooltip" data-placement="bottom" title="Depositar crédito para o aluno." href="depositarCredito.jsp" role="button">Entrar &raquo;</a></p>
                     </div>
                     <div class="col-lg-4">
-                        <img class="img-circle" src="Imagens/saldo.png" alt="Generic placeholder image" width="140" height="140">
+                        <img class="img-circle" src="Imagens/consultarsaldo.png" alt="Generic placeholder image" width="140" height="140">
                         <h2>Consultar Saldo do Aluno</h2>
                         <p><a class="btn btn-warning waves-effect waves-light" data-toggle="tooltip" data-placement="bottom" title="Consultar saldo do aluno através da matricula." href="ConsultarSaldoAlunoPorResponsavel.jsp" role="button">Entrar &raquo;</a></p>
                     </div>
                     <div class="col-lg-4 " style="margin-left: 184px;">
-                        <img class="img-circle" src="Imagens/saldo.png" alt="Generic placeholder image" width="140" height="140">
+                        <img class="img-circle" src="Imagens/consultaraluno.png" alt="Generic placeholder image" width="140" height="140">
                         <h2>Consultar Consumo do Aluno</h2>
-                        <p><a class="btn btn-warning waves-effect waves-light" data-toggle="tooltip" data-placement="bottom" title="Bloquear consumo do aluno através da matricula." href="consultarConsumoAluno.jsp" role="button">Entrar &raquo;</a></p>
+                        <p><a class="btn btn-warning waves-effect waves-light" data-toggle="tooltip" data-placement="bottom" title="Consultar todo o consumo do aluno." href="consultarConsumoAluno.jsp" role="button">Entrar &raquo;</a></p>
                     </div>
                     <div class="col-lg-4">
-                        <img class="img-circle" src="Imagens/bloqueio.png" alt="Generic placeholder image" width="140" height="140">
+                        <img class="img-circle" src="Imagens/bloquearconsumo.png" alt="Generic placeholder image" width="140" height="140">
                         <h2>Bloquear Consumo do Aluno</h2>
-                        <p><a class="btn btn-warning waves-effect waves-light" data-toggle="tooltip" data-placement="bottom" title="Consultar saldo do aluno através da matricula." href="bloquearConsumoAluno.jsp" role="button">Entrar &raquo;</a></p>
+                        <p><a class="btn btn-warning waves-effect waves-light" data-toggle="tooltip" data-placement="bottom" title="Bloquear consumo de determindos alimentos." href="bloquearConsumoAluno.jsp" role="button">Entrar &raquo;</a></p>
                     </div>
                 </div>
             </div>
