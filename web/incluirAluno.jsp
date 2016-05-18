@@ -100,7 +100,7 @@
                      <div class="form-group row">
                         <label for="txtCpfResponsavel" class="col-sm-2 form-control-label">CPF do Responsável</label>
                         <div class="col-sm-2">
-                            <input type="password" required="true" maxlength="6" class="form-control" name="txtCpfResponsavel">
+                            <input type="text" required="true" maxlength="11" class="form-control" name="txtCpfResponsavel">
                         </div>
                     </div>
                     <button type="submit" class="btn btn-warning">Cadastrar</button>

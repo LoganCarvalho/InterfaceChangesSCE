@@ -118,7 +118,7 @@ public class ResponsavelDAO {
 
             resposta = stmt.executeQuery();
             while (resposta.next()) {
-                responsavel.setId_Funcionario(Integer.parseInt(resposta.getString("id_responsavel")));
+                responsavel.setIdResponsavel(Integer.parseInt(resposta.getString("id_responsavel")));
                 
                 ok = true;
             }

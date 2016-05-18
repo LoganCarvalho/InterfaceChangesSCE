@@ -8,7 +8,9 @@ public class Responsavel extends Usuario {
     
     private String cpf;
     private String email;
-    private int id_Funcionario;
+    private int idResponsavel;
+
+ 
 
     public Responsavel(String cpf, String email, String nome, String cep, String telefone, String login, String senha, String tipo_usuario) {
         super(nome,telefone, login, senha, tipo_usuario);
@@ -35,12 +37,12 @@ public class Responsavel extends Usuario {
         this.email = email;
     }
     
-       public int getId_Funcionario() {
-        return id_Funcionario;
+   public int getIdResponsavel() {
+        return idResponsavel;
     }
 
-    public void setId_Funcionario(int id_Funcionario) {
-        this.id_Funcionario = id_Funcionario;
+    public void setIdResponsavel(int idResponsavel) {
+        this.idResponsavel = idResponsavel;
     }
     
      //modelo que deve ser seguido para fazer os outros métodos

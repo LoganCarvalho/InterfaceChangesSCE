@@ -35,7 +35,7 @@ public class CadastroAlunoPorResponsavel extends HttpServlet {
         try {
             //faz uma busca em reponsável pelo CPF
             respostaResponsavel = respons.consultarPeloCPF(respons);
-            aluno.setIdResponsavel(respons.getId_Funcionario());
+            aluno.setIdResponsavel(respons.getIdResponsavel());
             resposta= aluno.incluir(aluno);
         } catch (Exception ex) {
             Logger.getLogger(CadastroAlunoPorResponsavel.class.getName()).log(Level.SEVERE, null, ex);
