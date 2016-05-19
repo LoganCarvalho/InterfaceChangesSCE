@@ -131,5 +131,12 @@ public class Aluno extends Usuario {
         boolean resposta = alunoDao.consultarSaldo(aluno);
         return resposta;
     }
+    
+    public boolean consultar(Aluno aluno) throws Exception {
+
+        AlunoDAO alunoDao = new AlunoDAO();
+        boolean resposta = alunoDao.consultar(aluno);
+        return resposta;
+    }
 
 }

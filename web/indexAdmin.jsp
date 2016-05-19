@@ -55,12 +55,12 @@
             <div class="container text-center">
                 <div class="row">
                     <div class="col-md-7">
-                        <img class="img-circle" src="Imagens/escola.jpg" alt="Generic placeholder image" width="140" height="140">
+                        <img class="img-circle" src="Imagens/cadastrarescola.png" alt="Generic placeholder image" width="140" height="140">
                         <h2>Cadastrar Escola</h2>
                         <p><a class="btn btn-warning waves-effect waves-light" href="incluirEscola.jsp" data-toggle="tooltip" data-placement="bottom" title="Clique aqui para cadastrar uma escola." role="button">Entrar &raquo;</a></p>
                     </div>
                     <div class="col-md-4">
-                        <img class="img-circle" src="Imagens/funcionario.jpg" alt="Generic placeholder image" width="140" height="140">
+                        <img class="img-circle" src="Imagens/cadastrarfuncionario.png" alt="Generic placeholder image" width="140" height="140">
                         <h2>Cadastrar Funcionário</h2>
                         <p><a class="btn btn-warning waves-effect waves-light" data-toggle="tooltip" data-placement="bottom" title="Clique aqui para cadastrar um funcionário." href="incluirFuncionario.jsp" role="button">Entrar &raquo;</a></p>
                     </div>

@@ -59,7 +59,7 @@
                         <p><a class="btn btn-warning waves-effect waves-light" href="CadResponsavel.jsp" data-toggle="tooltip" data-placement="bottom" title="Clique aqui para realizar o cadastro de um Responsável." role="button">Entrar &raquo;</a></p>
                     </div>
                     <div class="col-md-4">
-                        <img class="img-circle" src="Imagens/saldo.jpg" alt="Generic placeholder image" width="140" height="140">
+                        <img class="img-circle" src="Imagens/consultarresponsável.png" alt="Generic placeholder image" width="140" height="140">
                         <h2>Consultar Responsável</h2>
                         <p><a class="btn btn-warning waves-effect waves-light" data-toggle="tooltip" data-placement="bottom" title="Clique aqui para consultar os dados do Responsável." href="consultarResponsavel.jsp" role="button">Entrar &raquo;</a></p>
                     </div>

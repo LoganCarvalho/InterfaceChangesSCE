@@ -20,7 +20,7 @@ public class ConsultarConsumoAluno extends HttpServlet {
         int resposta = 0;
         //pegar data para fazer select com between para trazer o consumo do aluno
         aluno.setMatricula(Integer.parseInt(request.getParameter("txtMatricula"))); //a servlet não funciona por causa dessa converã para inteiro
-        
+        //Temos que colocar a data
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

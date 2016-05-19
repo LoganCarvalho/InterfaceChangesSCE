@@ -131,4 +131,38 @@ public class AlunoDAO {
         }
         return ok;
     }
+    
+     public boolean consultar(Aluno aluno) throws Exception {
+
+        Connection conexao = ConnectionFactory.getConnection();
+        ResultSet resposta = null;
+        boolean ok = false;
+        StringBuilder sql = new StringBuilder();
+
+        try {
+            sql.append("select * from CantinaEscola.aluno");
+            sql.append(" where matricula_aluno = ? ");
+            PreparedStatement stmt = conexao.prepareStatement(sql.toString());
+            stmt.setInt(1, aluno.getMatricula());
+
+            resposta = stmt.executeQuery();
+            while (resposta.next()) {            
+                aluno.setNome(resposta.getString("nome_aluno"));
+                //aluno.setSaldo(Integer.parseInt(resposta.getString("saldo_aluno")));
+                aluno.setTurma(resposta.getString("turma_aluno"));
+                aluno.setTurno(resposta.getString("turno_aluno"));
+                   
+                ok = true;
+            }
+        } catch (SQLException error) {
+            System.out.println(error.getMessage());
+        } finally {
+            if (conexao != null) {
+                ConnectionFactory.FecharConexao(conexao, null, resposta);
+            }
+        }
+        return ok;
+    }
+    
+    
 }
