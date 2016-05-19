@@ -40,9 +40,14 @@ public class CadastroAlunoPorResponsavel extends HttpServlet {
         } catch (Exception ex) {
             Logger.getLogger(CadastroAlunoPorResponsavel.class.getName()).log(Level.SEVERE, null, ex);
         }
-        RequestDispatcher rd = request.getRequestDispatcher("sucesso.jsp");
-        rd.include(request, response);
-    }
+        if (respostaResponsavel!= false){
+                   RequestDispatcher rd = request.getRequestDispatcher("sucesso.jsp");
+            rd.include(request, response);
+        } else {
+            RequestDispatcher rd = request.getRequestDispatcher("error.jsp");
+            rd.include(request, response);
+        }
+    }   
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
