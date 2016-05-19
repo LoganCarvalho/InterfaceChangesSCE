@@ -47,7 +47,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="alert alert-danger">
-                            <center><strong>Não existe um responsável para o CPF informado!</strong></center>
+                            <center><strong>Ocorreu um erro! Tente novamente!</strong></center>
                         </div>
                     </div>
                 </div>

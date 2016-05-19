@@ -24,12 +24,12 @@ public class ConsultarSaldoAluno extends HttpServlet {
         aluno.setMatricula(Integer.parseInt(request.getParameter("txtMatricula")));
        
         try {
-            resposta = aluno.consultar(aluno);
+            resposta = aluno.consultarSaldo(aluno);
         } catch (Exception ex) {
             Logger.getLogger(ConsultarSaldoAluno.class.getName()).log(Level.SEVERE, null, ex);
         }
         request.setAttribute("alunoRespons", aluno);
-        RequestDispatcher rd = request.getRequestDispatcher("consultarSaldo.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("ConsultarSaldoAlunoPorResponsavel.jsp");
         rd.include(request, response);
     }
 

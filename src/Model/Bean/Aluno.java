@@ -125,10 +125,10 @@ public class Aluno extends Usuario {
         return resposta;
     }
 
-    public boolean consultar(Aluno aluno) throws Exception {
+    public boolean consultarSaldo(Aluno aluno) throws Exception {
 
         AlunoDAO alunoDao = new AlunoDAO();
-        boolean resposta = alunoDao.consultar(aluno);
+        boolean resposta = alunoDao.consultarSaldo(aluno);
         return resposta;
     }
 

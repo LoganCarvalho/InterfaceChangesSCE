@@ -1,4 +1,4 @@
-
+<%@page import="Model.Bean.Aluno"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -38,9 +38,8 @@
                     </ul>
                 </div>
                 <ul class="nav navbar-nav navbar-right" style="padding-top: 0.5cm">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:#FFFFFF; font-size: x-large">Responsável</a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:#FFFFFF; font-size: x-large">Funcionário</a>
                     <ul class="dropdown-menu">
-                        <li><a href="#"><span class="glyphicon glyphicon-user"></span>Perfil</a></li>  
                         <li><a href="Inicio.jsp"><span class="glyphicon glyphicon-log-out"></span>Sair</a></li>
                     </ul>   
                 </ul>
@@ -51,18 +50,21 @@
                 <p>Consultar Saldo</p>
             </div>
             <div class="container">
-                <form action="ConsultarSaldoAluno" method="post">  
+                <form action="ConsultarSaldoAluno" method="post"> 
+                    <% Aluno alunoRespons = (Aluno) request.getAttribute("alunoRespons");%>
                     <div class="form-group row">
                         <label for="txtMatricula" class="col-sm-2 form-control-label">Mátricula do Aluno</label>
                         <div class="col-sm-3">
-                            <input type="text" class="form-control" name="txtMatricula" describedby="basic-addon2">
+                            <input type="text" class="form-control" name="txtMatricula">
                         </div>
-                    </div>
+                    </div>                                        
                     <div class="form-group row">
                         <label for="txtSaldoAluno" class="col-sm-2 form-control-label">Saldo do Aluno</label>
                         <div class="col-sm-3">
-                            <input type="text" class="form-control" name="txtSaldoAluno">
-                        </div>
+                        <%if (alunoRespons != null) {%>   
+                            <input type="text" class="form-control" readonly="true" value="<%=alunoRespons.getSaldo()%>" name="txtSaldoAluno">
+                        <% } %>
+                        </div>                         
                     </div>                    
                     <button type="submit" class="btn btn-warning">Consultar</button>
                 </form>
