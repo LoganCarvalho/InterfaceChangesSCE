@@ -1,6 +1,8 @@
 
 package Model.Bean;
 
+import Model.Dao.EscolaDAO;
+
 public class Escola {
     
     private String nomeEscola;
@@ -70,6 +72,19 @@ public class Escola {
         this.funcionario = funcionario;
     }
     
+     public int incluir(Escola escola) throws Exception {
+
+          int resposta= 0;
+         try {
+              EscolaDAO escolaDao = new EscolaDAO();
+              resposta = escolaDao.incluir(escola);
+            
+         } catch (Exception e) {
+             System.out.println(e.getMessage());
+         }
+       
+        return resposta;
+    }
     
     
 }

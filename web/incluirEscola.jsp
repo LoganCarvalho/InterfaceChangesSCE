@@ -55,7 +55,7 @@
             <p>Cadastrar Escola</p>
             </div>
             <div class="container">
-                <form action="ResponsavelController2" method="post">  
+                <form action="IncluirEscola" method="post">  
                     <div class="form-group row">
                         <label for="txtNomeEscola" class="col-sm-2 form-control-label">Nome da Escola</label>
                         <div class="col-sm-4">
@@ -70,16 +70,22 @@
                     </div>   
                      <div class="form-group row">
                         <label for="txtTelEscola" class="col-sm-2 form-control-label">Telefone</label>
-                        <div class="col-sm-4">
+                        <div class="col-sm-2">
                             <input type="text" maxlength="9" class="form-control" name="txtTelEscola">
                         </div>
                     </div>
                      <div class="form-group row">
                         <label for="txtEmailEscola" class="col-sm-2 form-control-label">Email</label>
-                        <div class="col-sm-4">
+                        <div class="col-sm-2">
                             <input type="email" class="form-control" name="txtEmailEscola">
                         </div>
-                    </div>                                 
+                    </div> 
+                     <div class="form-group row">
+                        <label for="txtCnpjEscola" class="col-sm-2 form-control-label">CNPJ da Escola</label>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" name="txtCnpjEscola">
+                        </div>
+                    </div>     
                     <button type="submit" class="btn btn-warning">Cadastrar</button>
                 </form>
             </div>

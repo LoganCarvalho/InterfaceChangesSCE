@@ -40,6 +40,10 @@
         <servlet-name>ConsultarConsumoAluno</servlet-name>
         <servlet-class>Controller.ConsultarConsumoAluno</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>IncluirEscola</servlet-name>
+        <servlet-class>Controller.IncluirEscola</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ServletMain</servlet-name>
         <url-pattern>/ServletMain</url-pattern>
@@ -79,6 +83,10 @@
     <servlet-mapping>
         <servlet-name>ConsultarConsumoAluno</servlet-name>
         <url-pattern>/ConsultarConsumoAluno</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>IncluirEscola</servlet-name>
+        <url-pattern>/IncluirEscola</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
