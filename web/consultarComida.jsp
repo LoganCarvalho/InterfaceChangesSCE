@@ -53,7 +53,7 @@
             <div class="container">
                 <form action="ConsultarComida" method="get">  
                     <div class="form-group row">
-                        <label for="sellComida" class="col-sm-2 form-control-label">Comida</label>
+                        <label for="txtComida" class="col-sm-2 form-control-label">Comida</label>
                         <% ProdutoComida comida = (ProdutoComida) request.getAttribute("comida");%>
                         <div class="col-sm-3">                               
                             <input type="text" class="form-control" name="txtComida" describedby="basic-addon2">                                                           

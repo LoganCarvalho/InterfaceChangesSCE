@@ -33,10 +33,14 @@ public class CadastroResponsavel extends HttpServlet {
             Logger.getLogger(CadastroResponsavel.class.getName()).log(Level.SEVERE, null, ex);
         }
          //Verificar uma forma de exibir uma mesnagem depois que a inserção ocorrer com sucesso.
-     
+     if(resposta != 0){ 
         RequestDispatcher rd = request.getRequestDispatcher("sucesso.jsp");
+        rd.include(request, response);      
+     } else {
+        RequestDispatcher rd = request.getRequestDispatcher("error.jsp");
         rd.include(request, response);
-    }
+     }
+    }    
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)

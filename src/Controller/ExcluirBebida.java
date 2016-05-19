@@ -1,6 +1,7 @@
 
 package Controller;
 
+import Model.Bean.ProdutoBebida;
 import Model.Bean.ProdutoComida;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -13,23 +14,23 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(name = "ExcluirComida", urlPatterns = {"/ExcluirComida"})
-public class ExcluirComida extends HttpServlet {
+@WebServlet(name = "ExcluirBebida", urlPatterns = {"/ExcluirBebida"})
+public class ExcluirBebida extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-         ProdutoComida comida = new ProdutoComida();
+         ProdutoBebida bebida = new ProdutoBebida();
         int resposta=0;
-        comida.setCodigo(request.getParameter("codigo"));
+        bebida.setCodigo(request.getParameter("codigo"));
         
          try {
-           resposta= comida.excluir(comida);
+           resposta= bebida.excluir(bebida);
            
         } catch (Exception ex) {
             Logger.getLogger(ExcluirComida.class.getName()).log(Level.SEVERE, null, ex);
         }
        // request.setAttribute("responsavel", respons);
-       RequestDispatcher rd = request.getRequestDispatcher("consultarComida.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("consultarBebida.jsp");
         rd.forward(request, response);
     }
 

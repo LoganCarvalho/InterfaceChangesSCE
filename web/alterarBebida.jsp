@@ -50,7 +50,7 @@
             <p>Alterar Bebida</p>
             </div>
             <div class="container">
-                <form action="ResponsavelController2" method="post">  
+                <form action="AlterarBebida" method="post">  
                     <div class="form-group row">
                         <label for="txtCodigoBebida" class="col-sm-2 form-control-label">Código da Bebida</label>
                         <div class="col-sm-4">

@@ -34,10 +34,15 @@ public class CadastroBebida extends HttpServlet {
         }
          //Verificar uma forma de exibir uma mesnagem depois que a inserção ocorrer com sucesso.
      
-        RequestDispatcher rd = request.getRequestDispatcher("sucesso.jsp");
+       if (resposta != 0){
+           RequestDispatcher rd = request.getRequestDispatcher("sucesso.jsp");
+            rd.include(request, response);
+       } else {
+        RequestDispatcher rd = request.getRequestDispatcher("error.jsp");
         rd.include(request, response);
-        
+        } 
     }
+       
     
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)

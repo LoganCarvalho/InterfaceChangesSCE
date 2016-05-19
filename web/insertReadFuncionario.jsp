@@ -43,9 +43,8 @@
                     </ul>
                 </div>
                 <ul class="nav navbar-nav navbar-right" style="padding-top: 0.5cm">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:#FFFFFF; font-size: x-large">Nome do Aluno</a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:#FFFFFF; font-size: x-large">Funcionário</a>
                     <ul class="dropdown-menu">
-                        <li><a href="#"><span class="glyphicon glyphicon-user"></span>Perfil</a></li>  
                         <li><a href="Inicio.jsp"><span class="glyphicon glyphicon-log-out"></span>Sair</a></li>
                     </ul>   
                 </ul>

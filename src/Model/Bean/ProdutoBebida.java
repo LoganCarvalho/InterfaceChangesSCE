@@ -39,10 +39,10 @@ public class ProdutoBebida extends Produto {
         return resposta;
     }
     
-      public int excluir() throws Exception {
+      public int excluir(ProdutoBebida produtoBebida) throws Exception {
 
         BebidaDAO bebidaDao = new BebidaDAO();
-        int resposta = bebidaDao.excluir(this);
+        int resposta = bebidaDao.excluir(produtoBebida);
         return resposta;
     }
       
@@ -53,12 +53,12 @@ public class ProdutoBebida extends Produto {
         return resposta;
     }
       
-     /*  public boolean consultar(ProdutoBebida produtoBebida) throws Exception {
+      public boolean consultar(ProdutoBebida produtoBebida) throws Exception {
 
         BebidaDAO bebidaDao = new BebidaDAO();
         boolean resposta = bebidaDao.consultar(produtoBebida);
         return resposta;
-    }*/
+    }
     
     
 }
