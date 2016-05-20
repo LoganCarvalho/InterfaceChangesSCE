@@ -1,3 +1,4 @@
+<%@page import="Model.Bean.Aluno"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -38,7 +39,6 @@
                 <ul class="nav navbar-nav navbar-right" style="padding-top: 0.5cm">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:#FFFFFF; font-size:x-large">Responsável</a>
                     <ul class="dropdown-menu">
-                        <li><a href="#"><span class="glyphicon glyphicon-user"></span>Perfil</a></li>  
                         <li><a href="Inicio.jsp"><span class="glyphicon glyphicon-log-out"></span>Sair</a></li>
                     </ul>   
                 </ul>
@@ -51,6 +51,7 @@
             <div class="container">
                 <form action="ConsultarAlunoResponsavel" method="post">  
                     <div class="form-group row">
+                     <% Aluno aluno = (Aluno) request.getAttribute("alunoConsulta");%>
                         <label for="txtMatricula" class="col-sm-2 form-control-label">Mátricula do Aluno</label>
                         <div class="col-sm-3">
                             <input type="text" class="form-control" name="txtMatricula" describedby="basic-addon2">
@@ -77,22 +78,16 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                  <% if (aluno != null) { %>
                                     <tr>
-                                        <td>John</td>
-                                        <td>Doe</td> 
-                                        <td>Doe</td>
-                                        <td>Doe</td>
-                                        <td><a href="alterarAluno.jsp"><span class="glyphicon glyphicon-edit"></span></a></td>                                        
-                                        <td><span class="glyphicon glyphicon-remove"></span></td>       
+                                        <td><%=aluno.getMatricula()%></td>
+                                        <td><%=aluno.getNome()%></td>
+                                        <td><%=aluno.getTurma()%></td>
+                                        <td><%=aluno.getTurno()%></td>
+                                         <td><a href="alterarAluno.jsp?matricula=<%=aluno.getMatricula()%>&nome=<%=aluno.getNome()%>&turma=<%=aluno.getTurma()%>&turno=<%=aluno.getTurno()%>"><span class="glyphicon glyphicon-edit"></span></a></td>                                        
+                                        <td><a href="ExcluirAluno??matricula=<%=aluno.getMatricula()%>"><span class="glyphicon glyphicon-remove"></span></a></td>       
                                     </tr>
-                                    <tr>
-                                        <td>Mary</td>
-                                        <td>Moe</td>
-                                        <td>Doe</td>
-                                        <td>Doe</td> 
-                                        <td><a href="alterarAluno.jsp"><span class="glyphicon glyphicon-edit"></span></a></td>                                        
-                                        <td><span class="glyphicon glyphicon-remove"></span></td>                                        
-                                    </tr>
+                                 <% } %>   
                                 </tbody>
                             </table>
                         </div>    

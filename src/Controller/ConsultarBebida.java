@@ -32,7 +32,7 @@ public class ConsultarBebida extends HttpServlet {
            resposta= bebida.consultar(bebida);
            
         } catch (Exception ex) {
-            Logger.getLogger(CadastroResponsavel.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ConsultarBebida.class.getName()).log(Level.SEVERE, null, ex);
         }
         request.setAttribute("bebida", bebida);
         RequestDispatcher rd = request.getRequestDispatcher("consultarBebida.jsp");

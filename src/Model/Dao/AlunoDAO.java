@@ -100,6 +100,33 @@ public class AlunoDAO {
         return resposta;
     }
 
+     public int alterarAluno(Aluno aluno) throws Exception {
+        
+        Connection conexao = ConnectionFactory.getConnection();
+        int resposta = 0;
+        StringBuilder sql = new StringBuilder();
+        try {
+            sql.append("UPDATE CantinaEscola.aluno SET");
+            sql.append(" nome_aluno = ? ,turno_aluno = ? ,turma_aluno = ? ");
+            sql.append(" WHERE matricula_aluno = ?");
+            PreparedStatement stmt = conexao.prepareStatement(sql.toString());
+            stmt.setString(1, aluno.getNome());
+            stmt.setString(2, aluno.getTurno());
+            stmt.setString(3, aluno.getTurma()); 
+            stmt.setInt(4, aluno.getMatricula());
+            stmt.executeUpdate();
+
+        } catch (SQLException error) {
+            System.out.println(error.getMessage());
+        } finally {
+            if (conexao != null) {
+                resposta = 1;
+                ConnectionFactory.FecharConexao(conexao);
+            }
+        }
+        return resposta;
+    }
+     
     public boolean consultarSaldo(Aluno aluno) throws Exception {
 
         Connection conexao = ConnectionFactory.getConnection();
@@ -141,14 +168,16 @@ public class AlunoDAO {
 
         try {
             sql.append("select * from CantinaEscola.aluno");
-            sql.append(" where matricula_aluno = ? ");
+            sql.append(" where matricula_aluno = ? or nome_aluno = ? ");
             PreparedStatement stmt = conexao.prepareStatement(sql.toString());
             stmt.setInt(1, aluno.getMatricula());
-
+            stmt.setString(2, aluno.getNome());
+            
             resposta = stmt.executeQuery();
-            while (resposta.next()) {            
+            while (resposta.next()) { 
+                aluno.setMatricula(Integer.parseInt(resposta.getString("matricula_aluno")));
                 aluno.setNome(resposta.getString("nome_aluno"));
-                //aluno.setSaldo(Integer.parseInt(resposta.getString("saldo_aluno")));
+                aluno.setSaldo(Integer.parseInt(resposta.getString("saldo_aluno")));
                 aluno.setTurma(resposta.getString("turma_aluno"));
                 aluno.setTurno(resposta.getString("turno_aluno"));
                    

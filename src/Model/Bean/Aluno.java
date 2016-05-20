@@ -114,7 +114,7 @@ public class Aluno extends Usuario {
     public int update(Aluno aluno) throws Exception {
 
         AlunoDAO alunoDAO = new AlunoDAO();
-        int resposta = alunoDAO.update(aluno);
+        int resposta = alunoDAO.alterarAluno(aluno);
         return resposta;
     }
 
