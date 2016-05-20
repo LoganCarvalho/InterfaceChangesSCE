@@ -69,14 +69,14 @@ public int incluir(ProdutoBebida produtoBebida) throws Exception {
         StringBuilder sql = new StringBuilder();
         try {
             sql.append("UPDATE CantinaEscola.produto_bebida SET");
-            sql.append(" nome_bebida = ?, preco_bebida = ? , qunatidade_bebida = ?, fornecedor = ?");
-            sql.append(" WHERE codigo_comida = ?");
+            sql.append(" nome_bebida = ?, preco_bebida = ? , quantidade_bebida = ?, fornecedor = ?");
+            sql.append(" WHERE codigo_bebida = ?");
             PreparedStatement stmt = conexao.prepareStatement(sql.toString());
             stmt.setString(1, produtoBebida.getNome());
             stmt.setDouble(2, produtoBebida.getPreco()); 
             stmt.setInt(3, produtoBebida.getQuantidade());
-            stmt.setString(5, produtoBebida.getFornecedor());
-            stmt.setString(6, produtoBebida.getCodigo());
+            stmt.setString(4, produtoBebida.getFornecedor());
+            stmt.setString(5, produtoBebida.getCodigo());
             stmt.executeUpdate();
 
         } catch (SQLException error) {

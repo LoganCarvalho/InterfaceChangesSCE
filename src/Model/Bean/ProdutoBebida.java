@@ -46,10 +46,10 @@ public class ProdutoBebida extends Produto {
         return resposta;
     }
       
-    public int update() throws Exception {
+    public int update(ProdutoBebida produtoBebida) throws Exception {
 
         BebidaDAO bebidaDao = new BebidaDAO();
-        int resposta = bebidaDao.update(this);
+        int resposta = bebidaDao.update(produtoBebida);
         return resposta;
     }
       

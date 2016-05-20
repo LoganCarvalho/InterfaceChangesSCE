@@ -50,29 +50,35 @@
             <p>Alterar Bebida</p>
             </div>
             <div class="container">
-                <form action="AlterarBebida" method="post">  
+                <form action="AlterarBebida" method="get">  
                     <div class="form-group row">
                         <label for="txtCodigoBebida" class="col-sm-2 form-control-label">Código da Bebida</label>
                         <div class="col-sm-4">
-                            <input type="text" class="form-control" name="txtCodigoBebida" describedby="basic-addon2">
+                            <input type="text" class="form-control" readonly="true" value="<%=request.getParameter("codigo")%>" name="codigo" describedby="basic-addon2">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="txtNomeBebida" class="col-sm-2 form-control-label">Nome da Bebida</label>
                         <div class="col-sm-4">
-                            <input type="text" class="form-control" name="txtNomeBebida">
+                            <input type="text" class="form-control" value="<%=request.getParameter("nome")%>" name="nome">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="txtFornecedor" class="col-sm-2 form-control-label">Fornecedor</label>
                         <div class="col-sm-4">
-                            <input type="text"  class="form-control" name="txtFornecedor">
+                            <input type="text"  class="form-control" value="<%=request.getParameter("fornecedor")%>" name="fornecedor">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="txtPrecoBebida" class="col-sm-2 form-control-label">Preço da Bebida</label>
                         <div class="col-sm-4">
-                            <input type="text" class="form-control" name="txtPrecoBebida" placeholder="R$ 00,00">
+                            <input type="text" class="form-control" value="<%=request.getParameter("preco")%>" name="preco" placeholder="R$ 00,00">
+                        </div>
+                    </div>
+                     <div class="form-group row">
+                        <label for="txtQntd" class="col-sm-2 form-control-label">Quantidade</label>
+                        <div class="col-sm-4">
+                            <input type="text" value="<%=request.getParameter("quantidade")%>"  class="form-control" name="quantidade">
                         </div>
                     </div>
                     <button type="submit" class="btn btn-warning">Alterar</button>

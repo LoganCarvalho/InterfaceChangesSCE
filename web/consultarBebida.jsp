@@ -68,6 +68,7 @@
                                         <th>Nome do Produto</th>
                                         <th>Preço</th>
                                         <th>Fornecedor</th>
+                                        <th>Quantidade</th>
                                         <th>Bloquear</th>
                                         <th>Editar</th>
                                         <th>Excluir</th>
@@ -80,8 +81,9 @@
                                         <td><%=bebida.getNome()%></td>
                                         <td><%=bebida.getPreco()%></td>
                                         <td><%=bebida.getFornecedor()%></td>
+                                        <td><%=bebida.getQuantidade()%></td>
                                         <td><a href="#"><span class="glyphicon glyphicon-ban-circle"></span></a></td>                                        
-                                         <td><a href="alteraBebida.jsp?codigo=<%=bebida.getCodigo()%>&nome=<%=bebida.getNome()%>&preco=<%=bebida.getPreco()%>&fornecedor=<%=bebida.getFornecedor()%>&quantidade=<%=bebida.getQuantidade()%>"><span class="glyphicon glyphicon-edit"></span></a></td>                                        
+                                         <td><a href="alterarBebida.jsp?codigo=<%=bebida.getCodigo()%>&nome=<%=bebida.getNome()%>&preco=<%=bebida.getPreco()%>&fornecedor=<%=bebida.getFornecedor()%>&quantidade=<%=bebida.getQuantidade()%>"><span class="glyphicon glyphicon-edit"></span></a></td>                                        
                                         <td><a href="ExcluirBebida.jsp?codigo=<%=bebida.getCodigo()%>"></a><span class="glyphicon glyphicon-remove"></span></td>       
                                     </tr>
                                  <% } %>
