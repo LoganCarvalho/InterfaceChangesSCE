@@ -65,7 +65,7 @@
                     <div class="form-group row">
                         <label for="txtMatriculaAluno" class="col-sm-2 form-control-label">Mátricula do Aluno</label>
                         <div class="col-sm-2">
-                            <input type="number" maxlength="9" required="true" class="form-control" name="txtMatriculaAluno">
+                            <input type="text" maxlength="9" required="true" class="form-control" name="txtMatriculaAluno">
                         </div>
                     </div>
                     <div class="form-group row">

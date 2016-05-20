@@ -25,7 +25,7 @@ public class CadastroAlunoPorResponsavel extends HttpServlet {
         boolean respostaResponsavel = false;
         //Pegando parâmetros da tela. Avaliar necessidade de capturar mais campos
         aluno.setNome(request.getParameter("txtNomeAluno"));
-       // aluno.setMatricula(Integer.parseInt(request.getParameter("txtMatricula"))); //a servlet não funciona por causa dessa converã para inteiro
+        aluno.setMatricula(Integer.parseInt(request.getParameter("txtMatriculaAluno"))); //a servlet não funciona por causa dessa converã para inteiro
         aluno.setTurma(request.getParameter("txtTurma"));
         aluno.setTurno(request.getParameter("txtTurno"));
         aluno.setLogin(request.getParameter("txtLoginAluno"));
