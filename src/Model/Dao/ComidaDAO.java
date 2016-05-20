@@ -133,16 +133,18 @@ public int incluir(ProdutoComida produtoComida) throws Exception {
 
         try {
             sql.append("select * from CantinaEscola.produto_comida");
-            sql.append(" where disponivel_comida = 1");
+            sql.append(" where disponivel_comida = 'S'");
             PreparedStatement stmt = conexao.prepareStatement(sql.toString());
 
             resposta = stmt.executeQuery();
+             //List<ProdutoComida> listaProdutos  = new ArrayList<>();
              while (resposta.next()) {
+               // ProdutoComida PC = new ProdutoComida();
                 produtoComida.setCodigo(resposta.getString("codigo_comida"));
                 produtoComida.setNome(resposta.getString("nome_comida"));
                 produtoComida.setPreco(resposta.getDouble("preco_comida"));
                 produtoComida.setIngredientes(resposta.getString("ingredientes"));
-                             
+                //listaProdutos.add(PC);
                 ok = true;
             }
         } catch (SQLException error) {
@@ -194,5 +196,29 @@ public int incluir(ProdutoComida produtoComida) throws Exception {
             }
         }
         return (comidas);
+    }
+       
+       public int bloquear(ProdutoComida produtoComida) throws Exception {
+        
+        Connection conexao = ConnectionFactory.getConnection();
+        int resposta = 0;
+        StringBuilder sql = new StringBuilder();
+        try {
+            sql.append("UPDATE CantinaEscola.produto_comida SET");
+            sql.append(" disponivel_comida = 'N'");
+            sql.append(" WHERE codigo_comida = ?");
+            PreparedStatement stmt = conexao.prepareStatement(sql.toString());
+            stmt.setString(1, produtoComida.getCodigo());
+            stmt.executeUpdate();
+
+        } catch (SQLException error) {
+            System.out.println(error.getMessage());
+        } finally {
+            if (conexao != null) {
+                resposta = 1;
+                ConnectionFactory.FecharConexao(conexao);
+            }
+        }
+        return resposta;
     }
 }

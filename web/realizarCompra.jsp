@@ -73,7 +73,7 @@
                                         <td>John</td>
                                         <td>Doe</td> 
                                         <td>Doe</td>
-                                        <td><a href="#"><span class="glyphicon glyphicon-ok"></span></a></td>                                        
+                                        <td><a href="passarserveltcomValor"><span class="glyphicon glyphicon-ok"></span></a></td>                                        
                                     </tr>
                                 </tbody>
                             </table>

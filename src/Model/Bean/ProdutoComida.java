@@ -50,6 +50,13 @@ public class ProdutoComida extends Produto {
        
         return resposta;
     }
+     
+      public int bloquear(ProdutoComida produtoComida) throws Exception {
+
+        ComidaDAO ComidaDao = new ComidaDAO();
+        int resposta = ComidaDao.bloquear(produtoComida);
+        return resposta;
+    }
     
       public int excluir(ProdutoComida produtoComida) throws Exception {
 

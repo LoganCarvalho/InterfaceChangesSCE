@@ -44,6 +44,10 @@
         <servlet-name>IncluirEscola</servlet-name>
         <servlet-class>Controller.IncluirEscola</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>BloquearComida</servlet-name>
+        <servlet-class>Controller.BloquearComida</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ServletMain</servlet-name>
         <url-pattern>/ServletMain</url-pattern>
@@ -87,6 +91,10 @@
     <servlet-mapping>
         <servlet-name>IncluirEscola</servlet-name>
         <url-pattern>/IncluirEscola</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BloquearComida</servlet-name>
+        <url-pattern>/BloquearComida</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
