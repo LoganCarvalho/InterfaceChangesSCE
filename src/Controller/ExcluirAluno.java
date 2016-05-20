@@ -28,7 +28,7 @@ public class ExcluirAluno extends HttpServlet {
            resposta= aluno.excluir(aluno);
            
         } catch (Exception ex) {
-            Logger.getLogger(ExcluirComida.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ExcluirAluno.class.getName()).log(Level.SEVERE, null, ex);
         }
        // request.setAttribute("responsavel", respons);
         RequestDispatcher rd = request.getRequestDispatcher("consultarAluno.jsp");
