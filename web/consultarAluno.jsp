@@ -85,7 +85,7 @@
                                         <td><%=aluno.getTurma()%></td>
                                         <td><%=aluno.getTurno()%></td>
                                          <td><a href="alterarAluno.jsp?matricula=<%=aluno.getMatricula()%>&nome=<%=aluno.getNome()%>&turma=<%=aluno.getTurma()%>&turno=<%=aluno.getTurno()%>"><span class="glyphicon glyphicon-edit"></span></a></td>                                        
-                                        <td><a href="ExcluirAluno??matricula=<%=aluno.getMatricula()%>"><span class="glyphicon glyphicon-remove"></span></a></td>       
+                                        <td><a href="ExcluirAluno?matricula=<%=aluno.getMatricula()%>"><span class="glyphicon glyphicon-remove"></span></a></td>       
                                     </tr>
                                  <% } %>   
                                 </tbody>

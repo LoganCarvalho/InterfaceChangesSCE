@@ -57,23 +57,29 @@ public class AlunoDAO {
         return resposta;
     }
 
-    public int excluir(Aluno aluno) throws Exception {
+     public int excluir(Aluno aluno) throws Exception {
+        
         Connection conexao = ConnectionFactory.getConnection();
         int resposta = 0;
+        StringBuilder sql = new StringBuilder();
         try {
-            Statement sentenca = conexao.createStatement();
-            String sql = "delete from CantinaEscola.aluno "
-                    + "where cpf = **";
-            resposta = sentenca.executeUpdate(sql);
-        } catch (SQLException erro) {
+            sql.append("delete from CantinaEscola.aluno");
+            sql.append(" where matricula_aluno = ?");
+            PreparedStatement stmt = conexao.prepareStatement(sql.toString());
+            stmt.setInt(1, aluno.getMatricula());
+            stmt.executeUpdate();
 
+        } catch (SQLException error) {
+            System.out.println(error.getMessage());
         } finally {
             if (conexao != null) {
+                resposta = 1;
                 ConnectionFactory.FecharConexao(conexao);
             }
         }
         return resposta;
     }
+    
 
      public int update(Aluno aluno) throws Exception {
         

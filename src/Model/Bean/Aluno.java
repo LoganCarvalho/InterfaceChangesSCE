@@ -118,10 +118,10 @@ public class Aluno extends Usuario {
         return resposta;
     }
 
-    public int excluir() throws Exception {
+    public int excluir(Aluno aluno) throws Exception {
 
-        AlunoDAO aluno = new AlunoDAO();
-        int resposta = aluno.excluir(this);
+        AlunoDAO alunoDao = new AlunoDAO();
+        int resposta = alunoDao.excluir(aluno);
         return resposta;
     }
 
