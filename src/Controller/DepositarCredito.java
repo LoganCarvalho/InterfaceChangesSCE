@@ -17,8 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 
 public class DepositarCredito extends HttpServlet {
 
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         Aluno aluno = new Aluno();
         int resposta = 0;

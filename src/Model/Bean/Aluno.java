@@ -85,12 +85,12 @@ public class Aluno extends Usuario {
          double  valorCredito = aluno.getSaldo();
          double novoSaldo;
          
-         consultar(aluno);
+         consultarSaldo(aluno);
          saldoAntigo = aluno.getSaldo();
          
          novoSaldo = saldoAntigo + valorCredito;
          aluno.setSaldo(novoSaldo);
-         update(aluno);
+         updateSaldo(aluno);
          
         return 1;
     }
@@ -115,6 +115,13 @@ public class Aluno extends Usuario {
 
         AlunoDAO alunoDAO = new AlunoDAO();
         int resposta = alunoDAO.alterarAluno(aluno);
+        return resposta;
+    }
+    
+     public int updateSaldo(Aluno aluno) throws Exception {
+
+        AlunoDAO alunoDAO = new AlunoDAO();
+        int resposta = alunoDAO.update(aluno);
         return resposta;
     }
 
