@@ -43,9 +43,8 @@
                     </ul>
                 </div>
                 <ul class="nav navbar-nav navbar-right" style="padding-top: 0.5cm">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:#FFFFFF; font-size: x-large">Nome do Aluno</a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:#FFFFFF; font-size: x-large">Aluno</a>
                     <ul class="dropdown-menu">
-                        <li><a href="#"><span class="glyphicon glyphicon-user"></span>Perfil</a></li>  
                         <li><a href="Inicio.jsp"><span class="glyphicon glyphicon-log-out"></span>Sair</a></li>
                     </ul>   
                 </ul>
@@ -53,13 +52,15 @@
         </nav>
         <div class="jumbotron">
             <div class="container text-center">
-                <div class="row">
-                    <div class="col-md-12">
-                        <img class="img-circle" src="Imagens/comprar.png" alt="Generic placeholder image" width="140" height="140">
-                        <h2>Comprar</h2>
-                        <p><a class="btn btn-warning waves-effect waves-light" href="realizarCompra.jsp" data-toggle="tooltip" data-placement="bottom" title="Clique aqui para realizar compra dos produtos desejados." role="button">Entrar &raquo;</a></p>
-                    </div>                 
-                </div>             
+                <form action="CarregarAlimento" method="post">  
+                    <div class="row">
+                        <div class="col-md-12">
+                            <img class="img-circle" src="Imagens/comprar.png" alt="Generic placeholder image" width="140" height="140">
+                            <h2>Comprar</h2>
+                            <p><a class="btn btn-warning waves-effect waves-light" href="realizarCompra.jsp" data-toggle="tooltip" data-placement="bottom" title="Clique aqui para realizar compra dos produtos desejados." role="button">Entrar &raquo;</a></p>
+                        </div>                 
+                    </div>
+                </form>   
             </div>
         </div>
         <!-- Inicializando os ToolTips -->

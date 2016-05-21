@@ -1,3 +1,4 @@
+<%@page import="Model.Bean.Aluno"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -49,12 +50,15 @@
                 <p>Comprar Alimento</p>
             </div>
             <div class="container">
-                <form action="RealizarCompra" method="post">  
+                <form action="RealizarCompra" method="post"> 
+                    <% Aluno aluno = (Aluno) request.getAttribute("aluno");%>
                     <div class="form-group row">
                         <label for="txtSaldoAluno" class="col-sm-2 form-control-label">Saldo Disponível</label>
                         <div class="col-sm-3">
-                            <input type="text" class="form-control" name="txtSaldoAluno" describedby="basic-addon2"/>    
+                            <% if (aluno != null) { %>
+                            <input type="text" class="form-control" name="txtSaldoAluno" value="<%=aluno.getSaldo()%>" describedby="basic-addon2"/>    
                         </div>
+                        <% } %>
                     </div>    
                        <button type="submit" class="btn btn-warning">Exibir Alimentos</button>     
                     <div class="row">

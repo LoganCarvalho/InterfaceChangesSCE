@@ -1,6 +1,7 @@
 package Model.Dao;
 
 import Model.Bean.Aluno;
+import Model.Bean.Usuario;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -145,6 +146,39 @@ public class AlunoDAO {
             sql.append(" where matricula_aluno = ? ");
             PreparedStatement stmt = conexao.prepareStatement(sql.toString());
             stmt.setInt(1, aluno.getMatricula());
+
+            resposta = stmt.executeQuery();
+            while (resposta.next()) {            
+               // aluno.setNome(resposta.getString("nome_aluno"));
+                aluno.setSaldo(Integer.parseInt(resposta.getString("saldo_aluno")));
+                //aluno.setTurma(resposta.getString("turma_aluno"));
+                //aluno.setTurno(resposta.getString("turno_aluno"));
+                   
+                ok = true;
+            }
+        } catch (SQLException error) {
+            System.out.println(error.getMessage());
+        } finally {
+            if (conexao != null) {
+                ConnectionFactory.FecharConexao(conexao, null, resposta);
+            }
+        }
+        return ok;
+    }
+    
+     public boolean consultarSaldoAluno(Aluno aluno, Usuario usuario) throws Exception {
+
+        Connection conexao = ConnectionFactory.getConnection();
+        ResultSet resposta = null;
+        boolean ok = false;
+        StringBuilder sql = new StringBuilder();
+
+        try {
+            sql.append("select saldo_aluno from CantinaEscola.aluno");
+            sql.append(" inner join CantinaEscola.usuario on CantinaEscola.aluno.id_usuario = CantinaEscola.usuario.id_usuario");
+            sql.append(" where CantinaEscola.usuario.login_usuario = " +usuario.getLogin()+" ");
+            sql.append(" and CantinaEscola.usuario.senha_usurio = " +usuario.getSenha()+" ");
+            PreparedStatement stmt = conexao.prepareStatement(sql.toString());
 
             resposta = stmt.executeQuery();
             while (resposta.next()) {            

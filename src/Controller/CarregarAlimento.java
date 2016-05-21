@@ -5,51 +5,42 @@
  */
 package Controller;
 
+import Model.Bean.Aluno;
 import Model.Bean.Usuario;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author jcarvalho
+ * @author stephanie
  */
+@WebServlet(name = "CarregarAlimento", urlPatterns = {"/CarregarAlimento"})
+public class CarregarAlimento extends HttpServlet {
 
-public class LoginPerfil extends HttpServlet {
-
-  
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        Usuario usuario = new Usuario();
-        
-        //Pegando parâmetros da tela
-        usuario.setLogin(request.getParameter("txtEmailLogin"));
-        usuario.setSenha(request.getParameter("txtSenhaLogin"));
-        
-         try {
-            usuario.consultar(usuario);
-            if (usuario.getTipo_usuario().equals("F")){
-                RequestDispatcher rd = request.getRequestDispatcher("FuncionarioIndex.jsp");
-                request.getSession().setAttribute("login_usuario", usuario.getLogin());
-                rd.include(request, response);
-                               
-            } else if (usuario.getTipo_usuario().equals("A")){
-                RequestDispatcher rd = request.getRequestDispatcher("indexAluno.jsp");
-                request.getSession().setAttribute("login_usuario", usuario);
-                rd.include(request, response);
-            }   else{
-                RequestDispatcher rd = request.getRequestDispatcher("indexResponsavel.jsp");
-                request.getSession().setAttribute("login_usuario", usuario.getLogin());
-                rd.include(request, response);
-            }
+            
+        Usuario usuario = (Usuario) request.getAttribute("login_usuario");
+        Aluno aluno = new Aluno();
+        boolean resposta = true;
+
+        try {
+            resposta= aluno.consultarSaldoAluno(aluno, usuario);
         } catch (Exception ex) {
-            Logger.getLogger(CadastroResponsavel.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ConsultarAlunoResponsavel.class.getName()).log(Level.SEVERE, null, ex);
         }
+       request.setAttribute("aluno", aluno);
+       RequestDispatcher rd = request.getRequestDispatcher("realizarCompra.jsp");
+       rd.forward(request, response);
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -92,5 +83,3 @@ public class LoginPerfil extends HttpServlet {
     }// </editor-fold>
 
 }
-
-
